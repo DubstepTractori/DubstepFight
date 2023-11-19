@@ -1,0 +1,12 @@
+C:\Users\16\source\repos\DubstepFight\DubstepFight\bin\Debug\DubstepFight.exe.config
+C:\Users\16\source\repos\DubstepFight\DubstepFight\bin\Debug\DubstepFight.exe
+C:\Users\16\source\repos\DubstepFight\DubstepFight\bin\Debug\DubstepFight.pdb
+C:\Users\16\source\repos\DubstepFight\DubstepFight\obj\Debug\DubstepFight.csproj.AssemblyReference.cache
+C:\Users\16\source\repos\DubstepFight\DubstepFight\obj\Debug\DubstepFight.csproj.SuggestedBindingRedirects.cache
+C:\Users\16\source\repos\DubstepFight\DubstepFight\obj\Debug\DubstepFight.Form1.resources
+C:\Users\16\source\repos\DubstepFight\DubstepFight\obj\Debug\DubstepFight.Properties.Resources.resources
+C:\Users\16\source\repos\DubstepFight\DubstepFight\obj\Debug\DubstepFight.csproj.GenerateResource.cache
+C:\Users\16\source\repos\DubstepFight\DubstepFight\obj\Debug\DubstepFight.csproj.CoreCompileInputs.cache
+C:\Users\16\source\repos\DubstepFight\DubstepFight\obj\Debug\DubstepFight.exe
+C:\Users\16\source\repos\DubstepFight\DubstepFight\obj\Debug\DubstepFight.pdb
+C:\Users\16\source\repos\DubstepFight\DubstepFight\obj\Debug\DubstepFight.Form2.resources
