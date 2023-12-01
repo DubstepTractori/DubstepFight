@@ -12,10 +12,21 @@ namespace DubstepFight
 
         public int Attack1()
         {
-            return Power;
+            int Attack = Power / 3;//значение атаки и его расчеты
+            return Attack;
         }
 
-        //public int Attack2() { }
-        //public int Passive() { }
+        public int Attack2()  //темнота поглощая рыцаря наносит доп урон
+        {
+            Health -= 7;
+            Power--;
+            int Attack = Power / 3 + 10;//значение атаки и его расчеты
+            return Attack;
+        }
+        public void Passive() // возрастание его мощи
+        {
+            Power++;
+
+        }
     }
 }
