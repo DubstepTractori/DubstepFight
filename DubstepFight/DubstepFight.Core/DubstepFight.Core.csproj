@@ -45,10 +45,13 @@
     <Compile Include="Model\Heroes\Asssasin.cs" />
     <Compile Include="Model\Heroes\BaseHero.cs" />
     <Compile Include="Model\Heroes\BlackKnight.cs" />
+    <Compile Include="Model\Heroes\Elf.cs" />
     <Compile Include="Model\Heroes\Giant.cs" />
     <Compile Include="Model\Weapon\Fight.cs" />
+    <Compile Include="Model\Weapon\GiantFist.cs" />
     <Compile Include="Model\Weapon\Katana.cs" />
     <Compile Include="Model\Weapon\Mace.cs" />
+    <Compile Include="Model\Weapon\MagicStaff.cs" />
     <Compile Include="Model\Weapon\Weapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
