@@ -44,6 +44,9 @@
     <Compile Include="BaseHero.cs" />
     <Compile Include="BlackKnight.cs" />
     <Compile Include="Asssasin.cs" />
+    <Compile Include="Katana.cs" />
+    <Compile Include="Mace.cs" />
+    <Compile Include="Weapon.cs" />
     <Compile Include="Fight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
