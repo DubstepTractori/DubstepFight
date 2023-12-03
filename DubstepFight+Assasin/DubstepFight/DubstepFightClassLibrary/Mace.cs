@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DubstepFightClassLibrary
 {
-    internal class mace
+    internal class Mace : Weapon
     {
+        public Mace() { PowerWeapon = 15; } //просто больно бьет 
+        
     }
 }
