@@ -50,6 +50,7 @@
     <Compile Include="Model\Weapon\Fight.cs" />
     <Compile Include="Model\Weapon\GiantFist.cs" />
     <Compile Include="Model\Weapon\Katana.cs" />
+    <Compile Include="Model\Weapon\Knuckleduster.cs" />
     <Compile Include="Model\Weapon\Mace.cs" />
     <Compile Include="Model\Weapon\MagicStaff.cs" />
     <Compile Include="Model\Weapon\Weapon.cs" />

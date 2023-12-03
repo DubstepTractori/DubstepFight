@@ -18,7 +18,8 @@ namespace DubstepFightClassLibrary
 
             Health = 100;
             Power = 20;
-            Ultimate = 0;               
+            Ultimate = 0;
+            Name = "Эльф";
         }
 
 

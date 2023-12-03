@@ -10,7 +10,8 @@ namespace DubstepFight
     {
         private int health;
         private int power;
-
+        private string name;
+        public BaseHero() { Health = 0; Power = 0; Name = "NoName"; }
         public int Health
         {
             get
@@ -25,6 +26,14 @@ namespace DubstepFight
             { return power;}
             set
             { power = value; }
+        }
+
+        public string Name
+        {
+            get
+            { return name; }
+            set
+            { name = value; }
         }
     }
 

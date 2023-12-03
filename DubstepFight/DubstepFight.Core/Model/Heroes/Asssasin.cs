@@ -11,7 +11,7 @@ namespace DubstepFightClassLibrary
     public class Asssasin : BaseHero
     {
         int dexterity;
-        public Asssasin() { Health = 75; Power = 20; dexterity = 1; }
+        public Asssasin() { Health = 75; Power = 20; dexterity = 1; Name = "Асассин"; }
         
 
         public int Attack1()            // <-- Дефолтная тычка героя(c особенностью класса )в данном классе у асассина есть нож

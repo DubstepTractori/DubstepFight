@@ -14,6 +14,7 @@ namespace DubstepFightClassLibrary
         {
             Health = 200; //Статы
             Power = 15; // гиганта
+            Name = "Гигант";
         }
 
         public double Attack() //Дефолтная атака
