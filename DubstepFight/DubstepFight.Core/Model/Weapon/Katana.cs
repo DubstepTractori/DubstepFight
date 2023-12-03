@@ -11,6 +11,7 @@ namespace DubstepFightClassLibrary
         public Katana() { PowerWeapon = 1; }
         public void Passive()// игра будет через лейт идти либо через сильный старт поэтому малые статы и возможность стать сильнее
         {
+            NameOfWeapon = "Катана";
             PowerWeapon++;
         }
     }

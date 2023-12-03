@@ -10,6 +10,15 @@ namespace DubstepFightClassLibrary
     internal class Weapon
     {
         int powerWeapon;
+        string nameOfWeapon;
+
+        public Weapon()
+        {
+            powerWeapon = 0;
+            nameOfWeapon = "NoName";
+        }
+
+        
         public int PowerWeapon
         {
             get
@@ -17,5 +26,6 @@ namespace DubstepFightClassLibrary
             set
             { powerWeapon = value; }
         }
+        public string NameOfWeapon { get => nameOfWeapon; set => nameOfWeapon = value; }
     }
 }

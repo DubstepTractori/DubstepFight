@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace DubstepFightClassLibrary
 {
-    public class MagicStaff : Weapon
+    internal class MagicStaff : Weapon
     {
 
         
         public MagicStaff() 
         {
-
+            NameOfWeapon = "Магический посох";
             PowerWeapon = 10;
 
         }
