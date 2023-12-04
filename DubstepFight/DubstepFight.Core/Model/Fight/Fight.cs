@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DubstepFight.Core
+namespace DubstepFight.Core.Model.Fight
 {
-    public class Class1
+    internal class Fight
     {
     }
 }
