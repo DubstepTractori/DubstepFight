@@ -19,14 +19,15 @@ namespace DubstepFightClassLibrary
 
         }
 
-        public void MagicOfRandom() // Магия рандома с малым шансом посох может апнуть себе статы и стать сильнее
+        public void PassiveMagStaff() // Магия рандома с малым шансом посох может апнуть себе статы и стать сильнее
         {
             Random rnd = new Random();
-            int cube = rnd.Next(1, 10);
-
-            if (cube > 8)
+            int cube = rnd.Next(1, 20);
+            int changes = 15;
+            if (cube > changes)
             {
                 PowerWeapon += 5;
+                changes--;
             }
         }
     }
