@@ -10,12 +10,14 @@ namespace DubstepFightClassLibrary
     internal class Knuckleduster : Weapon
     {
 
-        public Knuckleduster(BaseHero baseHero)  //Кастет
+         public Knuckleduster(BaseHero baseHero)  //Кастет
         {
             NameOfWeapon = "Кастет";
-
-            double PowerOfHeroAndKnuckleduster = (baseHero.Health / 10);
-            PowerWeapon = (int)(baseHero.Power * PowerOfHeroAndKnuckleduster);
+            PowerWeapon = 7;
+        }
+        public void Passive()
+        {
+            //отхил героя на 3 еденицы реализовать в будующем
         }
 
         
