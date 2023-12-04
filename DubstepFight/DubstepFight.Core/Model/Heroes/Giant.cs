@@ -13,23 +13,23 @@ namespace DubstepFightClassLibrary
         public Giant()
         {
             Health = 200; //Статы
-            Power = 15; // гиганта
+            Power = 20; // гиганта
             Name = "Гигант";
         }
 
         public double Attack() //Дефолтная атака
         {
-            return Power / 2;
+            return Power / 3;
         }
 
 
         public double AttackWithVereStrongFist() //Обилка гиганта где с шансом
-                                //он может нанаести дефолтную тычку с прибавление 10 урона, тип с размаха ебнет
+                                //он может нанаести дефолтную тычку с прибавление 10 урона, тип с размаха Бьет
         {
             Random rnd = new Random();
             int cube = rnd.Next(1, 10);
 
-            if (cube > 7) 
+            if (cube > 5) 
             {
 
                 return Attack() + 10;
@@ -40,12 +40,14 @@ namespace DubstepFightClassLibrary
         }
 
 
-        public void Passive() //Когда у гиганта остаётся меньше 50 хп он ебашит с 2х уроном
+        public int Passive() //Когда у гиганта остаётся меньше 50 хп он Бьет с 2х уроном
         {
             if (Health < 50)
             {
-                Power = Power * 2;
+                int Attack1 = Attack() * 2;
+                return Attack1;
             }
+            return 0;
         }
 
 
