@@ -17,13 +17,13 @@ namespace DubstepFightClassLibrary
             Name = "Гигант";
         }
 
-        public double Attack() //Дефолтная атака
+        public int Attack() //Дефолтная атака
         {
             return Power / 3;
         }
 
 
-        public double AttackWithVereStrongFist() //Обилка гиганта где с шансом
+        public int AttackWithVereStrongFist() //Обилка гиганта где с шансом
                                 //он может нанаести дефолтную тычку с прибавление 10 урона, тип с размаха Бьет
         {
             Random rnd = new Random();
