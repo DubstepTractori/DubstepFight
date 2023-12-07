@@ -29,24 +29,9 @@ namespace DubstepFightClassLibrary
         }
 
 
-        public int Attack() // Дефолтная атака эльфа
-        {
 
-            Ultimate++;
-            return Power / 2;
 
-        }
 
-        public int AttackWithUltimate() // Атак с ультой
-        {
-            if (Ultimate > 5) //Если уже пять ходов было пройдено то Эльф бьёт Атакой 2х
-            {
-                int U = Ultimate;
-                Ultimate = 0;
-                return Attack() * U;
-            }
-            return 0;
-        }
 
 
         public void Passive()

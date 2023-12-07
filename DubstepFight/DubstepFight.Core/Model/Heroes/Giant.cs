@@ -17,27 +17,7 @@ namespace DubstepFightClassLibrary
             Name = "Гигант";
         }
 
-        public int Attack() //Дефолтная атака
-        {
-            return Power / 3;
-        }
-
-
-        public int AttackWithVereStrongFist() //Обилка гиганта где с шансом
-                                //он может нанаести дефолтную тычку с прибавление 10 урона, тип с размаха Бьет
-        {
-            Random rnd = new Random();
-            int cube = rnd.Next(1, 10);
-
-            if (cube > 5) 
-            {
-
-                return Attack() + 10;
-            }
-
-            return Attack();
-
-        }
+ 
 
 
         public int Passive() //Когда у гиганта остаётся меньше 50 хп он Бьет с 2х уроном
