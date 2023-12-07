@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace DubstepFight
 {
-    public class BaseHero
+    public abstract class BaseHero
     {
         private int health;
         private int power;
         private string name;
+
         public BaseHero() { Health = 0; Power = 0; Name = "NoName"; }
         public int Health
         {

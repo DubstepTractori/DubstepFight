@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Attack\AssasinAttack.cs" />
+    <Compile Include="Model\Attack\BlackKnightAttack.cs" />
+    <Compile Include="Model\Attack\PoisonAttack.cs" />
+    <Compile Include="Model\Attack\BaseAttack.cs" />
+    <Compile Include="Model\Attack\VoidAttack.cs" />
     <Compile Include="Model\Heroes\Asssasin.cs" />
     <Compile Include="Model\Heroes\BaseHero.cs" />
     <Compile Include="Model\Heroes\BlackKnight.cs" />
