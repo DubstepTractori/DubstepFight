@@ -46,14 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="FightMenu\ChooseCharacterMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <Compile Include="FightMenu\ChooseCharacterMenu.Designer.cs">
+      <DependentUpon>ChooseCharacterMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuFolder\DevelopersCreditMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuFolder\DevelopersCreditMenu.Designer.cs">
+      <DependentUpon>DevelopersCreditMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuFolder\MainGameMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuFolder\MainGameMenu.Designer.cs">
+      <DependentUpon>MainGameMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainMenuFolder\SettingsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuFolder\SettingsMenu.Designer.cs">
+      <DependentUpon>SettingsMenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FightMenu\ChooseCharacterMenu.resx">
+      <DependentUpon>ChooseCharacterMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuFolder\DevelopersCreditMenu.resx">
+      <DependentUpon>DevelopersCreditMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuFolder\MainGameMenu.resx">
+      <DependentUpon>MainGameMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MainMenuFolder\SettingsMenu.resx">
+      <DependentUpon>SettingsMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

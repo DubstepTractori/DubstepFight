@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DubstepFight
 {
-    public partial class MainMenu : Form
+    public partial class ChooseCharacterMenu : Form
     {
-        public MainMenu()
+        public ChooseCharacterMenu()
         {
             InitializeComponent();
         }

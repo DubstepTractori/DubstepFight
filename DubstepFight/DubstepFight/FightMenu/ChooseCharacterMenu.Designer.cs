@@ -1,0 +1,114 @@
+﻿namespace DubstepFight
+{
+    partial class ChooseCharacterMenu
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.ChooseCharacterLabel = new System.Windows.Forms.Label();
+            this.ChooseHeroAssasinButton = new System.Windows.Forms.Button();
+            this.ChooseHeroBlackKnightButton = new System.Windows.Forms.Button();
+            this.ChooseHeroElfButton = new System.Windows.Forms.Button();
+            this.ChooseHeroGiantButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // ChooseCharacterLabel
+            // 
+            this.ChooseCharacterLabel.AutoSize = true;
+            this.ChooseCharacterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseCharacterLabel.Location = new System.Drawing.Point(294, 71);
+            this.ChooseCharacterLabel.Name = "ChooseCharacterLabel";
+            this.ChooseCharacterLabel.Size = new System.Drawing.Size(204, 24);
+            this.ChooseCharacterLabel.TabIndex = 1;
+            this.ChooseCharacterLabel.Text = "Выберите персонажа";
+            this.ChooseCharacterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ChooseHeroAssasinButton
+            // 
+            this.ChooseHeroAssasinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseHeroAssasinButton.Location = new System.Drawing.Point(183, 147);
+            this.ChooseHeroAssasinButton.Name = "ChooseHeroAssasinButton";
+            this.ChooseHeroAssasinButton.Size = new System.Drawing.Size(157, 94);
+            this.ChooseHeroAssasinButton.TabIndex = 2;
+            this.ChooseHeroAssasinButton.Text = "Ассасин";
+            this.ChooseHeroAssasinButton.UseVisualStyleBackColor = true;
+            // 
+            // ChooseHeroBlackKnightButton
+            // 
+            this.ChooseHeroBlackKnightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseHeroBlackKnightButton.Location = new System.Drawing.Point(183, 291);
+            this.ChooseHeroBlackKnightButton.Name = "ChooseHeroBlackKnightButton";
+            this.ChooseHeroBlackKnightButton.Size = new System.Drawing.Size(157, 100);
+            this.ChooseHeroBlackKnightButton.TabIndex = 3;
+            this.ChooseHeroBlackKnightButton.Text = "Чёрный\r\nРыцарь";
+            this.ChooseHeroBlackKnightButton.UseVisualStyleBackColor = true;
+            // 
+            // ChooseHeroElfButton
+            // 
+            this.ChooseHeroElfButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseHeroElfButton.Location = new System.Drawing.Point(469, 147);
+            this.ChooseHeroElfButton.Name = "ChooseHeroElfButton";
+            this.ChooseHeroElfButton.Size = new System.Drawing.Size(167, 94);
+            this.ChooseHeroElfButton.TabIndex = 4;
+            this.ChooseHeroElfButton.Text = "Эльф";
+            this.ChooseHeroElfButton.UseVisualStyleBackColor = true;
+            // 
+            // ChooseHeroGiantButton
+            // 
+            this.ChooseHeroGiantButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseHeroGiantButton.Location = new System.Drawing.Point(469, 291);
+            this.ChooseHeroGiantButton.Name = "ChooseHeroGiantButton";
+            this.ChooseHeroGiantButton.Size = new System.Drawing.Size(167, 100);
+            this.ChooseHeroGiantButton.TabIndex = 5;
+            this.ChooseHeroGiantButton.Text = "Гигант";
+            this.ChooseHeroGiantButton.UseVisualStyleBackColor = true;
+            // 
+            // ChooseCharacterMenu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ChooseHeroGiantButton);
+            this.Controls.Add(this.ChooseHeroElfButton);
+            this.Controls.Add(this.ChooseHeroBlackKnightButton);
+            this.Controls.Add(this.ChooseHeroAssasinButton);
+            this.Controls.Add(this.ChooseCharacterLabel);
+            this.Name = "ChooseCharacterMenu";
+            this.Text = "Dubstep Fight";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label ChooseCharacterLabel;
+        private System.Windows.Forms.Button ChooseHeroAssasinButton;
+        private System.Windows.Forms.Button ChooseHeroBlackKnightButton;
+        private System.Windows.Forms.Button ChooseHeroElfButton;
+        private System.Windows.Forms.Button ChooseHeroGiantButton;
+    }
+}
