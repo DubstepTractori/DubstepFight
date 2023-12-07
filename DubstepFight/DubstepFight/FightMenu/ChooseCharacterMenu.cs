@@ -12,9 +12,18 @@ namespace DubstepFight
 {
     public partial class ChooseCharacterMenu : Form
     {
-        public ChooseCharacterMenu()
+        MainGameMenu menu;
+
+        public ChooseCharacterMenu(MainGameMenu returnMenu)
         {
             InitializeComponent();
+            this.menu = returnMenu;
+        }
+
+        private void ReturnToMenuButton_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Close();
         }
     }
 }

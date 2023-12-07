@@ -52,6 +52,12 @@
     <Compile Include="FightMenu\ChooseCharacterMenu.Designer.cs">
       <DependentUpon>ChooseCharacterMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FightMenu\FightSceneMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FightMenu\FightSceneMenu.Designer.cs">
+      <DependentUpon>FightSceneMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuFolder\DevelopersCreditMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <EmbeddedResource Include="FightMenu\ChooseCharacterMenu.resx">
       <DependentUpon>ChooseCharacterMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FightMenu\FightSceneMenu.resx">
+      <DependentUpon>FightSceneMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuFolder\DevelopersCreditMenu.resx">
       <DependentUpon>DevelopersCreditMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +98,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="MainMenuFolder\SettingsMenu.resx">
       <DependentUpon>SettingsMenu.cs</DependentUpon>
@@ -105,6 +115,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\GitHubIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

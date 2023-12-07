@@ -27,7 +27,7 @@ namespace DubstepFight
 
         private void ChoosePlayer1Button_Click(object sender, EventArgs e)
         {
-            ChooseCharacter = new ChooseCharacterMenu();
+            ChooseCharacter = new ChooseCharacterMenu(this);
             ChooseCharacter.Show();
             ChooseCharacter.Size = this.Size;
             ChooseCharacter.Location = this.Location;
@@ -47,6 +47,11 @@ namespace DubstepFight
             Settings.Location = this.Location;
 
             this.Hide();
+        }
+
+        private void MainGameMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

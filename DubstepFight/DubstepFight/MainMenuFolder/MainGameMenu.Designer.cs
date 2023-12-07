@@ -82,15 +82,15 @@
             // SettingsButton
             // 
             this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SettingsButton.Location = new System.Drawing.Point(314, 300);
+            this.SettingsButton.Location = new System.Drawing.Point(314, 294);
             this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(164, 33);
+            this.SettingsButton.Size = new System.Drawing.Size(164, 39);
             this.SettingsButton.TabIndex = 4;
             this.SettingsButton.Text = "Настройки";
             this.SettingsButton.UseVisualStyleBackColor = true;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
-            // MainMenu
+            // MainGameMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,8 +100,9 @@
             this.Controls.Add(this.ChoosePlayer2Button);
             this.Controls.Add(this.ChoosePlayer1Button);
             this.Controls.Add(this.WelcomeLabel);
-            this.Name = "MainMenu";
+            this.Name = "MainGameMenu";
             this.Text = "Dubstep Fight";
+            this.Load += new System.EventHandler(this.MainGameMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
