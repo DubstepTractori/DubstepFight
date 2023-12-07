@@ -11,7 +11,14 @@ namespace DubstepFightClassLibrary
     public class Asssasin : BaseHero
     {
         int dexterity;
-        public Asssasin() { Health = 75; Power = 20; dexterity = 1; }
+        public int Dexterity
+        {
+            get
+            { return dexterity; }
+            set
+            { dexterity = value; }
+        }
+        public Asssasin() { Health = 75; Power = 20; Dexterity = 1; Name = "Асассин"; }
         
 
         public int Attack1()            // <-- Дефолтная тычка героя(c особенностью класса )в данном классе у асассина есть нож
@@ -35,7 +42,7 @@ namespace DubstepFightClassLibrary
         }
         public int Passive() // ловкость - если случайным обазом его значение кубика + ловкость превышают значение то он наносит врагу урон без атаки типо во время атаки он может либо ударить в ответ либо ничего 
         { 
-            dexterity++;
+            Dexterity++;
             Random rnd = new Random();
             int cube = rnd.Next(1, 10);
             if (dexterity + cube > 10)

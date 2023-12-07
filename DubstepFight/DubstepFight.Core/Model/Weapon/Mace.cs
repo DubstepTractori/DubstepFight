@@ -8,7 +8,11 @@ namespace DubstepFightClassLibrary
 {
     internal class Mace : Weapon
     {
-        public Mace() { PowerWeapon = 15; } //просто больно бьет 
+        public Mace() 
+        {
+            PowerWeapon = 15; //просто больно бьет 
+            NameOfWeapon = "Булава";
+        } 
         
     }
 }
