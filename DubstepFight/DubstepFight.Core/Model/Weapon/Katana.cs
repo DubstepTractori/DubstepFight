@@ -8,6 +8,9 @@ namespace DubstepFightClassLibrary
 {
     internal class Katana : Weapon
     {
+        /// <summary>
+        /// класс катаны
+        /// </summary>
         public Katana() { PowerWeapon = 1; NameOfWeapon = "Катана"; }
         public void Passive()// игра будет через лейт идти либо через сильный старт поэтому малые статы и возможность стать сильнее
         {

@@ -8,6 +8,9 @@ namespace DubstepFight
 {
     public class BlackKnight : BaseHero
     {
+        /// <summary>
+        /// класс темного рыцаря
+        /// </summary>
         public BlackKnight() { Health = 150; Power = 25; Name = "Темный Рыцарь"; }
 
         public int Attack1()

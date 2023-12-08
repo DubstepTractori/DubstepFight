@@ -41,16 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Attack\UltimateElf.cs" />
+    <Compile Include="Model\Attack\VeryStrongFistAttack.cs" />
+    <Compile Include="Model\Attack\ElfAttack.cs" />
+    <Compile Include="Model\Attack\GiantAttack.cs" />
+    <Compile Include="Model\Passivki\AssasinPassive.cs" />
     <Compile Include="Model\Attack\AssasinAttack.cs" />
     <Compile Include="Model\Attack\BlackKnightAttack.cs" />
     <Compile Include="Model\Attack\PoisonAttack.cs" />
     <Compile Include="Model\Attack\BaseAttack.cs" />
     <Compile Include="Model\Attack\VoidAttack.cs" />
+    <Compile Include="Model\Passivki\BasePassive.cs" />
     <Compile Include="Model\Heroes\Asssasin.cs" />
     <Compile Include="Model\Heroes\BaseHero.cs" />
     <Compile Include="Model\Heroes\BlackKnight.cs" />
     <Compile Include="Model\Heroes\Elf.cs" />
     <Compile Include="Model\Heroes\Giant.cs" />
+    <Compile Include="Model\Passivki\BlackkingPassive.cs" />
+    <Compile Include="Model\Passivki\ElfPassive.cs" />
+    <Compile Include="Model\Passivki\GaintPassive.cs" />
+    <Compile Include="Model\Passivki\KatanaPassive.cs" />
+    <Compile Include="Model\Passivki\KnuckkledusterPassive.cs" />
+    <Compile Include="Model\Passivki\MagicStaffPassive.cs" />
     <Compile Include="Model\Weapon\Katana.cs" />
     <Compile Include="Model\Weapon\Knuckleduster.cs" />
     <Compile Include="Model\Weapon\Mace.cs" />

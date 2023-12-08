@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DubstepFight.Core.Model.Attack
 {
-    internal class GiantAttack : BaseAttack
+    public class GiantAttack : BaseAttack
     {
 
         /// <summary>

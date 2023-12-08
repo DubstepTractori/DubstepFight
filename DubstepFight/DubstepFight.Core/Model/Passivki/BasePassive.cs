@@ -16,6 +16,6 @@ namespace DubstepFight.Core.Model.Passive
         /// <summary>
         /// базовый класс пасивки.
         /// </summary>
-        public abstract void Passive();
+        public abstract bool Passive(int Power, int PowerWeapon);
     }
 }

@@ -9,6 +9,9 @@ namespace DubstepFightClassLibrary
 {
     internal class Weapon
     {
+        /// <summary>
+        /// базовый класс оружия
+        /// </summary>
         int powerWeapon;
         string nameOfWeapon;
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DubstepFight.Core.Model.Attack
 {
-    public class AttackWithUltimateElf : BaseAttack
+    public class UltimateElf : ElfAttack
     {
 
         /// <summary>
@@ -15,7 +15,7 @@ namespace DubstepFight.Core.Model.Attack
 
         //Пока не уверен насчёт ультимейта, как с ним поступать
 
-        public AttackWithUltimateElf() { Damage = 0; }
+        public UltimateElf() { Damage = 0; }
         public int ultimate;
 
         public int AttackWithUltimate() // Атак с ультой

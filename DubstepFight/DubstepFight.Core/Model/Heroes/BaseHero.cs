@@ -12,6 +12,9 @@ namespace DubstepFight
         private int power;
         private string name;
 
+        /// <summary>
+        /// базовый класс героя
+        /// </summary>
         public BaseHero() { Health = 0; Power = 0; Name = "NoName"; }
         public int Health
         {

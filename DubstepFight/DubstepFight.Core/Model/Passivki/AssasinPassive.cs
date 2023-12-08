@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace DubstepFight.Core.Model.Passive
     public class AssasinPassive : BasePassive
     {
         /// <summary>
-        /// // ловкость - если случайным обазом его значение кубика + ловкость превышают значение 
+        /// ловкость - если случайным обазом его значение кубика + ловкость превышают значение 
         /// то он наносит врагу урон без атаки типо во время атаки он может либо ударить в ответ либо ничего 
         /// </summary>
         private int _dexterity;
@@ -29,16 +30,16 @@ namespace DubstepFight.Core.Model.Passive
             Dexterity = dexterity;
             _passiveType = passiveType;
         }
-        public override void Passive() 
+        public override bool Passive(int Power, int PowerWeapon) 
         {
             Dexterity++;
             Random rnd = new Random();
             int cube = rnd.Next(1, 10);
             if (_dexterity + cube > 10)
             {
-                return 10;
+                return true;
             }
-            return 0;
+            return  false;
         }
        
     }
