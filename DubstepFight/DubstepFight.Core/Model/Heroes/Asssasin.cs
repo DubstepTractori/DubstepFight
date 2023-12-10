@@ -1,4 +1,6 @@
 ﻿using DubstepFight;
+using DubstepFight.Core.Model.Attack;
+using DubstepFight.Core.Model.Passive;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +12,8 @@ namespace DubstepFightClassLibrary
 {
     public class Asssasin : BaseHero
     {
+
+
         /// <summary>
         /// класс асассина
         /// </summary>
@@ -21,6 +25,24 @@ namespace DubstepFightClassLibrary
             set
             { dexterity = value; }
         }
+
+
         public Asssasin() { Health = 75; Power = 20; Dexterity = 1; Name = "Асассин"; }
+
+        public Asssasin(List<AssasinAttack> attacks, List<AssasinPassive> passives) : this()
+        {
+            Attacks = new List<BaseAttack>();
+            Passives = new List<BasePassive>();
+            foreach(AssasinAttack attack in attacks)
+            {
+                Attacks.Add(attack);
+            }
+
+            foreach(AssasinPassive passive in passives)
+            { 
+                Passives.Add(passive); 
+            }
+
+        }
     }
 }

@@ -59,7 +59,7 @@
     <Compile Include="Model\Heroes\Giant.cs" />
     <Compile Include="Model\Passivki\BlackkingPassive.cs" />
     <Compile Include="Model\Passivki\ElfPassive.cs" />
-    <Compile Include="Model\Passivki\GaintPassive.cs" />
+    <Compile Include="Model\Passivki\GiantPassive.cs" />
     <Compile Include="Model\Passivki\KatanaPassive.cs" />
     <Compile Include="Model\Passivki\KnuckkledusterPassive.cs" />
     <Compile Include="Model\Passivki\MagicStaffPassive.cs" />

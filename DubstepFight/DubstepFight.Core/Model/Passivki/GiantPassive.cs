@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DubstepFight.Core.Model.Passivki
+namespace DubstepFight.Core.Model.Passive
 {
-    public class GaintPassive : BasePassive
+    public class GiantPassive : BasePassive
     {
         /// <summary>
         /// пассивка гиганта с элемнтом рандома

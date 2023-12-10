@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DubstepFight.Core.Model.Passivki
+namespace DubstepFight.Core.Model.Passive
 {
     public class KnuckkledusterPassive : BasePassive
     {
@@ -16,7 +16,7 @@ namespace DubstepFight.Core.Model.Passivki
         public PassiveType PassiveType { get => _passiveType; set => _passiveType = value; }
         public override bool Passive(int Power, int PowerWeapon) // возрастание его мощи
         {
-            int Power++;
+            Power++;
             return true;
         }
     }
