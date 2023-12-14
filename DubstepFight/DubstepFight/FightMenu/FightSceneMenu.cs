@@ -12,9 +12,16 @@ namespace DubstepFight.FightMenu
 {
     public partial class FightSceneMenu : Form
     {
-        public FightSceneMenu()
+        BaseHero ChosenHero;
+
+
+
+        public FightSceneMenu(BaseHero chosenHero)
         {
             InitializeComponent();
+            ChosenHero = chosenHero;
+            Player1HeroNameLabel.Text = chosenHero.Name;
+            Player1HpLabel.Text = chosenHero.Health.ToString();
         }
     }
 }

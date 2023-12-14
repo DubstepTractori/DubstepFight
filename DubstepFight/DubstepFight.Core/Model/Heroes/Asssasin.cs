@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DubstepFightClassLibrary
 {
-    public class Asssasin : BaseHero
+    public class Assasin : BaseHero
     {
 
 
@@ -27,9 +27,9 @@ namespace DubstepFightClassLibrary
         }
 
 
-        public Asssasin() { Health = 75; Power = 20; Dexterity = 1; Name = "Асассин"; }
+        public Assasin() { Health = 75; Power = 20; Dexterity = 1; Name = "Асассин"; }
 
-        public Asssasin(List<AssasinAttack> attacks, List<AssasinPassive> passives) : this()
+        public Assasin(List<AssasinAttack> attacks, List<AssasinPassive> passives) : this()
         {
             Attacks = new List<BaseAttack>();
             Passives = new List<BasePassive>();

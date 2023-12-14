@@ -70,6 +70,12 @@
     <Compile Include="MainMenuFolder\MainGameMenu.Designer.cs">
       <DependentUpon>MainGameMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCustomAttackButton1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyCustomAttackButton1.Designer.cs">
+      <DependentUpon>MyCustomAttackButton1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainMenuFolder\SettingsMenu.cs">
@@ -116,7 +122,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DubstepFight.Core\DubstepFight.Core.csproj">
+      <Project>{100a79d0-9194-4051-b6a7-df8617918080}</Project>
+      <Name>DubstepFight.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GitHubIcon.png" />
   </ItemGroup>

@@ -56,6 +56,7 @@
             this.ChooseHeroAssasinButton.TabIndex = 2;
             this.ChooseHeroAssasinButton.Text = "Ассасин";
             this.ChooseHeroAssasinButton.UseVisualStyleBackColor = true;
+            this.ChooseHeroAssasinButton.Click += new System.EventHandler(this.ChooseHeroAssasinButton_Click);
             // 
             // ChooseHeroBlackKnightButton
             // 
@@ -76,6 +77,7 @@
             this.ChooseHeroElfButton.TabIndex = 4;
             this.ChooseHeroElfButton.Text = "Эльф";
             this.ChooseHeroElfButton.UseVisualStyleBackColor = true;
+            this.ChooseHeroElfButton.Click += new System.EventHandler(this.ChooseHeroElfButton_Click);
             // 
             // ChooseHeroGiantButton
             // 

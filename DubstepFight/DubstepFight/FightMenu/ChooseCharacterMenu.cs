@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DubstepFight.FightMenu;
+using DubstepFightClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,14 @@ namespace DubstepFight
     public partial class ChooseCharacterMenu : Form
     {
         MainGameMenu menu;
+        FightSceneMenu fight;
+
+        Assasin ChosenAssasin;
+        Elf ChosenElf;
+        BlackKnight ChosenBlackKnight;
+        
+        
+
 
         public ChooseCharacterMenu(MainGameMenu returnMenu)
         {
@@ -25,5 +35,28 @@ namespace DubstepFight
             menu.Show();
             this.Close();
         }
+
+        private void ChooseHeroAssasinButton_Click(object sender, EventArgs e)
+        {
+            ChosenAssasin = new Assasin();
+            fight = new FightSceneMenu(ChosenAssasin);
+
+            fight.Show();
+            fight.Location = this.Location;
+            fight.Size = this.Size;
+            this.Close();
+        }
+
+        private void ChooseHeroElfButton_Click(object sender, EventArgs e)
+        {
+            ChosenElf = new Elf();
+            fight = new FightSceneMenu(ChosenElf);
+
+            fight.Show();
+            fight.Location = this.Location;
+            fight.Size = this.Size;
+            this.Close();
+        }
+
     }
 }
