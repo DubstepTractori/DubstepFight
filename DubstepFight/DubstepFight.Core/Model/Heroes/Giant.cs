@@ -1,4 +1,7 @@
 ﻿using DubstepFight;
+using DubstepFight.Core.Model.Attack;
+using DubstepFight.Core.Model.Passive;
+using DubstepFight.Core.Model.Passivki;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,47 +12,29 @@ namespace DubstepFightClassLibrary
 {
     internal class Giant : BaseHero
     {
-
+        /// <summary>
+        /// класс гиганта
+        /// </summary>
         public Giant()
         {
             Health = 200; //Статы
             Power = 20; // гиганта
             Name = "Гигант";
         }
-
-        public int Attack() //Дефолтная атака
+        public Giant(List<GiantAttack> attacks, List<GiantPassive> passives) : this()
         {
-            return Power / 3;
-        }
-
-
-        public int AttackWithVereStrongFist() //Обилка гиганта где с шансом
-                                //он может нанаести дефолтную тычку с прибавление 10 урона, тип с размаха Бьет
-        {
-            Random rnd = new Random();
-            int cube = rnd.Next(1, 10);
-
-            if (cube > 5) 
+            Attacks = new List<BaseAttack>();
+            Passives = new List<BasePassive>();
+            foreach (GiantAttack attack in attacks)
             {
-
-                return Attack() + 10;
+                Attacks.Add(attack);
             }
 
-            return Attack();
-
-        }
-
-
-        public int Passive() //Когда у гиганта остаётся меньше 50 хп он Бьет с 2х уроном
-        {
-            if (Health < 50)
+            foreach (GiantPassive passive in passives)
             {
-                int Attack1 = Attack() * 2;
-                return Attack1;
+                Passives.Add(passive);
             }
-            return 0;
+
         }
-
-
     }
 }

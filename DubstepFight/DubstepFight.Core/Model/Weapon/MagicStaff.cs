@@ -10,7 +10,9 @@ namespace DubstepFightClassLibrary
 {
     internal class MagicStaff : Weapon
     {
-
+        /// <summary>
+        /// класс магического посоха
+        /// </summary>
         
         public MagicStaff() 
         {
@@ -19,16 +21,5 @@ namespace DubstepFightClassLibrary
 
         }
 
-        public void PassiveMagStaff() // Магия рандома с малым шансом посох может апнуть себе статы и стать сильнее
-        {
-            Random rnd = new Random();
-            int cube = rnd.Next(1, 20);
-            int changes = 15;
-            if (cube > changes)
-            {
-                PowerWeapon += 5;
-                changes--;
-            }
-        }
     }
 }

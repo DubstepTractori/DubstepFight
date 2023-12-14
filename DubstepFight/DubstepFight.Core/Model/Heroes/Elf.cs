@@ -1,4 +1,7 @@
 ﻿using DubstepFight;
+using DubstepFight.Core.Model.Attack;
+using DubstepFight.Core.Model.Passive;
+using DubstepFight.Core.Model.Passivki;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,59 +13,30 @@ namespace DubstepFightClassLibrary
 {
     public class Elf : BaseHero
     {
-
-        public int ultimate; //Стата для накопление ультимейта во время ходов
-        public int Ultimate
-        {
-            get
-            { return ultimate; }
-            set
-            { ultimate = value; }
-        }
+        /// <summary>
+        /// класс эльфа
+        /// </summary>
         public Elf() 
         {
 
             Health = 100;
             Power = 15;
-            Ultimate = 0;
             Name = "Эльф";
         }
-
-
-        public int Attack() // Дефолтная атака эльфа
+        public Elf(List<ElfAttack> attacks, List<ElfPassive> passives) : this()
         {
-
-            Ultimate++;
-            return Power / 2;
-
-        }
-
-        public int AttackWithUltimate() // Атак с ультой
-        {
-            if (Ultimate > 5) //Если уже пять ходов было пройдено то Эльф бьёт Атакой 2х
+            Attacks = new List<BaseAttack>();
+            Passives = new List<BasePassive>();
+            foreach (ElfAttack attack in attacks)
             {
-                int U = Ultimate;
-                Ultimate = 0;
-                return Attack() * U;
+                Attacks.Add(attack);
             }
-            return 0;
-        }
 
-
-        public void Passive()
-        {
-            Random rnd = new Random();
-            int cube = rnd.Next(1, 10);
-
-            if (cube > 5)
+            foreach (ElfPassive passive in passives)
             {
-                if (Health < 100)
-                {
-                    Health += 10;
-                }
+                Passives.Add(passive);
             }
+
         }
-
-
     }
 }

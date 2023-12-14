@@ -15,10 +15,7 @@ namespace DubstepFightClassLibrary
             NameOfWeapon = "Кастет";
             PowerWeapon = 7;
         }
-        public void Passive()
-        {
-            //отхил героя на 3 еденицы реализовать в будующем
-        }
+        
 
         
 
