@@ -18,25 +18,25 @@ namespace DubstepFightClassLibrary
         /// </summary>
         public Elf() 
         {
-
             Health = 100;
             Power = 15;
             Name = "Эльф";
         }
-        public Elf(List<ElfAttack> attacks, List<ElfPassive> passives) : this()
+        public override int Attack1()
         {
-            Attacks = new List<BaseAttack>();
-            Passives = new List<BasePassive>();
-            foreach (ElfAttack attack in attacks)
-            {
-                Attacks.Add(attack);
-            }
-
-            foreach (ElfPassive passive in passives)
-            {
-                Passives.Add(passive);
-            }
-
+            return Power;
         }
+
+        public override int Attack2()
+        {
+            return Convert.ToInt32(Power * 1.3);
+        }
+
+        public override int TakeDamage(int takenDamage)
+        {
+            Health -= takenDamage;
+            return takenDamage;
+        }
+
     }
 }

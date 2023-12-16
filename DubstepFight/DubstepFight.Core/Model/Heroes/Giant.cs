@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DubstepFightClassLibrary
 {
-    internal class Giant : BaseHero
+    public  class Giant : BaseHero
     {
         /// <summary>
         /// класс гиганта
@@ -21,20 +21,20 @@ namespace DubstepFightClassLibrary
             Power = 20; // гиганта
             Name = "Гигант";
         }
-        public Giant(List<GiantAttack> attacks, List<GiantPassive> passives) : this()
+        public override int Attack1()
         {
-            Attacks = new List<BaseAttack>();
-            Passives = new List<BasePassive>();
-            foreach (GiantAttack attack in attacks)
-            {
-                Attacks.Add(attack);
-            }
+            return Power;
+        }
 
-            foreach (GiantPassive passive in passives)
-            {
-                Passives.Add(passive);
-            }
+        public override int Attack2()
+        {
+            return Convert.ToInt32(Power * 1.3);
+        }
 
+        public override int TakeDamage(int takenDamage)
+        {
+            Health -= takenDamage;
+            return takenDamage;
         }
     }
 }

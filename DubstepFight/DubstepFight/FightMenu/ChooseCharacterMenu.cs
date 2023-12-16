@@ -20,10 +20,8 @@ namespace DubstepFight
         Assasin ChosenAssasin;
         Elf ChosenElf;
         BlackKnight ChosenBlackKnight;
+        Giant ChosenGiant;
         
-        
-
-
         public ChooseCharacterMenu(MainGameMenu returnMenu)
         {
             InitializeComponent();
@@ -58,5 +56,26 @@ namespace DubstepFight
             this.Close();
         }
 
+        private void ChooseHeroBlackKnightButton_Click(object sender, EventArgs e)
+        {
+            ChosenBlackKnight = new BlackKnight();
+            fight = new FightSceneMenu(ChosenBlackKnight);
+
+            fight.Show();
+            fight.Location = this.Location;
+            fight.Size = this.Size;
+            this.Close();
+        }
+
+        private void ChooseHeroGiantButton_Click(object sender, EventArgs e)
+        {
+            ChosenGiant = new Giant();
+            fight = new FightSceneMenu(ChosenGiant);
+
+            fight.Show();
+            fight.Location = this.Location;
+            fight.Size = this.Size;
+            this.Close();
+        }
     }
 }

@@ -17,32 +17,40 @@ namespace DubstepFightClassLibrary
         /// <summary>
         /// класс асассина
         /// </summary>
-        int dexterity;
-        public int Dexterity
+
+
+        public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; }
+
+        public override int Attack1()
         {
-            get
-            { return dexterity; }
-            set
-            { dexterity = value; }
+            return Power;
         }
 
-
-        public Assasin() { Health = 75; Power = 20; Dexterity = 1; Name = "Асассин"; }
-
-        public Assasin(List<AssasinAttack> attacks, List<AssasinPassive> passives) : this()
+        public override int Attack2()
         {
-            Attacks = new List<BaseAttack>();
-            Passives = new List<BasePassive>();
-            foreach(AssasinAttack attack in attacks)
-            {
-                Attacks.Add(attack);
-            }
-
-            foreach(AssasinPassive passive in passives)
-            { 
-                Passives.Add(passive); 
-            }
-
+            return Convert.ToInt32(Power * 1.3);
         }
+
+        public override int TakeDamage(int takenDamage)
+        {
+            Health -= takenDamage;
+            return takenDamage;
+        }
+
+        //public Assasin(List<AssasinAttack> attacks, List<AssasinPassive> passives) : this()
+        //{
+        //    Attacks = new List<BaseAttack>();
+        //    Passives = new List<BasePassive>();
+        //    foreach(AssasinAttack attack in attacks)
+        //    {
+        //        Attacks.Add(attack);
+        //    }
+
+        //    foreach(AssasinPassive passive in passives)
+        //    { 
+        //        Passives.Add(passive); 
+        //    }
+
+        //}
     }
 }

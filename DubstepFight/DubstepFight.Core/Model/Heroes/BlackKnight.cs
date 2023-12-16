@@ -15,20 +15,20 @@ namespace DubstepFight
         /// </summary>
         public BlackKnight() { Health = 150; Power = 25; Name = "Темный Рыцарь"; }
 
-        public BlackKnight(List<BlackKnightAttack> attacks, List<BlackkingPassive> passives) : this()
+        public override int Attack1()
         {
-            Attacks = new List<BaseAttack>();
-            Passives = new List<BasePassive>();
-            foreach (BlackKnightAttack attack in attacks)
-            {
-                Attacks.Add(attack);
-            }
+            return Power;
+        }
 
-            foreach (BlackkingPassive passive in passives)
-            {
-                Passives.Add(passive);
-            }
+        public override int Attack2()
+        {
+            return Convert.ToInt32(Power * 1.3);
+        }
 
+        public override int TakeDamage(int takenDamage)
+        {
+            Health -= takenDamage;
+            return takenDamage;
         }
     }
 }

@@ -36,6 +36,7 @@
             // 
             // DevelopersButton
             // 
+            this.DevelopersButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.DevelopersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DevelopersButton.Location = new System.Drawing.Point(283, 143);
             this.DevelopersButton.Name = "DevelopersButton";
@@ -47,6 +48,7 @@
             // 
             // ChooseCharacterLabel
             // 
+            this.ChooseCharacterLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChooseCharacterLabel.AutoSize = true;
             this.ChooseCharacterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChooseCharacterLabel.Location = new System.Drawing.Point(335, 51);
@@ -58,6 +60,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(283, 223);
             this.button1.Name = "button1";
@@ -68,6 +71,7 @@
             // 
             // BackToMainMenuButton
             // 
+            this.BackToMainMenuButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BackToMainMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackToMainMenuButton.Location = new System.Drawing.Point(254, 305);
             this.BackToMainMenuButton.Name = "BackToMainMenuButton";

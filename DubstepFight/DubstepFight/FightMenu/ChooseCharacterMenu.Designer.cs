@@ -38,6 +38,7 @@
             // 
             // ChooseCharacterLabel
             // 
+            this.ChooseCharacterLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChooseCharacterLabel.AutoSize = true;
             this.ChooseCharacterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChooseCharacterLabel.Location = new System.Drawing.Point(303, 30);
@@ -60,6 +61,7 @@
             // 
             // ChooseHeroBlackKnightButton
             // 
+            this.ChooseHeroBlackKnightButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ChooseHeroBlackKnightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChooseHeroBlackKnightButton.Location = new System.Drawing.Point(183, 241);
             this.ChooseHeroBlackKnightButton.Name = "ChooseHeroBlackKnightButton";
@@ -67,9 +69,11 @@
             this.ChooseHeroBlackKnightButton.TabIndex = 3;
             this.ChooseHeroBlackKnightButton.Text = "Чёрный\r\nРыцарь";
             this.ChooseHeroBlackKnightButton.UseVisualStyleBackColor = true;
+            this.ChooseHeroBlackKnightButton.Click += new System.EventHandler(this.ChooseHeroBlackKnightButton_Click);
             // 
             // ChooseHeroElfButton
             // 
+            this.ChooseHeroElfButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ChooseHeroElfButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChooseHeroElfButton.Location = new System.Drawing.Point(469, 98);
             this.ChooseHeroElfButton.Name = "ChooseHeroElfButton";
@@ -81,6 +85,7 @@
             // 
             // ChooseHeroGiantButton
             // 
+            this.ChooseHeroGiantButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ChooseHeroGiantButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChooseHeroGiantButton.Location = new System.Drawing.Point(469, 241);
             this.ChooseHeroGiantButton.Name = "ChooseHeroGiantButton";
@@ -88,9 +93,11 @@
             this.ChooseHeroGiantButton.TabIndex = 5;
             this.ChooseHeroGiantButton.Text = "Гигант";
             this.ChooseHeroGiantButton.UseVisualStyleBackColor = true;
+            this.ChooseHeroGiantButton.Click += new System.EventHandler(this.ChooseHeroGiantButton_Click);
             // 
             // ReturnToMenuButton
             // 
+            this.ReturnToMenuButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ReturnToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ReturnToMenuButton.Location = new System.Drawing.Point(317, 377);
             this.ReturnToMenuButton.Name = "ReturnToMenuButton";

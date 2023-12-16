@@ -80,6 +80,7 @@
             // 
             // BackToSettingsButton
             // 
+            this.BackToSettingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BackToSettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackToSettingsButton.Location = new System.Drawing.Point(616, 382);
             this.BackToSettingsButton.Name = "BackToSettingsButton";
@@ -91,6 +92,7 @@
             // 
             // GitHubLinkButton
             // 
+            this.GitHubLinkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GitHubLinkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.GitHubLinkButton.Location = new System.Drawing.Point(12, 313);
             this.GitHubLinkButton.Name = "GitHubLinkButton";

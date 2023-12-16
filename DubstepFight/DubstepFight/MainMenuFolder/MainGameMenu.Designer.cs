@@ -30,13 +30,13 @@
         {
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.ChoosePlayer1Button = new System.Windows.Forms.Button();
-            this.ChoosePlayer2Button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // WelcomeLabel
             // 
+            this.WelcomeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.WelcomeLabel.AutoSize = true;
             this.WelcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.WelcomeLabel.Location = new System.Drawing.Point(310, 42);
@@ -48,28 +48,19 @@
             // 
             // ChoosePlayer1Button
             // 
+            this.ChoosePlayer1Button.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChoosePlayer1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChoosePlayer1Button.Location = new System.Drawing.Point(111, 174);
+            this.ChoosePlayer1Button.Location = new System.Drawing.Point(280, 169);
             this.ChoosePlayer1Button.Name = "ChoosePlayer1Button";
-            this.ChoosePlayer1Button.Size = new System.Drawing.Size(164, 61);
+            this.ChoosePlayer1Button.Size = new System.Drawing.Size(244, 62);
             this.ChoosePlayer1Button.TabIndex = 1;
-            this.ChoosePlayer1Button.Text = "Игрок 1";
+            this.ChoosePlayer1Button.Text = "Играть";
             this.ChoosePlayer1Button.UseVisualStyleBackColor = true;
             this.ChoosePlayer1Button.Click += new System.EventHandler(this.ChoosePlayer1Button_Click);
             // 
-            // ChoosePlayer2Button
-            // 
-            this.ChoosePlayer2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChoosePlayer2Button.Location = new System.Drawing.Point(508, 174);
-            this.ChoosePlayer2Button.Name = "ChoosePlayer2Button";
-            this.ChoosePlayer2Button.Size = new System.Drawing.Size(164, 61);
-            this.ChoosePlayer2Button.TabIndex = 2;
-            this.ChoosePlayer2Button.Text = "Игрок 2";
-            this.ChoosePlayer2Button.UseVisualStyleBackColor = true;
-            this.ChoosePlayer2Button.Click += new System.EventHandler(this.ChoosePlayer2Button_Click);
-            // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(314, 366);
             this.button1.Name = "button1";
@@ -81,6 +72,7 @@
             // 
             // SettingsButton
             // 
+            this.SettingsButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SettingsButton.Location = new System.Drawing.Point(314, 294);
             this.SettingsButton.Name = "SettingsButton";
@@ -92,12 +84,11 @@
             // 
             // MainGameMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.ChoosePlayer2Button);
             this.Controls.Add(this.ChoosePlayer1Button);
             this.Controls.Add(this.WelcomeLabel);
             this.Name = "MainGameMenu";
@@ -112,7 +103,6 @@
 
         private System.Windows.Forms.Label WelcomeLabel;
         private System.Windows.Forms.Button ChoosePlayer1Button;
-        private System.Windows.Forms.Button ChoosePlayer2Button;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button SettingsButton;
     }

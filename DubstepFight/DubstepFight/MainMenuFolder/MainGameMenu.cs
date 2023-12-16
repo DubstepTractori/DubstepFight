@@ -51,7 +51,6 @@ namespace DubstepFight
 
         private void MainGameMenu_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

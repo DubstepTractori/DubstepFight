@@ -13,19 +13,17 @@ namespace DubstepFight
         private int health;
         private int power;
         private string name;
-        private List<BaseAttack> _attacks;
-        private List<BasePassive> _passives;
+
 
         /// <summary>
         /// базовый класс героя
         /// </summary>
         public BaseHero() { Health = 0; Power = 0; Name = "NoName"; }
 
-        protected BaseHero(List<BaseAttack> attacks, List<BasePassive> passives) : this()
-        {
-            _attacks = attacks;
-            _passives = passives;
-        }
+        public abstract int Attack1();
+        public abstract int Attack2();
+
+        public abstract int TakeDamage(int takenDamage);
 
         public int Health
         {
@@ -50,9 +48,7 @@ namespace DubstepFight
             set
             { name = value; }
         }
-
-        public List<BaseAttack> Attacks { get => _attacks; set => _attacks = value; }
-        public List<BasePassive> Passives { get => _passives; set => _passives = value; }
+         
     }
 
 
