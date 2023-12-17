@@ -1,5 +1,6 @@
 ﻿using DubstepFight;
 using DubstepFight.Core.Model.Attack;
+using DubstepFight.Core.Model.Fight;
 using DubstepFight.Core.Model.Passive;
 using System;
 using System.Collections;
@@ -18,8 +19,8 @@ namespace DubstepFightClassLibrary
         /// класс асассина
         /// </summary>
 
-
-        public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; }
+        Random Rand = new Random();
+        public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; Passive = new Passive(0); }
 
         public override int Attack1()
         {
@@ -28,13 +29,36 @@ namespace DubstepFightClassLibrary
 
         public override int Attack2()
         {
-            return Convert.ToInt32(Power * 1.3);
+            return Convert.ToInt32(Power/2);
+            Passive.PassiveCounter1 += 2;
         }
 
         public override int TakeDamage(int takenDamage)
         {
-            Health -= takenDamage;
-            return takenDamage;
+            
+            if (Rand.Next(0, 10) < 4)
+            {
+                return 0;
+            }
+            else
+            {
+                Health -= takenDamage;
+                return takenDamage;
+            }
+              
+        }
+
+        public override int PassiveProc()
+        {
+            if (Passive.PassiveCounter1 > 0)
+            {
+                return Power / 2;
+            }
+            else
+            {
+                return 0;
+            }
+            
         }
 
         //public Assasin(List<AssasinAttack> attacks, List<AssasinPassive> passives) : this()

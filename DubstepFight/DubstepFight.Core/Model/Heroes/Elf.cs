@@ -1,5 +1,6 @@
 ﻿using DubstepFight;
 using DubstepFight.Core.Model.Attack;
+using DubstepFight.Core.Model.Fight;
 using DubstepFight.Core.Model.Passive;
 using DubstepFight.Core.Model.Passivki;
 using System;
@@ -16,20 +17,22 @@ namespace DubstepFightClassLibrary
         /// <summary>
         /// класс эльфа
         /// </summary>
-        public Elf() 
-        {
-            Health = 100;
-            Power = 15;
-            Name = "Эльф";
-        }
+        public Elf() { Health = 100; Power = 15; Name = "Эльф"; Passive = new Passive(0); }
         public override int Attack1()
         {
             return Power;
+            Passive.PassiveCounter1 += 1;
         }
 
         public override int Attack2()
         {
-            return Convert.ToInt32(Power * 1.3);
+            return Convert.ToInt32(20 + (6*Passive.PassiveCounter1));
+            Passive.PassiveCounter1 = 0;
+        }
+
+        public override int PassiveProc()
+        {
+            return 0; // пассивка прописана выше
         }
 
         public override int TakeDamage(int takenDamage)

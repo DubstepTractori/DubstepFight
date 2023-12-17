@@ -1,4 +1,5 @@
-﻿using DubstepFight.Core.Model.Fight;
+﻿using DubstepFight.CharacterInfoFolder;
+using DubstepFight.Core.Model.Fight;
 using DubstepFightClassLibrary;
 using System;
 using System.Collections.Generic;
@@ -19,14 +20,25 @@ namespace DubstepFight.FightMenu
         BaseHero Player2;
         Fight MyFight;
 
+        AssassinInfoForm assassinInfo;
+        GiantInfoForm giantInfo;
+        ElfInfoForm elfInfo;
+        BlackKnightInfoForm blackKnightInfo;
 
+        private void FormRezizeToThisShowAndHide(Form fromForm)
+        {
+            fromForm.Size = this.Size;
+            fromForm.Location = this.Location;
+            fromForm.Show();
+            this.Hide();
+        }
 
-        public FightSceneMenu(BaseHero chosenHero)
+        public FightSceneMenu(BaseHero chosenHero, BaseHero chosenHeroPlayer2)
         {
             InitializeComponent();
 
             Player1 = chosenHero;
-            Player2 = new Assasin();
+            Player2 = chosenHeroPlayer2;
 
             MyFight = new Fight(Player1, Player2);
 
@@ -41,6 +53,9 @@ namespace DubstepFight.FightMenu
             Player2HpLabel.Text = Player2.Health.ToString();
             Player2HpProgressBar.Maximum = Player2.Health;
             Player2HpProgressBar.Value = Player2.Health;
+
+            Player1GetDamageLabel.Text = "";
+            Player2GetDamageLabel.Text = "";
 
             TurnCheck();
         }
@@ -76,6 +91,20 @@ namespace DubstepFight.FightMenu
                 Player2Attack1MyButton.ButtonDisable();
                 Player2Attack2MyButton.ButtonDisable();
             }
+
+        }
+
+        private void PassiveCheck(BaseHero PlayerDoing, BaseHero PlayerWaiting)
+        {
+            AssassinPassiveProc(PlayerDoing, PlayerWaiting);
+        }
+
+        private void AssassinPassiveProc(BaseHero PlayerDoing, BaseHero PlayerWaiting)
+        {
+            if(PlayerWaiting.Name == "Assassin")
+            {
+                PlayerDoing.Health -= PlayerDoing.PassiveProc();
+            }
         }
 
 
@@ -83,7 +112,8 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                Player2.TakeDamage(Player1.Attack1());
+                int damageDealt = Player2.TakeDamage(Player1.Attack1());
+                Player2GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
             }
@@ -101,7 +131,8 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                Player2.TakeDamage(Player1.Attack2());
+                int damageDealt = Player2.TakeDamage(Player1.Attack1());
+                Player2GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
             }
@@ -118,7 +149,8 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                Player1.TakeDamage(Player2.Attack1());
+                int damageDealt = Player1.TakeDamage(Player2.Attack1());
+                Player1GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
             }
@@ -135,7 +167,8 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                Player1.TakeDamage(Player2.Attack2());
+                int damageDealt = Player1.TakeDamage(Player2.Attack1());
+                Player1GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
             }
@@ -145,6 +178,55 @@ namespace DubstepFight.FightMenu
                 Player1HpLabel.Text = Player1.Health.ToString();
                 Player1HpProgressBar.Value = 0;
                 MessageBox.Show("Победил Игрок 2");
+            }
+        }
+
+        private void Player1InfoButton_Click(object sender, EventArgs e)
+        {
+            if (Player1.Name == "Ассассин")
+            {
+                assassinInfo = new AssassinInfoForm(this);
+                FormRezizeToThisShowAndHide(assassinInfo);
+            }
+            if (Player1.Name == "Гигант")
+            {
+                giantInfo = new GiantInfoForm(this);
+                FormRezizeToThisShowAndHide(giantInfo);
+            }
+            if (Player1.Name == "Эльф")
+            {
+                elfInfo = new ElfInfoForm(this);
+                FormRezizeToThisShowAndHide(elfInfo);
+            }
+            if (Player1.Name == "Тёмный Рыцарь")
+            {
+                blackKnightInfo = new BlackKnightInfoForm(this);
+                FormRezizeToThisShowAndHide(blackKnightInfo);
+            }
+
+        }
+
+        private void Player2InfoButton_Click(object sender, EventArgs e)
+        {
+            if (Player2.Name == "Ассассин")
+            {
+                assassinInfo = new AssassinInfoForm(this);
+                FormRezizeToThisShowAndHide(assassinInfo);
+            }
+            if (Player2.Name == "Гигант")
+            {
+                giantInfo = new GiantInfoForm(this);
+                FormRezizeToThisShowAndHide(giantInfo);
+            }
+            if (Player2.Name == "Эльф")
+            {
+                elfInfo = new ElfInfoForm(this);
+                FormRezizeToThisShowAndHide(elfInfo);
+            }
+            if (Player2.Name == "Тёмный Рыцарь")
+            {
+                blackKnightInfo = new BlackKnightInfoForm(this);
+                FormRezizeToThisShowAndHide(blackKnightInfo);
             }
         }
     }

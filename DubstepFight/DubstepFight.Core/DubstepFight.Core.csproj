@@ -46,6 +46,7 @@
     <Compile Include="Model\Attack\ElfAttack.cs" />
     <Compile Include="Model\Attack\GiantAttack.cs" />
     <Compile Include="Model\Fight\Fight.cs" />
+    <Compile Include="Model\Fight\Passive.cs" />
     <Compile Include="Model\Passivki\AssasinPassive.cs" />
     <Compile Include="Model\Attack\AssasinAttack.cs" />
     <Compile Include="Model\Attack\BlackKnightAttack.cs" />

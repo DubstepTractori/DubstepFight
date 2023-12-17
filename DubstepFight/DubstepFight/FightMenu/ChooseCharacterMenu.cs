@@ -15,7 +15,7 @@ namespace DubstepFight
     public partial class ChooseCharacterMenu : Form
     {
         MainGameMenu menu;
-        FightSceneMenu fight;
+        ChooseCharacterMenu2 chooseCharacter2;
 
         Assasin ChosenAssasin;
         Elf ChosenElf;
@@ -37,44 +37,44 @@ namespace DubstepFight
         private void ChooseHeroAssasinButton_Click(object sender, EventArgs e)
         {
             ChosenAssasin = new Assasin();
-            fight = new FightSceneMenu(ChosenAssasin);
+            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenAssasin);
 
-            fight.Show();
-            fight.Location = this.Location;
-            fight.Size = this.Size;
+            chooseCharacter2.Show();
+            chooseCharacter2.Location = this.Location;
+            chooseCharacter2.Size = this.Size;
             this.Close();
         }
 
         private void ChooseHeroElfButton_Click(object sender, EventArgs e)
         {
             ChosenElf = new Elf();
-            fight = new FightSceneMenu(ChosenElf);
+            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenElf);
 
-            fight.Show();
-            fight.Location = this.Location;
-            fight.Size = this.Size;
+            chooseCharacter2.Show();
+            chooseCharacter2.Location = this.Location;
+            chooseCharacter2.Size = this.Size;
             this.Close();
         }
 
         private void ChooseHeroBlackKnightButton_Click(object sender, EventArgs e)
         {
             ChosenBlackKnight = new BlackKnight();
-            fight = new FightSceneMenu(ChosenBlackKnight);
+            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenBlackKnight);
 
-            fight.Show();
-            fight.Location = this.Location;
-            fight.Size = this.Size;
+            chooseCharacter2.Show();
+            chooseCharacter2.Location = this.Location;
+            chooseCharacter2.Size = this.Size;
             this.Close();
         }
 
         private void ChooseHeroGiantButton_Click(object sender, EventArgs e)
         {
             ChosenGiant = new Giant();
-            fight = new FightSceneMenu(ChosenGiant);
+            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenGiant);
 
-            fight.Show();
-            fight.Location = this.Location;
-            fight.Size = this.Size;
+            chooseCharacter2.Show();
+            chooseCharacter2.Location = this.Location;
+            chooseCharacter2.Size = this.Size;
             this.Close();
         }
     }
