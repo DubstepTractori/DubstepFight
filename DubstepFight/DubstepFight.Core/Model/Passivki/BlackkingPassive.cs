@@ -18,7 +18,6 @@ namespace DubstepFight.Core.Model.Passive
         {
             Power+=5;
             return true;
-
         }
     }
 }

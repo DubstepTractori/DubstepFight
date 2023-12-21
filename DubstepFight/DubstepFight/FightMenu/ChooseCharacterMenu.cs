@@ -42,7 +42,7 @@ namespace DubstepFight
             chooseCharacter2.Show();
             chooseCharacter2.Location = this.Location;
             chooseCharacter2.Size = this.Size;
-            this.Close();
+            this.Hide();
         }
 
         private void ChooseHeroElfButton_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace DubstepFight
             chooseCharacter2.Show();
             chooseCharacter2.Location = this.Location;
             chooseCharacter2.Size = this.Size;
-            this.Close();
+            this.Hide();
         }
 
         private void ChooseHeroBlackKnightButton_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace DubstepFight
             chooseCharacter2.Show();
             chooseCharacter2.Location = this.Location;
             chooseCharacter2.Size = this.Size;
-            this.Close();
+            this.Hide();
         }
 
         private void ChooseHeroGiantButton_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace DubstepFight
             chooseCharacter2.Show();
             chooseCharacter2.Location = this.Location;
             chooseCharacter2.Size = this.Size;
-            this.Close();
+            this.Hide();
         }
     }
 }

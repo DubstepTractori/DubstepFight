@@ -46,6 +46,7 @@
             this.ReturnToMenuButton.TabIndex = 12;
             this.ReturnToMenuButton.Text = "Вернуться";
             this.ReturnToMenuButton.UseVisualStyleBackColor = true;
+            this.ReturnToMenuButton.Click += new System.EventHandler(this.ReturnToMenuButton_Click);
             // 
             // ChooseHeroGiantButton
             // 

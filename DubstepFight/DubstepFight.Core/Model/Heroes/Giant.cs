@@ -33,6 +33,7 @@ namespace DubstepFightClassLibrary
 
         public override int TakeDamage(int takenDamage)
         {
+
             return Convert.ToInt32(takenDamage*0.8);
         }
     }

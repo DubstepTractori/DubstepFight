@@ -36,6 +36,7 @@ namespace DubstepFight.FightMenu
             fightMenu.Show();
             fightMenu.Location = this.Location;
             fightMenu.Size = this.Size;
+            returnMenu.Close();
             this.Close();
         }
 
@@ -47,6 +48,7 @@ namespace DubstepFight.FightMenu
             fightMenu.Show();
             fightMenu.Location = this.Location;
             fightMenu.Size = this.Size;
+            returnMenu.Close();
             this.Close();
         }
 
@@ -58,6 +60,7 @@ namespace DubstepFight.FightMenu
             fightMenu.Show();
             fightMenu.Location = this.Location;
             fightMenu.Size = this.Size;
+            returnMenu.Close();
             this.Close();
         }
 
@@ -69,6 +72,13 @@ namespace DubstepFight.FightMenu
             fightMenu.Show();
             fightMenu.Location = this.Location;
             fightMenu.Size = this.Size;
+            returnMenu.Close();
+            this.Close();
+        }
+
+        private void ReturnToMenuButton_Click(object sender, EventArgs e)
+        {
+            returnMenu.Show();
             this.Close();
         }
     }

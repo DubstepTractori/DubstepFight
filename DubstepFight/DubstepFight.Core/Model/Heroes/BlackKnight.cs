@@ -20,14 +20,7 @@ namespace DubstepFight
 
         public override int Attack1()
         {
-            if(Health>=Convert.ToInt32(Health/2))
-            {
-                return Power;
-            }
-            else
-            {
-                return Power + Convert.ToInt32(Power * 0.2);
-            }
+            return Power;
         }
 
         public override int Attack2()
@@ -39,6 +32,11 @@ namespace DubstepFight
         {
             Health -= takenDamage;
             return takenDamage;
+        }
+
+        public override int PassiveProc()
+        {
+            return Convert.ToInt32(25 + 25 * ( (150 - Health) / 200 ) );
         }
     }
 }
