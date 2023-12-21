@@ -63,6 +63,36 @@ namespace DubstepFight.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AssasinAttack1Icon {
+            get {
+                object obj = ResourceManager.GetObject("AssasinAttack1Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Assassin_Attack_1 {
+            get {
+                object obj = ResourceManager.GetObject("Assassin_Attack_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Assassin_Attack_2 {
+            get {
+                object obj = ResourceManager.GetObject("Assassin_Attack_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GitHubIcon {
             get {
                 object obj = ResourceManager.GetObject("GitHubIcon", resourceCulture);

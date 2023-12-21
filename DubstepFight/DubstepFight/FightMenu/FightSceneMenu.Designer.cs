@@ -194,11 +194,11 @@
             this.Player1Attack2MyButton.BackColor = System.Drawing.Color.White;
             this.Player1Attack2MyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Player1Attack2MyButton.ForeColor = System.Drawing.Color.Black;
+            this.Player1Attack2MyButton.Image = global::DubstepFight.Properties.Resources.Assassin_Attack_2;
             this.Player1Attack2MyButton.Location = new System.Drawing.Point(74, 380);
             this.Player1Attack2MyButton.Name = "Player1Attack2MyButton";
             this.Player1Attack2MyButton.Size = new System.Drawing.Size(118, 49);
             this.Player1Attack2MyButton.TabIndex = 8;
-            this.Player1Attack2MyButton.Text = "Атака 2";
             this.Player1Attack2MyButton.UseVisualStyleBackColor = false;
             this.Player1Attack2MyButton.Click += new System.EventHandler(this.Player1Attack2MyButton_Click);
             // 
@@ -208,11 +208,11 @@
             this.Player1Attack1MyButton.BackColor = System.Drawing.Color.White;
             this.Player1Attack1MyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.Player1Attack1MyButton.ForeColor = System.Drawing.Color.Black;
+            this.Player1Attack1MyButton.Image = global::DubstepFight.Properties.Resources.Assassin_Attack_1;
             this.Player1Attack1MyButton.Location = new System.Drawing.Point(12, 300);
             this.Player1Attack1MyButton.Name = "Player1Attack1MyButton";
             this.Player1Attack1MyButton.Size = new System.Drawing.Size(118, 49);
             this.Player1Attack1MyButton.TabIndex = 2;
-            this.Player1Attack1MyButton.Text = "Атака 1";
             this.Player1Attack1MyButton.UseVisualStyleBackColor = false;
             this.Player1Attack1MyButton.Click += new System.EventHandler(this.Player1Attack1MyButton_Click);
             // 

@@ -176,5 +176,10 @@
   <ItemGroup>
     <None Include="Resources\GitHubIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\AssasinAttack1Icon.jpg" />
+    <Content Include="Resources\Assassin_Attack_1.jpg" />
+    <None Include="Resources\Assassin_Attack_2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

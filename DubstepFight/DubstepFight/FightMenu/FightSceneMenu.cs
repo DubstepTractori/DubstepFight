@@ -77,7 +77,8 @@ namespace DubstepFight.FightMenu
         {
             if (!MyFight.IsPlayer1Turn)
             {
-                PassiveCheck(Player2, Player1);
+                PassiveCheck(Player1, Player2);
+                
 
                 Player1Attack1MyButton.ButtonDisable();
                 Player1Attack2MyButton.ButtonDisable();
@@ -88,7 +89,7 @@ namespace DubstepFight.FightMenu
 
             if (MyFight.IsPlayer1Turn)
             {
-                PassiveCheck(Player1, Player2);
+                PassiveCheck(Player2, Player1);
 
                 Player1Attack1MyButton.ButtonEnable();
                 Player1Attack2MyButton.ButtonEnable();
@@ -110,8 +111,7 @@ namespace DubstepFight.FightMenu
         {
             if(PlayerWaiting.Name == "Ассассин")
             {
-                PlayerDoing.Health -= PlayerDoing.PassiveProc();
-                //MessageBox.Show("Ассассин пассивка" + PlayerDoing.Name());
+                PlayerDoing.Health -= PlayerWaiting.PassiveProc();
             }
         }
 
@@ -119,7 +119,7 @@ namespace DubstepFight.FightMenu
         {
             if (PlayerWaiting.Name == "Тёмный Рыцарь")
             {
-                PlayerWaiting.Power = PlayerWaiting.PassiveProc();
+                PlayerWaiting.Power = PlayerDoing.PassiveProc();
             }
         }
 

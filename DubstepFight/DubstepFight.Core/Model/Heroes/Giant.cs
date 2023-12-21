@@ -33,8 +33,8 @@ namespace DubstepFightClassLibrary
 
         public override int TakeDamage(int takenDamage)
         {
-
-            return Convert.ToInt32(takenDamage*0.8);
+            Health -= Convert.ToInt32(takenDamage * 0.8);
+            return Convert.ToInt32(takenDamage*0.8);   
         }
     }
 }

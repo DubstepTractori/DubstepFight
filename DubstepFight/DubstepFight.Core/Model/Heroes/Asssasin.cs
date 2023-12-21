@@ -22,6 +22,8 @@ namespace DubstepFightClassLibrary
         Random Rand = new Random();
         public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; Passive = new Passive(0); }
 
+
+
         public override int Attack1()
         {
             return Power;
@@ -29,14 +31,15 @@ namespace DubstepFightClassLibrary
 
         public override int Attack2()
         {
-            return Convert.ToInt32(Power/2);
             Passive.PassiveCounter1 += 2;
+            return Convert.ToInt32(Power/2);
+           
         }
 
         public override int TakeDamage(int takenDamage)
         {
             
-            if (Rand.Next(0, 10) < 4)
+            if (Rand.Next(0, 10) < 3)
             {
                 return 0;
             }
@@ -45,13 +48,13 @@ namespace DubstepFightClassLibrary
                 Health -= takenDamage;
                 return takenDamage;
             }
-              
         }
 
         public override int PassiveProc()
         {
             if (Passive.PassiveCounter1 > 0)
             {
+                Passive.PassiveCounter1 -= 1;
                 return Power / 2;
             }
             else
