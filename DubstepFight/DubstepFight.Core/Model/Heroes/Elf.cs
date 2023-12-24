@@ -20,15 +20,14 @@ namespace DubstepFightClassLibrary
         public Elf() { Health = 100; Power = 15; Name = "Эльф"; Passive = new Passive(0); }
         public override int Attack1()
         {
-            Passive.PassiveCounter1 += 1;
             return Power;
+            Passive.PassiveCounter1 += 1;
         }
 
         public override int Attack2()
         {
-            int damage = Convert.ToInt32(15 * Passive.PassiveCounter1);
+            return Convert.ToInt32(20 + (6*Passive.PassiveCounter1));
             Passive.PassiveCounter1 = 0;
-            return damage;
         }
 
         public override int PassiveProc()

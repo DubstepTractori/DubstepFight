@@ -111,7 +111,6 @@ namespace DubstepFight.FightMenu
         {
             if(PlayerWaiting.Name == "Ассассин")
             {
-                MessageBox.Show("Срабатывание пассивки персонажа: " + PlayerWaiting.Name + ". Персонаж " + PlayerDoing.Name + " получает " + PlayerWaiting.PassiveProc().ToString() + " урона");
                 PlayerDoing.Health -= PlayerWaiting.PassiveProc();
             }
         }
@@ -121,7 +120,6 @@ namespace DubstepFight.FightMenu
             if (PlayerWaiting.Name == "Тёмный Рыцарь")
             {
                 PlayerWaiting.Power = PlayerDoing.PassiveProc();
-                MessageBox.Show("Сила рыцаря: " + PlayerWaiting.Power);
             }
         }
 
@@ -149,7 +147,7 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                int damageDealt = Player2.TakeDamage(Player1.Attack2());
+                int damageDealt = Player2.TakeDamage(Player1.Attack1());
                 Player2GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
@@ -185,7 +183,7 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                int damageDealt = Player1.TakeDamage(Player2.Attack2());
+                int damageDealt = Player1.TakeDamage(Player2.Attack1());
                 Player1GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();

@@ -27,13 +27,13 @@ namespace DubstepFightClassLibrary
         public override int Attack1()
         {
             return Power;
-
         }
 
         public override int Attack2()
         {
             Passive.PassiveCounter1 += 2;
             return Convert.ToInt32(Power/2);
+           
         }
 
         public override int TakeDamage(int takenDamage)
