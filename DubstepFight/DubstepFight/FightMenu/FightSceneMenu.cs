@@ -100,6 +100,22 @@ namespace DubstepFight.FightMenu
 
         }
 
+        private void Player1Win()
+        {
+            Player2.Health = 0;
+            Player2HpLabel.Text = Player2.Health.ToString();
+            Player2HpProgressBar.Value = 0;
+            MessageBox.Show("Победил Игрок 1");
+        }
+
+        private void Player2Win()
+        {
+            Player1.Health = 0;
+            Player1HpLabel.Text = Player1.Health.ToString();
+            Player1HpProgressBar.Value = 0;
+            MessageBox.Show("Победил Игрок 2");
+        }
+
         private void PassiveCheck(BaseHero PlayerDoing, BaseHero PlayerWaiting)
         {
             AssassinPassiveProc(PlayerDoing, PlayerWaiting);
@@ -135,10 +151,7 @@ namespace DubstepFight.FightMenu
             }
             catch
             {
-                Player2.Health = 0;
-                Player2HpLabel.Text = Player2.Health.ToString();
-                Player2HpProgressBar.Value = 0;
-                MessageBox.Show("Победил Игрок 1");
+                Player1Win();
             }
             
         }
@@ -147,17 +160,14 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                int damageDealt = Player2.TakeDamage(Player1.Attack1());
+                int damageDealt = Player2.TakeDamage(Player1.Attack2());
                 Player2GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
             }
             catch
             {
-                Player2.Health = 0;
-                Player2HpLabel.Text = Player2.Health.ToString();
-                Player2HpProgressBar.Value = 0;
-                MessageBox.Show("Победил Игрок 1");
+                Player1Win();
             }
         }
 
@@ -172,10 +182,7 @@ namespace DubstepFight.FightMenu
             }
             catch
             {
-                Player1.Health = 0;
-                Player1HpLabel.Text = Player1.Health.ToString();
-                Player1HpProgressBar.Value = 0;
-                MessageBox.Show("Победил Игрок 2");
+                Player2Win();
             }
         }
 
@@ -183,17 +190,14 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                int damageDealt = Player1.TakeDamage(Player2.Attack1());
+                int damageDealt = Player1.TakeDamage(Player2.Attack2());
                 Player1GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
             }
             catch
             {
-                Player1.Health = 0;
-                Player1HpLabel.Text = Player1.Health.ToString();
-                Player1HpProgressBar.Value = 0;
-                MessageBox.Show("Победил Игрок 2");
+                Player2Win();
             }
         }
 

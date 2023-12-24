@@ -17,17 +17,20 @@ namespace DubstepFightClassLibrary
         /// <summary>
         /// класс эльфа
         /// </summary>
-        public Elf() { Health = 100; Power = 15; Name = "Эльф"; Passive = new Passive(0); }
+        public Elf() { Health = 100; Power = 15; Name = "Эльф"; Passive = new Passive(0); Attack2CD = 1; }
         public override int Attack1()
         {
-            return Power;
+            Attack2CD -= 1;
             Passive.PassiveCounter1 += 1;
+            return Power;
         }
 
         public override int Attack2()
         {
-            return Convert.ToInt32(20 + (6*Passive.PassiveCounter1));
+            Attack2CD = 1;
+            int damage = Convert.ToInt32(15 * Passive.PassiveCounter1);
             Passive.PassiveCounter1 = 0;
+            return damage; 
         }
 
         public override int PassiveProc()

@@ -17,12 +17,12 @@ namespace DubstepFight
         private int power;
         private string name;
         private Passive passive;
-
+        int attack2CD;
 
         /// <summary>
         /// базовый класс героя
         /// </summary>
-        public BaseHero() { Health = 0; Power = 0; Name = "NoName"; Passive = new Passive(0); }
+        public BaseHero() { Health = 0; Power = 0; Name = "NoName"; Passive = new Passive(0); attack2CD = 0; }
 
         public abstract int Attack1();
         public abstract int Attack2();
@@ -61,6 +61,14 @@ namespace DubstepFight
             { return passive; }
             set
             { passive = value; }
+        }
+
+        public int Attack2CD
+        {
+            get 
+            { return attack2CD;}
+            set
+            {attack2CD = value;} 
         }
 
          

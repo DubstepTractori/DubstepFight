@@ -12,6 +12,7 @@ namespace DubstepFight
 {
     public class BlackKnight : BaseHero
     {
+        Random random = new Random();
         /// <summary>
         /// класс темного рыцаря
         /// </summary>
@@ -20,7 +21,29 @@ namespace DubstepFight
 
         public override int Attack1()
         {
+            if (Health <= 75 && Health > 50)
+            {
+                if (random.Next(0, 10) < 3)
+                {
+                    Health += 25;
+                }
+            }
+            else if (Health <= 50 && Health > 25)
+            {
+                if (random.Next(0, 10) < 5)
+                {
+                    Health += 25;
+                }
+            }
+            else if (Health <= 25)
+            {
+                if (random.Next(0, 10) < 7)
+                {
+                    Health += 25;
+                }
+            }
             return Power;
+
         }
 
         public override int Attack2()
@@ -36,7 +59,14 @@ namespace DubstepFight
 
         public override int PassiveProc()
         {
-            return Convert.ToInt32(25 + 25 * ( (150 - Health) / 200 ) );
+            if (Health <= 75)
+            {
+                return Convert.ToInt32(25 * 1.5);
+            }
+            else
+            {
+                return 25;
+            }
         }
     }
 }

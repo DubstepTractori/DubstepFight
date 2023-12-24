@@ -20,20 +20,21 @@ namespace DubstepFightClassLibrary
         /// </summary>
 
         Random Rand = new Random();
-        public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; Passive = new Passive(0); }
+        public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; Passive = new Passive(0); Attack2CD = 3; }
 
 
 
         public override int Attack1()
         {
+            Attack2CD -= 1;
             return Power;
         }
 
         public override int Attack2()
         {
+            Attack2CD = 3;
             Passive.PassiveCounter1 += 2;
             return Convert.ToInt32(Power/2);
-           
         }
 
         public override int TakeDamage(int takenDamage)
