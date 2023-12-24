@@ -54,7 +54,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(68, 367);
+            this.label8.Location = new System.Drawing.Point(68, 317);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(494, 60);
             this.label8.TabIndex = 34;
@@ -66,7 +66,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(35, 337);
+            this.label7.Location = new System.Drawing.Point(33, 276);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(163, 20);
             this.label7.TabIndex = 33;
@@ -78,10 +78,8 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(68, 276);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(545, 40);
+            this.label6.Size = new System.Drawing.Size(0, 20);
             this.label6.TabIndex = 32;
-            this.label6.Text = "Кровотечение - при использовании атакующего навыка наносит урон, \r\nравный 5% от м" +
-    "акс. здоровья";
             // 
             // label5
             // 
@@ -89,11 +87,10 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(68, 182);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(510, 60);
+            this.label5.Size = new System.Drawing.Size(652, 40);
             this.label5.TabIndex = 31;
-            this.label5.Text = "Ассасин делает быстрый взмах своим кинжалом, нанося 12 урона\r\nи вызывая у противн" +
-    "ика [Кровотечение] на 2 хода\r\n[Использование данного навыка расходует 2 очка сил" +
-    "ы]";
+            this.label5.Text = "Темный Рыцарь наносит дополнительный урон в размере его силы плюс 30% от неё\r\n[Ис" +
+    "пользование данного навыка расходует 2 очка силы]";
             // 
             // label4
             // 
@@ -113,8 +110,8 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(406, 40);
             this.label3.TabIndex = 29;
-            this.label3.Text = "Ассасин бьёт своим кинжалом нанося 20 урона\r\n[Использование данного навыка даёт +" +
-    "1 очко силы]";
+            this.label3.Text = "Темный рыцарь бьёт своим мечом нанося 25 урона\r\n[Использование данного навыка даё" +
+    "т +1 очко силы]";
             // 
             // label2
             // 
