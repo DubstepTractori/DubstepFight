@@ -1,4 +1,5 @@
 ﻿using DubstepFight;
+using DubstepFight.Core.Model.Attack;
 using DubstepFight.Core.Model.Fight;
 using DubstepFight.Core.Model.Passive;
 using DubstepFight.Core.Model.Passivki;
@@ -15,10 +16,9 @@ namespace DubstepFightClassLibrary
         /// <summary>
         /// класс гиганта
         /// </summary>
-        public Giant() { Health = 200; Power = 20; Name = "Гигант"; KDTwoAttack = 2; }
+        public Giant() { Health = 200; Power = 20; Name = "Гигант"; }
         public override int Attack1()
         {
-            KDTwoAttack--;
             return Power;
         }
 
@@ -28,7 +28,6 @@ namespace DubstepFightClassLibrary
         }
         public override int Attack2()
         {
-            KDTwoAttack = 2;
             return Convert.ToInt32(Power * 1.3);
         }
 

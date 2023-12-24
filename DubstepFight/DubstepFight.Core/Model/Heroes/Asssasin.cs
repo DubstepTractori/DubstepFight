@@ -1,4 +1,5 @@
 ﻿using DubstepFight;
+using DubstepFight.Core.Model.Attack;
 using DubstepFight.Core.Model.Fight;
 using DubstepFight.Core.Model.Passive;
 using System;
@@ -19,20 +20,19 @@ namespace DubstepFightClassLibrary
         /// </summary>
 
         Random Rand = new Random();
-        public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; Passive = new Passive(0); KDTwoAttack = 3; }
+        public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; Passive = new Passive(0); }
 
 
 
         public override int Attack1()
         {
-            KDTwoAttack --;
             return Power;
+
         }
 
         public override int Attack2()
         {
             Passive.PassiveCounter1 += 2;
-            KDTwoAttack = 3;
             return Convert.ToInt32(Power/2);
         }
 

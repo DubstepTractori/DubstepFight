@@ -1,4 +1,5 @@
-﻿using DubstepFight.Core.Model.Fight;
+﻿using DubstepFight.Core.Model.Attack;
+using DubstepFight.Core.Model.Fight;
 using DubstepFight.Core.Model.Passive;
 using System;
 using System.Collections.Generic;
@@ -20,13 +21,11 @@ namespace DubstepFight
 
         public override int Attack1()
         {
-            KDTwoAttack --;
             return Power;
         }
 
         public override int Attack2()
         {
-            KDTwoAttack = 2;
             return Convert.ToInt32(Power * 1.3);
         }
 
