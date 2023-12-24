@@ -19,6 +19,7 @@ namespace DubstepFight
         private Passive passive;
 
 
+
         /// <summary>
         /// базовый класс героя
         /// </summary>
