@@ -16,9 +16,10 @@ namespace DubstepFightClassLibrary
         /// <summary>
         /// класс гиганта
         /// </summary>
-        public Giant() { Health = 200; Power = 20; Name = "Гигант"; }
+        public Giant() { Health = 200; Power = 20; Name = "Гигант"; KDTwoAttack = 2; }
         public override int Attack1()
         {
+            KDTwoAttack--;
             return Power;
         }
 
@@ -28,6 +29,7 @@ namespace DubstepFightClassLibrary
         }
         public override int Attack2()
         {
+            KDTwoAttack = 2;
             return Convert.ToInt32(Power * 1.3);
         }
 
