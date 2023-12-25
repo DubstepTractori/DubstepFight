@@ -20,7 +20,10 @@ namespace DubstepFightClassLibrary
         /// </summary>
 
         Random Rand = new Random();
-        public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; Passive = new Passive(0); Attack2CD = 3; }
+        public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; Passive = new Passive(0); Attack2CD = 3;
+            Attack1ImgPath = @"..\..\Resources\Assassin\Assassin_Attack_1.jpg";
+            Attack2ImgPath = @"..\..\Resources\Assassin\Assassin_Attack_2.jpg";
+        }
 
 
 

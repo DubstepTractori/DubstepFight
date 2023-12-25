@@ -48,11 +48,16 @@ namespace DubstepFight.FightMenu
             Player1HpLabel.Text = Player1.Health.ToString();
             Player1HpProgressBar.Maximum = Player1.Health;
             Player1HpProgressBar.Value = Player1.Health;
+            Player1Attack1MyButton.Image = Image.FromFile(Player1.Attack1ImgPath);
+            Player1Attack2MyButton.Image = Image.FromFile(Player1.Attack2ImgPath);
+
 
             Player2HeroNameLabel.Text = Player2.Name;
             Player2HpLabel.Text = Player2.Health.ToString();
             Player2HpProgressBar.Maximum = Player2.Health;
             Player2HpProgressBar.Value = Player2.Health;
+            Player2Attack1MyButton.Image = Image.FromFile(Player2.Attack1ImgPath);
+            Player2Attack2MyButton.Image = Image.FromFile(Player2.Attack2ImgPath);
 
             Player1GetDamageLabel.Text = "";
             Player2GetDamageLabel.Text = "";
@@ -77,7 +82,8 @@ namespace DubstepFight.FightMenu
         {
             if (!MyFight.IsPlayer1Turn)
             {
-                PassiveCheck(Player1, Player2);
+                PassiveCheck(Player1, Player2, Player1Attack1MyButton, Player1Attack2MyButton, 
+                    Player2Attack1MyButton, Player2Attack2MyButton);
                 
 
                 Player1Attack1MyButton.ButtonDisable();
@@ -89,7 +95,8 @@ namespace DubstepFight.FightMenu
 
             if (MyFight.IsPlayer1Turn)
             {
-                PassiveCheck(Player2, Player1);
+                PassiveCheck(Player2, Player1, Player2Attack1MyButton, Player2Attack2MyButton, 
+                    Player1Attack1MyButton, Player1Attack2MyButton);
 
                 Player1Attack1MyButton.ButtonEnable();
                 Player1Attack2MyButton.ButtonEnable();
@@ -116,10 +123,12 @@ namespace DubstepFight.FightMenu
             MessageBox.Show("Победил Игрок 2");
         }
 
-        private void PassiveCheck(BaseHero PlayerDoing, BaseHero PlayerWaiting)
+        private void PassiveCheck(BaseHero PlayerDoing, BaseHero PlayerWaiting, Button PlayerWaitingAttackButton1, Button PlayerWaitingAttackButton2, 
+            Button PlayerDoingAttackButton1, Button PlayerDoingAttackButton2)
         {
             AssassinPassiveProc(PlayerDoing, PlayerWaiting);
-            BlackKnightPassiveProc(PlayerDoing, PlayerWaiting);
+            BlackKnightPassiveProc(PlayerWaiting, PlayerWaitingAttackButton1);
+            ElfPassiveProc(PlayerWaiting, PlayerWaitingAttackButton2);
             
         }
 
@@ -131,11 +140,20 @@ namespace DubstepFight.FightMenu
             }
         }
 
-        private void BlackKnightPassiveProc(BaseHero PlayerDoing, BaseHero PlayerWaiting)
+        private void BlackKnightPassiveProc(BaseHero PlayerWaiting, Button PlayerWaitingAttackButton1)
         {
             if (PlayerWaiting.Name == "Тёмный Рыцарь")
             {
-                PlayerWaiting.Power = PlayerDoing.PassiveProc();
+                PlayerWaiting.Power = PlayerWaiting.PassiveProc();
+                PlayerWaitingAttackButton1.Image = Image.FromFile(PlayerWaiting.Attack1ImgPath);
+            }
+        }
+
+        private void ElfPassiveProc(BaseHero PlayerWaiting, Button PlayerWaitingAttackButton2)
+        {
+            if (PlayerWaiting.Name == "Эльф")
+            {
+                PlayerWaitingAttackButton2.Image = Image.FromFile(PlayerWaiting.Attack2ImgPath);
             }
         }
 

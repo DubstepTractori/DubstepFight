@@ -17,7 +17,10 @@ namespace DubstepFight
         /// класс темного рыцаря
         /// </summary>
         /// 
-        public BlackKnight() { Health = 150; Power = 25; Name = "Тёмный Рыцарь"; Passive = new Passive(0); Attack2CD = 2; }
+        public BlackKnight() { Health = 150; Power = 25; Name = "Тёмный Рыцарь"; Passive = new Passive(0); Attack2CD = 2;
+            Attack1ImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg";
+            Attack2ImgPath = @"..\..\Resources\Other\NoIcon.png";
+        }
 
         public override int Attack1()
         {
@@ -63,10 +66,12 @@ namespace DubstepFight
         {
             if (Health <= 75)
             {
+                Attack1ImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Attack_1_Var_2.jpg";
                 return Convert.ToInt32(25 * 1.5);
             }
             else
             {
+                Attack1ImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg";
                 return 25;
             }
         }

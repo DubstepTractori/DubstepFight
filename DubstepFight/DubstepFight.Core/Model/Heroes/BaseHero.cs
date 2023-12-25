@@ -4,6 +4,7 @@ using DubstepFight.Core.Model.Passive;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
@@ -73,8 +74,8 @@ namespace DubstepFight
             {attack2CD = value;} 
         }
 
-        public string Attack1ImgPath1 { get => attack1ImgPath; set => attack1ImgPath = value; }
-        public string Attack2ImgPath1 { get => attack2ImgPath; set => attack2ImgPath = value; }
+        public string Attack1ImgPath { get => attack1ImgPath; set => attack1ImgPath = value; }
+        public string Attack2ImgPath { get => attack2ImgPath; set => attack2ImgPath = value; }
     }
 
 

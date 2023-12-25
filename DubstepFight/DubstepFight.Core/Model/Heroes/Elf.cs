@@ -6,6 +6,7 @@ using DubstepFight.Core.Model.Passivki;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +18,29 @@ namespace DubstepFightClassLibrary
         /// <summary>
         /// класс эльфа
         /// </summary>
-        public Elf() { Health = 100; Power = 15; Name = "Эльф"; Passive = new Passive(0); Attack2CD = 1; }
+        public Elf() { Health = 100; Power = 15; Name = "Эльф"; Passive = new Passive(0); Attack2CD = 1;
+            Attack1ImgPath = @"..\..\Resources\Elf\Elf_Attack_1.jpg";
+            Attack2ImgPath = @"..\..\Resources\Elf\Elf_Attack_1.jpg";
+        }
         public override int Attack1()
         {
             Attack2CD -= 1;
-            Passive.PassiveCounter1 += 1;
+            if(Passive.PassiveCounter1 < 6)
+            {
+                Passive.PassiveCounter1 += 1;
+            }
+
+            switch (Passive.PassiveCounter1)
+            {
+                case 2: Attack2ImgPath = @"..\..\Resources\Elf\Elf_Attack_2.jpg"; break;
+                case 3: Attack2ImgPath = @"..\..\Resources\Elf\Elf_Attack_3.jpg"; break;
+                case 4: Attack2ImgPath = @"..\..\Resources\Elf\Elf_Attack_4.jpg"; break;
+                case 5: Attack2ImgPath = @"..\..\Resources\Elf\Elf_Attack_5.jpg"; break;
+                case 6: Attack2ImgPath = @"..\..\Resources\Elf\Elf_Attack_6.jpg"; break;
+
+                default: Attack2ImgPath = @"..\..\Resources\Elf\Elf_Attack_1.jpg"; break;
+            }
+
             return Power;
         }
 
@@ -35,7 +54,7 @@ namespace DubstepFightClassLibrary
 
         public override int PassiveProc()
         {
-            return 0; // пассивка прописана выше
+            return 0;
         }
 
         public override int TakeDamage(int takenDamage)

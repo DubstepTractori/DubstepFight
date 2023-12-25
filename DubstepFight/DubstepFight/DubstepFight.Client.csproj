@@ -173,13 +173,19 @@
       <Name>DubstepFight.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\GitHubIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\AssasinAttack1Icon.jpg" />
-    <Content Include="Resources\Assassin_Attack_1.jpg" />
-    <None Include="Resources\Assassin_Attack_2.jpg" />
+    <Content Include="Resources\Assassin\Assassin_Attack_1.jpg" />
+    <Content Include="Resources\Assassin\Assassin_Attack_2.jpg" />
+    <Content Include="Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg" />
+    <Content Include="Resources\BlackKnight\BlackKnight_Attack_1_Var_2.jpg" />
+    <Content Include="Resources\Elf\Elf_Attack_1.jpg" />
+    <Content Include="Resources\Elf\Elf_Attack_2.jpg" />
+    <Content Include="Resources\Elf\Elf_Attack_3.jpg" />
+    <Content Include="Resources\Elf\Elf_Attack_4.jpg" />
+    <Content Include="Resources\Elf\Elf_Attack_5.jpg" />
+    <Content Include="Resources\Elf\Elf_Attack_6.jpg" />
+    <Content Include="Resources\Other\NoIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
