@@ -17,6 +17,8 @@ namespace DubstepFight
         private int power;
         private string name;
         private Passive passive;
+        private string attack1ImgPath;
+        private string attack2ImgPath;
         int attack2CD;
 
         /// <summary>
@@ -71,7 +73,8 @@ namespace DubstepFight
             {attack2CD = value;} 
         }
 
-         
+        public string Attack1ImgPath1 { get => attack1ImgPath; set => attack1ImgPath = value; }
+        public string Attack2ImgPath1 { get => attack2ImgPath; set => attack2ImgPath = value; }
     }
 
 

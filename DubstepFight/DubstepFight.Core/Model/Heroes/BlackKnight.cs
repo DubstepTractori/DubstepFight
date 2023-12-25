@@ -17,7 +17,7 @@ namespace DubstepFight
         /// класс темного рыцаря
         /// </summary>
         /// 
-        public BlackKnight() { Health = 150; Power = 25; Name = "Тёмный Рыцарь"; Passive = new Passive(0); }
+        public BlackKnight() { Health = 150; Power = 25; Name = "Тёмный Рыцарь"; Passive = new Passive(0); Attack2CD = 2; }
 
         public override int Attack1()
         {
@@ -42,12 +42,14 @@ namespace DubstepFight
                     Health += 25;
                 }
             }
+            Attack2CD -= 1;
             return Power;
 
         }
 
         public override int Attack2()
         {
+            Attack2CD = 2;
             return Convert.ToInt32(Power * 1.3);
         }
 
