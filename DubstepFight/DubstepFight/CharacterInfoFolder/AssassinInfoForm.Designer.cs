@@ -67,10 +67,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(68, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(406, 40);
+            this.label3.Size = new System.Drawing.Size(367, 40);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Ассасин бьёт своим кинжалом нанося 20 урона\r\n[Использование данного навыка даёт +" +
-    "1 очко силы]";
+            this.label3.Text = "Ассасин бьёт своим кинжалом нанося 20 урона\r\n[Перезарядка данного умения 1 ход]";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -93,8 +92,7 @@
             this.label5.Size = new System.Drawing.Size(510, 60);
             this.label5.TabIndex = 4;
             this.label5.Text = "Ассасин делает быстрый взмах своим кинжалом, нанося 12 урона\r\nи вызывая у противн" +
-    "ика [Кровотечение] на 2 хода\r\n[Использование данного навыка расходует 3 очка сил" +
-    "ы]";
+    "ика [Кровотечение] на 2 хода\r\n[Перезарядка данного умения 3 хода]";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
