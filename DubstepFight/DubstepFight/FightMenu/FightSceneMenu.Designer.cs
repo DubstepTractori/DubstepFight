@@ -43,6 +43,7 @@
             this.Player2Attack1MyButton = new DubstepFight.MyCustomAttackButton1();
             this.Player1Attack2MyButton = new DubstepFight.MyCustomAttackButton1();
             this.Player1Attack1MyButton = new DubstepFight.MyCustomAttackButton1();
+            this.PlayerWinLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Player1HpProgressBar
@@ -212,11 +213,23 @@
             this.Player1Attack1MyButton.UseVisualStyleBackColor = false;
             this.Player1Attack1MyButton.Click += new System.EventHandler(this.Player1Attack1MyButton_Click);
             // 
+            // PlayerWinLabel
+            // 
+            this.PlayerWinLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PlayerWinLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PlayerWinLabel.Location = new System.Drawing.Point(232, 75);
+            this.PlayerWinLabel.Name = "PlayerWinLabel";
+            this.PlayerWinLabel.Size = new System.Drawing.Size(341, 20);
+            this.PlayerWinLabel.TabIndex = 15;
+            this.PlayerWinLabel.Text = "NoWin";
+            this.PlayerWinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FightSceneMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.PlayerWinLabel);
             this.Controls.Add(this.Player2GetDamageLabel);
             this.Controls.Add(this.Player1GetDamageLabel);
             this.Controls.Add(this.Player2InfoButton);
@@ -255,5 +268,6 @@
         private System.Windows.Forms.Button Player2InfoButton;
         private System.Windows.Forms.Label Player1GetDamageLabel;
         private System.Windows.Forms.Label Player2GetDamageLabel;
+        private System.Windows.Forms.Label PlayerWinLabel;
     }
 }

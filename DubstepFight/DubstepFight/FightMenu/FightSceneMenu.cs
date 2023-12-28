@@ -61,6 +61,7 @@ namespace DubstepFight.FightMenu
 
             Player1GetDamageLabel.Text = "";
             Player2GetDamageLabel.Text = "";
+            PlayerWinLabel.Text = "";
 
             TurnCheck();
         }
@@ -82,8 +83,8 @@ namespace DubstepFight.FightMenu
         {
             if (!MyFight.IsPlayer1Turn)
             {
-                PassiveCheck(Player1, Player2, Player1Attack1MyButton, Player1Attack2MyButton, 
-                    Player2Attack1MyButton, Player2Attack2MyButton);
+                PassiveCheck(Player1, Player2, Player2Attack1MyButton, Player2Attack2MyButton, 
+                    Player1Attack1MyButton, Player1Attack2MyButton);
                 
 
                 Player1Attack1MyButton.ButtonDisable();
@@ -95,8 +96,8 @@ namespace DubstepFight.FightMenu
 
             if (MyFight.IsPlayer1Turn)
             {
-                PassiveCheck(Player2, Player1, Player2Attack1MyButton, Player2Attack2MyButton, 
-                    Player1Attack1MyButton, Player1Attack2MyButton);
+                PassiveCheck(Player2, Player1, Player1Attack1MyButton, Player1Attack2MyButton, 
+                    Player2Attack1MyButton, Player2Attack2MyButton);
 
                 Player1Attack1MyButton.ButtonEnable();
                 Player1Attack2MyButton.ButtonEnable();
@@ -104,7 +105,6 @@ namespace DubstepFight.FightMenu
                 Player2Attack1MyButton.ButtonDisable();
                 Player2Attack2MyButton.ButtonDisable();
             }
-
         }
 
         private void Player1Win()
@@ -113,6 +113,8 @@ namespace DubstepFight.FightMenu
             Player2HpLabel.Text = Player2.Health.ToString();
             Player2HpProgressBar.Value = 0;
             MessageBox.Show("Победил Игрок 1");
+            //Thread.Sleep(3500);
+
         }
 
         private void Player2Win()
@@ -129,7 +131,6 @@ namespace DubstepFight.FightMenu
             AssassinPassiveProc(PlayerDoing, PlayerWaiting);
             BlackKnightPassiveProc(PlayerWaiting, PlayerWaitingAttackButton1);
             ElfPassiveProc(PlayerWaiting, PlayerWaitingAttackButton2);
-            
         }
 
         private void AssassinPassiveProc(BaseHero PlayerDoing, BaseHero PlayerWaiting)
