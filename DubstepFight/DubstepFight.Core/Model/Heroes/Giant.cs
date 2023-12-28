@@ -16,7 +16,10 @@ namespace DubstepFightClassLibrary
         /// <summary>
         /// класс гиганта
         /// </summary>
-        public Giant() { Health = 200; Power = 20; Name = "Гигант"; Attack2CD = 2; }
+        public Giant() { Health = 200; Power = 20; Name = "Гигант"; Attack2CD = 2;
+            Attack1ImgPath = @"..\..\Resources\Other\NoIcon.png";
+            Attack2ImgPath = @"..\..\Resources\Other\NoIcon.png";
+        }
         public override int Attack1()
         {
             return Power;
