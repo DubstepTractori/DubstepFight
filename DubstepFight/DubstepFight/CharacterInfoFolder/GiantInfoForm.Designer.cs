@@ -54,18 +54,17 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(68, 367);
+            this.label8.Location = new System.Drawing.Point(68, 276);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(471, 40);
+            this.label8.Size = new System.Drawing.Size(496, 40);
             this.label8.TabIndex = 16;
-            this.label8.Text = "При получении урона Ассассин имеет 30%  шанс увернуться,\r\nигнорируя весь полученн" +
-    "ый урон";
+            this.label8.Text = "Гигант имеет огромное боевое тело, благодаря чему получает \r\nна 20% меньше урона";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(35, 337);
+            this.label7.Location = new System.Drawing.Point(35, 243);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(163, 20);
             this.label7.TabIndex = 15;
@@ -77,28 +76,25 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(68, 276);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(545, 40);
+            this.label6.Size = new System.Drawing.Size(0, 20);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Кровотечение - при использовании атакующего навыка наносит урон, \r\nравный 5% от м" +
-    "акс. здоровья";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(68, 182);
+            this.label5.Location = new System.Drawing.Point(68, 168);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(510, 60);
+            this.label5.Size = new System.Drawing.Size(593, 60);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Ассасин делает быстрый взмах своим кинжалом, нанося 12 урона\r\nи вызывая у противн" +
-    "ика [Кровотечение] на 2 хода\r\n[Использование данного навыка расходует 2 очка сил" +
-    "ы]";
+            this.label5.Text = "Гигант бьёт с замаха по врагу, нанося дополнительный урон в размере 30% \r\nот его " +
+    "базовой атаки\r\n[Перезарядка данного умения 2 хода]";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(35, 148);
+            this.label4.Location = new System.Drawing.Point(35, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 20);
             this.label4.TabIndex = 12;
@@ -110,10 +106,10 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(68, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(406, 40);
+            this.label3.Size = new System.Drawing.Size(427, 40);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Ассасин бьёт своим кинжалом нанося 20 урона\r\n[Использование данного навыка даёт +" +
-    "1 очко силы]";
+            this.label3.Text = "Ассасин бьёт своим большим кулаком нанося 20 урона\r\n[Перезарядка данного умения 1" +
+    " ход]\r\n";
             // 
             // label2
             // 

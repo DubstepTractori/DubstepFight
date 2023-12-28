@@ -56,10 +56,10 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(68, 367);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(471, 40);
+            this.label8.Size = new System.Drawing.Size(419, 40);
             this.label8.TabIndex = 25;
-            this.label8.Text = "При получении урона Ассассин имеет 30%  шанс увернуться,\r\nигнорируя весь полученн" +
-    "ый урон";
+            this.label8.Text = "С каждой базовой атакой эльф копит особые заряды\r\n для особой способности";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -75,12 +75,13 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(68, 276);
+            this.label6.Location = new System.Drawing.Point(68, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(545, 40);
+            this.label6.Size = new System.Drawing.Size(369, 40);
             this.label6.TabIndex = 23;
-            this.label6.Text = "Кровотечение - при использовании атакующего навыка наносит урон, \r\nравный 5% от м" +
-    "акс. здоровья";
+            this.label6.Text = "Эльф стреляет из лука заряженной стрелой\r\n[урон стрелы зависит от накопленных зар" +
+    "ядов]";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -88,11 +89,8 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(68, 182);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(510, 60);
+            this.label5.Size = new System.Drawing.Size(0, 20);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Ассасин делает быстрый взмах своим кинжалом, нанося 12 урона\r\nи вызывая у противн" +
-    "ика [Кровотечение] на 2 хода\r\n[Использование данного навыка расходует 2 очка сил" +
-    "ы]";
             // 
             // label4
             // 
@@ -110,10 +108,10 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(68, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(406, 40);
+            this.label3.Size = new System.Drawing.Size(371, 20);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Ассасин бьёт своим кинжалом нанося 20 урона\r\n[Использование данного навыка даёт +" +
-    "1 очко силы]";
+            this.label3.Text = "Эльф стреляет из своего лука нанося 20 урона\r\n";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 

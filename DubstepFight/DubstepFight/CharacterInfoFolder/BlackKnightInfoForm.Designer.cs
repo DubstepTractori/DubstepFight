@@ -88,8 +88,8 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(652, 40);
             this.label5.TabIndex = 31;
-            this.label5.Text = "Темный Рыцарь наносит дополнительный урон в размере его силы плюс 30% от неё\r\n[Ис" +
-    "пользование данного навыка расходует 2 очка силы]";
+            this.label5.Text = "Темный Рыцарь наносит дополнительный урон в размере его силы плюс 30% от неё\r\n[Пе" +
+    "резарядка данного умения 2 хода]";
             // 
             // label4
             // 
@@ -107,10 +107,10 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(68, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(406, 40);
+            this.label3.Size = new System.Drawing.Size(396, 40);
             this.label3.TabIndex = 29;
-            this.label3.Text = "Темный рыцарь бьёт своим мечом нанося 25 урона\r\n[Использование данного навыка даё" +
-    "т +1 очко силы]";
+            this.label3.Text = "Темный рыцарь бьёт своим мечом нанося 25 урона\r\n[Перезарядка данного умения 1 ход" +
+    "]";
             // 
             // label2
             // 
