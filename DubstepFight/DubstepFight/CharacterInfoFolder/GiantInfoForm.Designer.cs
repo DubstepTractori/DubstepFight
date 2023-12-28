@@ -54,7 +54,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(68, 266);
+            this.label8.Location = new System.Drawing.Point(68, 276);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(496, 40);
             this.label8.TabIndex = 16;
@@ -64,7 +64,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(35, 232);
+            this.label7.Location = new System.Drawing.Point(35, 243);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(163, 20);
             this.label7.TabIndex = 15;
@@ -85,10 +85,10 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(68, 168);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(593, 40);
+            this.label5.Size = new System.Drawing.Size(593, 60);
             this.label5.TabIndex = 13;
             this.label5.Text = "Гигант бьёт с замаха по врагу, нанося дополнительный урон в размере 30% \r\nот его " +
-    "базовой атаки";
+    "базовой атаки\r\n[Перезарядка данного умения 2 хода]";
             // 
             // label4
             // 
@@ -106,9 +106,10 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(68, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(427, 20);
+            this.label3.Size = new System.Drawing.Size(427, 40);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Ассасин бьёт своим большим кулаком нанося 20 урона\r\n";
+            this.label3.Text = "Ассасин бьёт своим большим кулаком нанося 20 урона\r\n[Перезарядка данного умения 1" +
+    " ход]\r\n";
             // 
             // label2
             // 
