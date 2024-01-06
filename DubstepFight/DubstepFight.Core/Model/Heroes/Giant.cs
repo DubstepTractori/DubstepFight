@@ -19,15 +19,16 @@ namespace DubstepFightClassLibrary
         public Giant() { Health = 200; Power = 20; Name = "Гигант"; Attack2CD = 2;
             Attack1ImgPath = @"..\..\Resources\Other\NoIcon.png";
             Attack2ImgPath = @"..\..\Resources\Other\NoIcon.png";
+            CharPoseIdleImgPath = @"..\..\Resources\Giant\Gigant_Pose.png";
         }
         public override int Attack1()
         {
+            Attack2CD-=1;
             return Power;
         }
 
         public override int PassiveProc()
         {
-            Attack2CD -= 1;
             return 0; //нет особой пассивки
         }
         public override int Attack2()

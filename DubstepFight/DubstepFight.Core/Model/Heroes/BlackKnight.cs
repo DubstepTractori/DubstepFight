@@ -20,6 +20,7 @@ namespace DubstepFight
         public BlackKnight() { Health = 150; Power = 25; Name = "Тёмный Рыцарь"; Passive = new Passive(0); Attack2CD = 2;
             Attack1ImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg";
             Attack2ImgPath = @"..\..\Resources\Other\NoIcon.png";
+            CharPoseIdleImgPath = @"..\..\Resources\Other\NoIcon.png";
         }
 
         public override int Attack1()

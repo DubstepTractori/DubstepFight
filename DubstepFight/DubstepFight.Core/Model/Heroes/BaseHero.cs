@@ -20,6 +20,7 @@ namespace DubstepFight
         private Passive passive;
         private string attack1ImgPath;
         private string attack2ImgPath;
+        private string charPoseIdleImgPath;
         int attack2CD;
 
         /// <summary>
@@ -76,6 +77,7 @@ namespace DubstepFight
 
         public string Attack1ImgPath { get => attack1ImgPath; set => attack1ImgPath = value; }
         public string Attack2ImgPath { get => attack2ImgPath; set => attack2ImgPath = value; }
+        public string CharPoseIdleImgPath { get => charPoseIdleImgPath; set => charPoseIdleImgPath = value; }
     }
 
 

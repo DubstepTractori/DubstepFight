@@ -13,8 +13,6 @@ namespace DubstepFightClassLibrary
 {
     public class Assasin : BaseHero
     {
-
-
         /// <summary>
         /// класс асассина
         /// </summary>
@@ -23,6 +21,7 @@ namespace DubstepFightClassLibrary
         public Assasin() { Health = 75; Power = 20; Name = "Ассассин"; Passive = new Passive(0); Attack2CD = 3;
             Attack1ImgPath = @"..\..\Resources\Assassin\Assassin_Attack_1.jpg";
             Attack2ImgPath = @"..\..\Resources\Assassin\Assassin_Attack_2.jpg";
+            CharPoseIdleImgPath = @"..\..\Resources\Assassin\Assassin_Pose.png";
         }
 
 

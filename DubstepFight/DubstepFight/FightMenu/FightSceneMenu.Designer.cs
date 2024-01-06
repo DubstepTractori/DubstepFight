@@ -44,6 +44,10 @@
             this.Player1Attack2MyButton = new DubstepFight.MyCustomAttackButton1();
             this.Player1Attack1MyButton = new DubstepFight.MyCustomAttackButton1();
             this.PlayerWinLabel = new System.Windows.Forms.Label();
+            this.Player1CharPicBox = new System.Windows.Forms.PictureBox();
+            this.Player2CharPicBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Player1CharPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player2CharPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Player1HpProgressBar
@@ -224,11 +228,30 @@
             this.PlayerWinLabel.Text = "NoWin";
             this.PlayerWinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Player1CharPicBox
+            // 
+            this.Player1CharPicBox.Location = new System.Drawing.Point(165, 127);
+            this.Player1CharPicBox.Name = "Player1CharPicBox";
+            this.Player1CharPicBox.Size = new System.Drawing.Size(177, 211);
+            this.Player1CharPicBox.TabIndex = 16;
+            this.Player1CharPicBox.TabStop = false;
+            // 
+            // Player2CharPicBox
+            // 
+            this.Player2CharPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Player2CharPicBox.Location = new System.Drawing.Point(464, 127);
+            this.Player2CharPicBox.Name = "Player2CharPicBox";
+            this.Player2CharPicBox.Size = new System.Drawing.Size(177, 211);
+            this.Player2CharPicBox.TabIndex = 17;
+            this.Player2CharPicBox.TabStop = false;
+            // 
             // FightSceneMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Player2CharPicBox);
+            this.Controls.Add(this.Player1CharPicBox);
             this.Controls.Add(this.PlayerWinLabel);
             this.Controls.Add(this.Player2GetDamageLabel);
             this.Controls.Add(this.Player1GetDamageLabel);
@@ -247,6 +270,8 @@
             this.Controls.Add(this.Player1HpProgressBar);
             this.Name = "FightSceneMenu";
             this.Text = "Dubstep Fight";
+            ((System.ComponentModel.ISupportInitialize)(this.Player1CharPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player2CharPicBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +294,7 @@
         private System.Windows.Forms.Label Player1GetDamageLabel;
         private System.Windows.Forms.Label Player2GetDamageLabel;
         private System.Windows.Forms.Label PlayerWinLabel;
+        private System.Windows.Forms.PictureBox Player1CharPicBox;
+        private System.Windows.Forms.PictureBox Player2CharPicBox;
     }
 }

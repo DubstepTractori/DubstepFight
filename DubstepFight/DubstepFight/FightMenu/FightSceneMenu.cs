@@ -50,6 +50,7 @@ namespace DubstepFight.FightMenu
             Player1HpProgressBar.Value = Player1.Health;
             Player1Attack1MyButton.Image = Image.FromFile(Player1.Attack1ImgPath);
             Player1Attack2MyButton.Image = Image.FromFile(Player1.Attack2ImgPath);
+            Player1CharPicBox.Image = Image.FromFile(Player1.CharPoseIdleImgPath);
 
 
             Player2HeroNameLabel.Text = Player2.Name;
@@ -58,6 +59,9 @@ namespace DubstepFight.FightMenu
             Player2HpProgressBar.Value = Player2.Health;
             Player2Attack1MyButton.Image = Image.FromFile(Player2.Attack1ImgPath);
             Player2Attack2MyButton.Image = Image.FromFile(Player2.Attack2ImgPath);
+            Image Player2CharPoseIdle = Image.FromFile((Player2.CharPoseIdleImgPath));
+            Player2CharPoseIdle.RotateFlip(RotateFlipType.Rotate180FlipY);
+            Player2CharPicBox.Image = Player2CharPoseIdle;
 
             Player1GetDamageLabel.Text = "";
             Player2GetDamageLabel.Text = "";
@@ -68,6 +72,9 @@ namespace DubstepFight.FightMenu
 
         private void FrameUpdate()
         {
+            
+
+            
 
             TurnCheck();
 
@@ -78,6 +85,11 @@ namespace DubstepFight.FightMenu
 
             Player2HpLabel.Text = Player2.Health.ToString();
             Player2HpProgressBar.Value = Player2.Health;
+
+            
+
+
+
         }
         private void TurnCheck()
         {
@@ -90,8 +102,12 @@ namespace DubstepFight.FightMenu
                 Player1Attack1MyButton.ButtonDisable();
                 Player1Attack2MyButton.ButtonDisable();
 
+
                 Player2Attack1MyButton.ButtonEnable();
                 Player2Attack2MyButton.ButtonEnable();
+
+                if (Player2.Attack2CD > 0)
+                { Player2Attack2MyButton.ButtonDisable(); }
             }
 
             if (MyFight.IsPlayer1Turn)
@@ -101,6 +117,9 @@ namespace DubstepFight.FightMenu
 
                 Player1Attack1MyButton.ButtonEnable();
                 Player1Attack2MyButton.ButtonEnable();
+
+                if (Player1.Attack2CD > 0)
+                { Player1Attack2MyButton.ButtonDisable(); }
 
                 Player2Attack1MyButton.ButtonDisable();
                 Player2Attack2MyButton.ButtonDisable();
