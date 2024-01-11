@@ -20,7 +20,10 @@ namespace DubstepFight.CharacterInfoFolder
         {
             InitializeComponent();
 
+
             ReturnFight = returnFight;
+
+
         }
 
         private void returnButton_Click(object sender, EventArgs e)

@@ -58,6 +58,12 @@
     <Compile Include="CharacterInfoFolder\BlackKnightInfoForm.Designer.cs">
       <DependentUpon>BlackKnightInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CharacterInfoFolder\EasterEgg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterInfoFolder\EasterEgg.Designer.cs">
+      <DependentUpon>EasterEgg.cs</DependentUpon>
+    </Compile>
     <Compile Include="CharacterInfoFolder\ElfInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterInfoFolder\BlackKnightInfoForm.resx">
       <DependentUpon>BlackKnightInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterInfoFolder\EasterEgg.resx">
+      <DependentUpon>EasterEgg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterInfoFolder\ElfInfoForm.resx">
       <DependentUpon>ElfInfoForm.cs</DependentUpon>
@@ -190,6 +199,7 @@
     <Content Include="Resources\Elf\Elf_Pose.png" />
     <Content Include="Resources\Giant\Gigant_Pose.png" />
     <Content Include="Resources\Other\NoIcon.png" />
+    <Content Include="Resources\Other\SecretNigga.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

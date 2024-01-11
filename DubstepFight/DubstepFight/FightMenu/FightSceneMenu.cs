@@ -21,10 +21,13 @@ namespace DubstepFight.FightMenu
         BaseHero Player2;
         Fight MyFight;
 
+        Random random;
+
         AssassinInfoForm assassinInfo;
         GiantInfoForm giantInfo;
         ElfInfoForm elfInfo;
         BlackKnightInfoForm blackKnightInfo;
+        EasterEgg secretInfo;
 
         MainGameMenu returnMenuMain;
 
@@ -43,6 +46,7 @@ namespace DubstepFight.FightMenu
             Player1 = chosenHero;
             Player2 = chosenHeroPlayer2;
             returnMenuMain = MainMenu;
+            random = new Random();
 
             MyFight = new Fight(Player1, Player2);
 
@@ -73,6 +77,8 @@ namespace DubstepFight.FightMenu
             Player1GetDamageLabel.Text = "";
             Player2GetDamageLabel.Text = "";
             PlayerWinLabel.Text = "";
+
+            
 
             
 
@@ -169,7 +175,7 @@ namespace DubstepFight.FightMenu
             if(PlayerWaiting.Name == "Ассассин")
             {
                 PlayerDoing.Health -= Convert.ToInt32(PlayerDoing.Health * 0.09);
-                PlayerWaiting.PassiveProc()
+                PlayerWaiting.PassiveProc();
             }
         }
 
@@ -280,8 +286,18 @@ namespace DubstepFight.FightMenu
             }
             if (Player1.Name == "Тёмный Рыцарь")
             {
-                blackKnightInfo = new BlackKnightInfoForm(this);
-                FormRezizeToThisShowAndHide(blackKnightInfo);
+                if(random.Next(0,100) == 1)
+                {
+                    secretInfo = new EasterEgg();
+                    FormRezizeToThisShowAndHide(secretInfo);
+                }
+                else
+                {
+                    blackKnightInfo = new BlackKnightInfoForm(this);
+                    FormRezizeToThisShowAndHide(blackKnightInfo);
+                }
+                
+                
             }
 
         }
