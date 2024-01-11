@@ -174,7 +174,7 @@ namespace DubstepFight.FightMenu
         {
             if(PlayerWaiting.Name == "Ассассин")
             {
-                PlayerDoing.Health -= Convert.ToInt32(PlayerDoing.Health * 0.09);
+                PlayerDoing.Health -= Convert.ToInt32(PlayerDoing.Health * 0.15);
                 PlayerWaiting.PassiveProc();
             }
         }
@@ -288,7 +288,7 @@ namespace DubstepFight.FightMenu
             {
                 if(random.Next(0,100) == 1)
                 {
-                    secretInfo = new EasterEgg();
+                    secretInfo = new EasterEgg(this);
                     FormRezizeToThisShowAndHide(secretInfo);
                 }
                 else
@@ -321,8 +321,16 @@ namespace DubstepFight.FightMenu
             }
             if (Player2.Name == "Тёмный Рыцарь")
             {
-                blackKnightInfo = new BlackKnightInfoForm(this);
-                FormRezizeToThisShowAndHide(blackKnightInfo);
+                if (random.Next(0, 100) == 1)
+                {
+                    secretInfo = new EasterEgg(this);
+                    FormRezizeToThisShowAndHide(secretInfo);
+                }
+                else
+                {
+                    blackKnightInfo = new BlackKnightInfoForm(this);
+                    FormRezizeToThisShowAndHide(blackKnightInfo);
+                }
             }
         }
 

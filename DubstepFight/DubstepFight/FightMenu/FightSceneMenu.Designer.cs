@@ -179,6 +179,7 @@
             // 
             // Player1CharPicBox
             // 
+            this.Player1CharPicBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player1CharPicBox.Location = new System.Drawing.Point(165, 127);
             this.Player1CharPicBox.Name = "Player1CharPicBox";
             this.Player1CharPicBox.Size = new System.Drawing.Size(177, 211);
@@ -187,7 +188,7 @@
             // 
             // Player2CharPicBox
             // 
-            this.Player2CharPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Player2CharPicBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Player2CharPicBox.Location = new System.Drawing.Point(464, 127);
             this.Player2CharPicBox.Name = "Player2CharPicBox";
             this.Player2CharPicBox.Size = new System.Drawing.Size(177, 211);
@@ -262,6 +263,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ReturnMenuButton);
             this.Controls.Add(this.Player2CharPicBox);

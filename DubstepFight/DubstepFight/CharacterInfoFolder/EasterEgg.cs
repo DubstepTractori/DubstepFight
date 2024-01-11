@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DubstepFight.FightMenu;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace DubstepFight.CharacterInfoFolder
 {
     public partial class EasterEgg : Form
     {
-        public EasterEgg()
+        FightSceneMenu returnGame;
+
+        public EasterEgg(FightSceneMenu ReturnMenu)
         {
+            returnGame = ReturnMenu;
             InitializeComponent();
+        }
+
+        private void ReturnButton_Click(object sender, EventArgs e)
+        {
+            returnGame.Show();
+            this.Close();
         }
     }
 }

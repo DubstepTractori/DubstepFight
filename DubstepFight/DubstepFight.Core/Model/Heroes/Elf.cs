@@ -18,7 +18,7 @@ namespace DubstepFightClassLibrary
         /// <summary>
         /// класс эльфа
         /// </summary>
-        public Elf() { Health = 100; Power = 15; Name = "Эльф"; Passive = new Passive(0); Attack2CD = 1;
+        public Elf() { Health = 125; Power = 20; Name = "Эльф"; Passive = new Passive(0); Attack2CD = 1;
             Attack1ImgPath = @"..\..\Resources\Elf\Elf_Attack_1.jpg";
             Attack2ImgPath = @"..\..\Resources\Elf\Elf_Attack_1.jpg";
             CharPoseIdleImgPath = @"..\..\Resources\Elf\Elf_Pose.png";

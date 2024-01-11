@@ -83,6 +83,16 @@ namespace DubstepFight.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Assassin_Pose {
+            get {
+                object obj = ResourceManager.GetObject("Assassin_Pose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BlackKnight_Attack_1_Var_1 {
             get {
                 object obj = ResourceManager.GetObject("BlackKnight_Attack_1_Var_1", resourceCulture);
@@ -96,6 +106,16 @@ namespace DubstepFight.Properties {
         internal static System.Drawing.Bitmap BlackKnight_Attack_1_Var_2 {
             get {
                 object obj = ResourceManager.GetObject("BlackKnight_Attack_1_Var_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BlackKnight_Pose {
+            get {
+                object obj = ResourceManager.GetObject("BlackKnight_Pose", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +176,36 @@ namespace DubstepFight.Properties {
         internal static System.Drawing.Bitmap Elf_Attack_6 {
             get {
                 object obj = ResourceManager.GetObject("Elf_Attack_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Elf_Pose {
+            get {
+                object obj = ResourceManager.GetObject("Elf_Pose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gigant_Pose {
+            get {
+                object obj = ResourceManager.GetObject("Gigant_Pose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MainMenu {
+            get {
+                object obj = ResourceManager.GetObject("MainMenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

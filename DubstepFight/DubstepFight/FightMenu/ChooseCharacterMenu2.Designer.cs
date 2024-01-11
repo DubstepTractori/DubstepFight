@@ -52,11 +52,11 @@
             // 
             this.ChooseHeroGiantButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ChooseHeroGiantButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseHeroGiantButton.Image = global::DubstepFight.Properties.Resources.Gigant_Pose;
             this.ChooseHeroGiantButton.Location = new System.Drawing.Point(471, 242);
             this.ChooseHeroGiantButton.Name = "ChooseHeroGiantButton";
             this.ChooseHeroGiantButton.Size = new System.Drawing.Size(167, 100);
             this.ChooseHeroGiantButton.TabIndex = 11;
-            this.ChooseHeroGiantButton.Text = "Гигант";
             this.ChooseHeroGiantButton.UseVisualStyleBackColor = true;
             this.ChooseHeroGiantButton.Click += new System.EventHandler(this.ChooseHeroGiantButton_Click);
             // 
@@ -64,11 +64,12 @@
             // 
             this.ChooseHeroElfButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ChooseHeroElfButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseHeroElfButton.Image = global::DubstepFight.Properties.Resources.Elf_Pose;
+            this.ChooseHeroElfButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ChooseHeroElfButton.Location = new System.Drawing.Point(471, 99);
             this.ChooseHeroElfButton.Name = "ChooseHeroElfButton";
             this.ChooseHeroElfButton.Size = new System.Drawing.Size(167, 94);
             this.ChooseHeroElfButton.TabIndex = 10;
-            this.ChooseHeroElfButton.Text = "Эльф";
             this.ChooseHeroElfButton.UseVisualStyleBackColor = true;
             this.ChooseHeroElfButton.Click += new System.EventHandler(this.ChooseHeroElfButton_Click);
             // 
@@ -76,22 +77,24 @@
             // 
             this.ChooseHeroBlackKnightButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ChooseHeroBlackKnightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseHeroBlackKnightButton.Image = global::DubstepFight.Properties.Resources.SecretNigga;
+            this.ChooseHeroBlackKnightButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ChooseHeroBlackKnightButton.Location = new System.Drawing.Point(185, 242);
             this.ChooseHeroBlackKnightButton.Name = "ChooseHeroBlackKnightButton";
             this.ChooseHeroBlackKnightButton.Size = new System.Drawing.Size(157, 100);
             this.ChooseHeroBlackKnightButton.TabIndex = 9;
-            this.ChooseHeroBlackKnightButton.Text = "Тёмный \r\nРыцарь";
             this.ChooseHeroBlackKnightButton.UseVisualStyleBackColor = true;
             this.ChooseHeroBlackKnightButton.Click += new System.EventHandler(this.ChooseHeroBlackKnightButton_Click);
             // 
             // ChooseHeroAssasinButton
             // 
             this.ChooseHeroAssasinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChooseHeroAssasinButton.Image = global::DubstepFight.Properties.Resources.Assassin_Pose;
+            this.ChooseHeroAssasinButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ChooseHeroAssasinButton.Location = new System.Drawing.Point(185, 99);
             this.ChooseHeroAssasinButton.Name = "ChooseHeroAssasinButton";
             this.ChooseHeroAssasinButton.Size = new System.Drawing.Size(157, 94);
             this.ChooseHeroAssasinButton.TabIndex = 8;
-            this.ChooseHeroAssasinButton.Text = "Ассасин";
             this.ChooseHeroAssasinButton.UseVisualStyleBackColor = true;
             this.ChooseHeroAssasinButton.Click += new System.EventHandler(this.ChooseHeroAssasinButton_Click);
             // 

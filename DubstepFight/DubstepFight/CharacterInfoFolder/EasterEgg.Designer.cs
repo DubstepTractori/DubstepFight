@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.SecretPictureBox = new System.Windows.Forms.PictureBox();
+            this.ReturnButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SecretPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,11 +42,22 @@
             this.SecretPictureBox.TabIndex = 0;
             this.SecretPictureBox.TabStop = false;
             // 
+            // ReturnButton
+            // 
+            this.ReturnButton.Location = new System.Drawing.Point(12, 373);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(764, 65);
+            this.ReturnButton.TabIndex = 1;
+            this.ReturnButton.Text = "Вернуться";
+            this.ReturnButton.UseVisualStyleBackColor = true;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
+            // 
             // EasterEgg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.SecretPictureBox);
             this.Name = "EasterEgg";
             this.Text = "EasterEgg";
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox SecretPictureBox;
+        private System.Windows.Forms.Button ReturnButton;
     }
 }
