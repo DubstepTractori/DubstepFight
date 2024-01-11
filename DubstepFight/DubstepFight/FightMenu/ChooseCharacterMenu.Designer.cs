@@ -118,6 +118,7 @@
             this.Controls.Add(this.ChooseHeroBlackKnightButton);
             this.Controls.Add(this.ChooseHeroAssasinButton);
             this.Controls.Add(this.ChooseCharacterLabel);
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "ChooseCharacterMenu";
             this.Text = "Dubstep Fight";
             this.ResumeLayout(false);

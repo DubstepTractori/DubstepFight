@@ -54,18 +54,18 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(68, 367);
+            this.label8.Location = new System.Drawing.Point(68, 315);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(419, 40);
+            this.label8.Size = new System.Drawing.Size(312, 40);
             this.label8.TabIndex = 25;
-            this.label8.Text = "С каждой базовой атакой эльф копит особые заряды\r\n для особой способности";
+            this.label8.Text = "Каждая базовая атака даёт 1 заряд.\r\nЗаряды увеличивают урон способности";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(35, 337);
+            this.label7.Location = new System.Drawing.Point(35, 285);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(163, 20);
             this.label7.TabIndex = 24;
@@ -77,10 +77,10 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(68, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(369, 40);
+            this.label6.Size = new System.Drawing.Size(372, 60);
             this.label6.TabIndex = 23;
-            this.label6.Text = "Эльф стреляет из лука заряженной стрелой\r\n[урон стрелы зависит от накопленных зар" +
-    "ядов]";
+            this.label6.Text = "Эльф стреляет из лука заряженной стрелой\r\n[Урон стрелы зависит от накопленных зар" +
+    "ядов]\r\n[Перезарядка данного умения 1 ход]";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
@@ -108,9 +108,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(68, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(371, 20);
+            this.label3.Size = new System.Drawing.Size(375, 20);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Эльф стреляет из своего лука нанося 20 урона\r\n";
+            this.label3.Text = "Эльф стреляет из своего лука, нанося 20 урона\r\n";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
@@ -147,6 +147,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "ElfInfoForm";
             this.Text = "ElfInfoForm";
             this.ResumeLayout(false);

@@ -39,13 +39,14 @@
             this.Player2InfoButton = new System.Windows.Forms.Button();
             this.Player1GetDamageLabel = new System.Windows.Forms.Label();
             this.Player2GetDamageLabel = new System.Windows.Forms.Label();
+            this.PlayerWinLabel = new System.Windows.Forms.Label();
+            this.Player1CharPicBox = new System.Windows.Forms.PictureBox();
+            this.Player2CharPicBox = new System.Windows.Forms.PictureBox();
+            this.ReturnMenuButton = new System.Windows.Forms.Button();
             this.Player2Attack2MyButton = new DubstepFight.MyCustomAttackButton1();
             this.Player2Attack1MyButton = new DubstepFight.MyCustomAttackButton1();
             this.Player1Attack2MyButton = new DubstepFight.MyCustomAttackButton1();
             this.Player1Attack1MyButton = new DubstepFight.MyCustomAttackButton1();
-            this.PlayerWinLabel = new System.Windows.Forms.Label();
-            this.Player1CharPicBox = new System.Windows.Forms.PictureBox();
-            this.Player2CharPicBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player1CharPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player2CharPicBox)).BeginInit();
             this.SuspendLayout();
@@ -165,6 +166,46 @@
             this.Player2GetDamageLabel.Text = "NoDamageGet";
             this.Player2GetDamageLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // PlayerWinLabel
+            // 
+            this.PlayerWinLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PlayerWinLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PlayerWinLabel.Location = new System.Drawing.Point(232, 75);
+            this.PlayerWinLabel.Name = "PlayerWinLabel";
+            this.PlayerWinLabel.Size = new System.Drawing.Size(341, 20);
+            this.PlayerWinLabel.TabIndex = 15;
+            this.PlayerWinLabel.Text = "NoWin";
+            this.PlayerWinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Player1CharPicBox
+            // 
+            this.Player1CharPicBox.Location = new System.Drawing.Point(165, 127);
+            this.Player1CharPicBox.Name = "Player1CharPicBox";
+            this.Player1CharPicBox.Size = new System.Drawing.Size(177, 211);
+            this.Player1CharPicBox.TabIndex = 16;
+            this.Player1CharPicBox.TabStop = false;
+            // 
+            // Player2CharPicBox
+            // 
+            this.Player2CharPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Player2CharPicBox.Location = new System.Drawing.Point(464, 127);
+            this.Player2CharPicBox.Name = "Player2CharPicBox";
+            this.Player2CharPicBox.Size = new System.Drawing.Size(177, 211);
+            this.Player2CharPicBox.TabIndex = 17;
+            this.Player2CharPicBox.TabStop = false;
+            // 
+            // ReturnMenuButton
+            // 
+            this.ReturnMenuButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ReturnMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReturnMenuButton.Location = new System.Drawing.Point(308, 104);
+            this.ReturnMenuButton.Name = "ReturnMenuButton";
+            this.ReturnMenuButton.Size = new System.Drawing.Size(197, 69);
+            this.ReturnMenuButton.TabIndex = 18;
+            this.ReturnMenuButton.Text = "Вернуться в меню";
+            this.ReturnMenuButton.UseVisualStyleBackColor = true;
+            this.ReturnMenuButton.Click += new System.EventHandler(this.ReturnMenuButton_Click);
+            // 
             // Player2Attack2MyButton
             // 
             this.Player2Attack2MyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -217,39 +258,12 @@
             this.Player1Attack1MyButton.UseVisualStyleBackColor = false;
             this.Player1Attack1MyButton.Click += new System.EventHandler(this.Player1Attack1MyButton_Click);
             // 
-            // PlayerWinLabel
-            // 
-            this.PlayerWinLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PlayerWinLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PlayerWinLabel.Location = new System.Drawing.Point(232, 75);
-            this.PlayerWinLabel.Name = "PlayerWinLabel";
-            this.PlayerWinLabel.Size = new System.Drawing.Size(341, 20);
-            this.PlayerWinLabel.TabIndex = 15;
-            this.PlayerWinLabel.Text = "NoWin";
-            this.PlayerWinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Player1CharPicBox
-            // 
-            this.Player1CharPicBox.Location = new System.Drawing.Point(165, 127);
-            this.Player1CharPicBox.Name = "Player1CharPicBox";
-            this.Player1CharPicBox.Size = new System.Drawing.Size(177, 211);
-            this.Player1CharPicBox.TabIndex = 16;
-            this.Player1CharPicBox.TabStop = false;
-            // 
-            // Player2CharPicBox
-            // 
-            this.Player2CharPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Player2CharPicBox.Location = new System.Drawing.Point(464, 127);
-            this.Player2CharPicBox.Name = "Player2CharPicBox";
-            this.Player2CharPicBox.Size = new System.Drawing.Size(177, 211);
-            this.Player2CharPicBox.TabIndex = 17;
-            this.Player2CharPicBox.TabStop = false;
-            // 
             // FightSceneMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ReturnMenuButton);
             this.Controls.Add(this.Player2CharPicBox);
             this.Controls.Add(this.Player1CharPicBox);
             this.Controls.Add(this.PlayerWinLabel);
@@ -268,6 +282,7 @@
             this.Controls.Add(this.Player1Attack1MyButton);
             this.Controls.Add(this.Player2HpProgressBar);
             this.Controls.Add(this.Player1HpProgressBar);
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "FightSceneMenu";
             this.Text = "Dubstep Fight";
             ((System.ComponentModel.ISupportInitialize)(this.Player1CharPicBox)).EndInit();
@@ -296,5 +311,6 @@
         private System.Windows.Forms.Label PlayerWinLabel;
         private System.Windows.Forms.PictureBox Player1CharPicBox;
         private System.Windows.Forms.PictureBox Player2CharPicBox;
+        private System.Windows.Forms.Button ReturnMenuButton;
     }
 }

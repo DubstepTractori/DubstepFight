@@ -180,6 +180,7 @@
     <Content Include="Resources\Assassin\Assassin_Pose.png" />
     <Content Include="Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg" />
     <Content Include="Resources\BlackKnight\BlackKnight_Attack_1_Var_2.jpg" />
+    <Content Include="Resources\BlackKnight\BlackKnight_Pose.png" />
     <Content Include="Resources\Elf\Elf_Attack_1.jpg" />
     <Content Include="Resources\Elf\Elf_Attack_2.jpg" />
     <Content Include="Resources\Elf\Elf_Attack_3.jpg" />

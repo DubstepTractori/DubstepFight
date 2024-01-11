@@ -58,7 +58,7 @@ namespace DubstepFightClassLibrary
             if (Passive.PassiveCounter1 > 0)
             {
                 Passive.PassiveCounter1 -= 1;
-                return Power / 2;
+                return 0;
             }
             else
             {

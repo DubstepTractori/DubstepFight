@@ -107,10 +107,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(68, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(396, 40);
+            this.label3.Size = new System.Drawing.Size(396, 20);
             this.label3.TabIndex = 29;
-            this.label3.Text = "Темный рыцарь бьёт своим мечом нанося 25 урона\r\n[Перезарядка данного умения 1 ход" +
-    "]";
+            this.label3.Text = "Темный рыцарь бьёт своим мечом нанося 25 урона";
             // 
             // label2
             // 
@@ -146,6 +145,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "BlackKnightInfoForm";
             this.Text = "BlackKnightInfoForm";
             this.ResumeLayout(false);

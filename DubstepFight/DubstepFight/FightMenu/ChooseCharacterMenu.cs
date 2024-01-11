@@ -37,7 +37,7 @@ namespace DubstepFight
         private void ChooseHeroAssasinButton_Click(object sender, EventArgs e)
         {
             ChosenAssasin = new Assasin();
-            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenAssasin);
+            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenAssasin, menu);
 
             chooseCharacter2.Show();
             chooseCharacter2.Location = this.Location;
@@ -48,7 +48,7 @@ namespace DubstepFight
         private void ChooseHeroElfButton_Click(object sender, EventArgs e)
         {
             ChosenElf = new Elf();
-            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenElf);
+            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenElf, menu);
 
             chooseCharacter2.Show();
             chooseCharacter2.Location = this.Location;
@@ -59,7 +59,7 @@ namespace DubstepFight
         private void ChooseHeroBlackKnightButton_Click(object sender, EventArgs e)
         {
             ChosenBlackKnight = new BlackKnight();
-            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenBlackKnight);
+            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenBlackKnight, menu);
 
             chooseCharacter2.Show();
             chooseCharacter2.Location = this.Location;
@@ -70,7 +70,7 @@ namespace DubstepFight
         private void ChooseHeroGiantButton_Click(object sender, EventArgs e)
         {
             ChosenGiant = new Giant();
-            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenGiant);
+            chooseCharacter2 = new ChooseCharacterMenu2(this, ChosenGiant, menu);
 
             chooseCharacter2.Show();
             chooseCharacter2.Location = this.Location;

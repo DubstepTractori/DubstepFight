@@ -67,9 +67,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(68, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(367, 40);
+            this.label3.Size = new System.Drawing.Size(371, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Ассасин бьёт своим кинжалом нанося 20 урона\r\n[Перезарядка данного умения 1 ход]";
+            this.label3.Text = "Ассасин бьёт своим кинжалом, нанося 20 урона";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -103,7 +103,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(545, 40);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Кровотечение - при использовании атакующего навыка наносит урон, \r\nравный 5% от м" +
+            this.label6.Text = "Кровотечение - при использовании атакующего навыка наносит урон, \r\nравный 9% от м" +
     "акс. здоровья. Данный навык игнорирует защиту";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
@@ -124,10 +124,10 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(68, 365);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(471, 40);
+            this.label8.Size = new System.Drawing.Size(467, 40);
             this.label8.TabIndex = 7;
-            this.label8.Text = "При получении урона Ассассин имеет 30%  шанс увернуться,\r\nигнорируя весь полученн" +
-    "ый урон";
+            this.label8.Text = "При получении урона Ассассин имеет 30% шанс увернуться,\r\nигнорируя весь полученны" +
+    "й урон";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // returnButton
@@ -155,6 +155,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "AssassinInfoForm";
             this.Text = "AssassinInfoForm";
             this.ResumeLayout(false);

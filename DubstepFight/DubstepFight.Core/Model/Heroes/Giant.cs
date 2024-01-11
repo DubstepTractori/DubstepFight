@@ -34,7 +34,7 @@ namespace DubstepFightClassLibrary
         public override int Attack2()
         {
             Attack2CD = 2;
-            return Convert.ToInt32(Power * 1.3);
+            return Convert.ToInt32(Power * 1.5);
         }
 
         public override int TakeDamage(int takenDamage)

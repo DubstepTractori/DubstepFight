@@ -113,6 +113,7 @@
             this.Controls.Add(this.DimaCreditLabel);
             this.Controls.Add(this.VadimCreditLabel);
             this.Controls.Add(this.AntonCreditLabel);
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "DevelopersCreditMenu";
             this.Text = "Dubstep Fight";
             this.ResumeLayout(false);

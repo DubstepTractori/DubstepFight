@@ -30,7 +30,6 @@
         {
             this.DevelopersButton = new System.Windows.Forms.Button();
             this.ChooseCharacterLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.BackToMainMenuButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -58,22 +57,11 @@
             this.ChooseCharacterLabel.Text = "Настройки";
             this.ChooseCharacterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(283, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 53);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Кнопка";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // BackToMainMenuButton
             // 
             this.BackToMainMenuButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BackToMainMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BackToMainMenuButton.Location = new System.Drawing.Point(254, 305);
+            this.BackToMainMenuButton.Location = new System.Drawing.Point(254, 263);
             this.BackToMainMenuButton.Name = "BackToMainMenuButton";
             this.BackToMainMenuButton.Size = new System.Drawing.Size(267, 53);
             this.BackToMainMenuButton.TabIndex = 4;
@@ -87,9 +75,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BackToMainMenuButton);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.ChooseCharacterLabel);
             this.Controls.Add(this.DevelopersButton);
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "SettingsMenu";
             this.Text = "SettingsMenu";
             this.ResumeLayout(false);
@@ -101,7 +89,6 @@
 
         private System.Windows.Forms.Button DevelopersButton;
         private System.Windows.Forms.Label ChooseCharacterLabel;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BackToMainMenuButton;
     }
 }

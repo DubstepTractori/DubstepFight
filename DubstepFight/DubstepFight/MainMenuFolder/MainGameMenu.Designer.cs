@@ -84,13 +84,16 @@
             // 
             // MainGameMenu
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ChoosePlayer1Button);
             this.Controls.Add(this.WelcomeLabel);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "MainGameMenu";
             this.Text = "Dubstep Fight";
             this.Load += new System.EventHandler(this.MainGameMenu_Load);

@@ -10,6 +10,7 @@ using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace DubstepFight.FightMenu
@@ -25,6 +26,8 @@ namespace DubstepFight.FightMenu
         ElfInfoForm elfInfo;
         BlackKnightInfoForm blackKnightInfo;
 
+        MainGameMenu returnMenuMain;
+
         private void FormRezizeToThisShowAndHide(Form fromForm)
         {
             fromForm.Size = this.Size;
@@ -33,16 +36,20 @@ namespace DubstepFight.FightMenu
             this.Hide();
         }
 
-        public FightSceneMenu(BaseHero chosenHero, BaseHero chosenHeroPlayer2)
+        public FightSceneMenu(BaseHero chosenHero, BaseHero chosenHeroPlayer2, MainGameMenu MainMenu)
         {
             InitializeComponent();
 
             Player1 = chosenHero;
             Player2 = chosenHeroPlayer2;
+            returnMenuMain = MainMenu;
 
             MyFight = new Fight(Player1, Player2);
 
             TurnCounterLabel.Text = MyFight.TurnCounter.ToString();
+
+            ReturnMenuButton.Enabled = false;
+            ReturnMenuButton.Visible = false;
 
             Player1HeroNameLabel.Text = Player1.Name;
             Player1HpLabel.Text = Player1.Health.ToString();
@@ -66,6 +73,8 @@ namespace DubstepFight.FightMenu
             Player1GetDamageLabel.Text = "";
             Player2GetDamageLabel.Text = "";
             PlayerWinLabel.Text = "";
+
+            
 
             TurnCheck();
         }
@@ -131,8 +140,9 @@ namespace DubstepFight.FightMenu
             Player2.Health = 0;
             Player2HpLabel.Text = Player2.Health.ToString();
             Player2HpProgressBar.Value = 0;
-            MessageBox.Show("Победил Игрок 1");
-            //Thread.Sleep(3500);
+            PlayerWinLabel.Text = "Победил Игрок 1";
+            ReturnMenuButton.Visible = true;
+            ReturnMenuButton.Enabled = true;
 
         }
 
@@ -141,7 +151,9 @@ namespace DubstepFight.FightMenu
             Player1.Health = 0;
             Player1HpLabel.Text = Player1.Health.ToString();
             Player1HpProgressBar.Value = 0;
-            MessageBox.Show("Победил Игрок 2");
+            PlayerWinLabel.Text = "Победил Игрок 2";
+            ReturnMenuButton.Visible = true;
+            ReturnMenuButton.Enabled = true;
         }
 
         private void PassiveCheck(BaseHero PlayerDoing, BaseHero PlayerWaiting, Button PlayerWaitingAttackButton1, Button PlayerWaitingAttackButton2, 
@@ -156,7 +168,8 @@ namespace DubstepFight.FightMenu
         {
             if(PlayerWaiting.Name == "Ассассин")
             {
-                PlayerDoing.Health -= PlayerWaiting.PassiveProc();
+                PlayerDoing.Health -= Convert.ToInt32(PlayerDoing.Health * 0.09);
+                PlayerWaiting.PassiveProc()
             }
         }
 
@@ -186,6 +199,9 @@ namespace DubstepFight.FightMenu
                 Player2GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
+                if (Player2.Health <= 0)
+                { Player1Win(); }
+
             }
             catch
             {
@@ -202,6 +218,8 @@ namespace DubstepFight.FightMenu
                 Player2GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
+                if (Player2.Health <= 0)
+                { Player1Win(); }
             }
             catch
             {
@@ -217,6 +235,8 @@ namespace DubstepFight.FightMenu
                 Player1GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
+                if (Player1.Health <= 0)
+                { Player2Win(); }
             }
             catch
             {
@@ -232,9 +252,11 @@ namespace DubstepFight.FightMenu
                 Player1GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 MyFight.TurnSwitch();
                 FrameUpdate();
+                if(Player1.Health <= 0)
+                { Player2Win(); }
             }
             catch
-            {
+            {              
                 Player2Win();
             }
         }
@@ -286,6 +308,12 @@ namespace DubstepFight.FightMenu
                 blackKnightInfo = new BlackKnightInfoForm(this);
                 FormRezizeToThisShowAndHide(blackKnightInfo);
             }
+        }
+
+        private void ReturnMenuButton_Click(object sender, EventArgs e)
+        {
+            FormRezizeToThisShowAndHide(returnMenuMain);
+            this.Close();
         }
     }
 }
