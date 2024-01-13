@@ -36,17 +36,19 @@
             // SecretPictureBox
             // 
             this.SecretPictureBox.Image = global::DubstepFight.Properties.Resources.SecretNigga;
-            this.SecretPictureBox.Location = new System.Drawing.Point(-1, -2);
+            this.SecretPictureBox.Location = new System.Drawing.Point(2, -2);
             this.SecretPictureBox.Name = "SecretPictureBox";
-            this.SecretPictureBox.Size = new System.Drawing.Size(303, 223);
+            this.SecretPictureBox.Size = new System.Drawing.Size(796, 369);
+            this.SecretPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SecretPictureBox.TabIndex = 0;
             this.SecretPictureBox.TabStop = false;
             // 
             // ReturnButton
             // 
+            this.ReturnButton.AutoSize = true;
             this.ReturnButton.Location = new System.Drawing.Point(12, 373);
             this.ReturnButton.Name = "ReturnButton";
-            this.ReturnButton.Size = new System.Drawing.Size(764, 65);
+            this.ReturnButton.Size = new System.Drawing.Size(776, 65);
             this.ReturnButton.TabIndex = 1;
             this.ReturnButton.Text = "Вернуться";
             this.ReturnButton.UseVisualStyleBackColor = true;
@@ -56,13 +58,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.SecretPictureBox);
             this.Name = "EasterEgg";
             this.Text = "EasterEgg";
+            this.Load += new System.EventHandler(this.EasterEgg_Load);
+            this.Resize += new System.EventHandler(this.EasterEgg_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.SecretPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -321,7 +321,7 @@ namespace DubstepFight.FightMenu
             }
             if (Player2.Name == "Тёмный Рыцарь")
             {
-                if (random.Next(0, 100) == 1)
+                if (random.Next(0, 2) == 1)
                 {
                     secretInfo = new EasterEgg(this);
                     FormRezizeToThisShowAndHide(secretInfo);
