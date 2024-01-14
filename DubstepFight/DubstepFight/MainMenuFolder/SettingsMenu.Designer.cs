@@ -59,11 +59,12 @@
             // 
             // BackToMainMenuButton
             // 
-            this.BackToMainMenuButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.BackToMainMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BackToMainMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BackToMainMenuButton.Location = new System.Drawing.Point(254, 263);
+            this.BackToMainMenuButton.Location = new System.Drawing.Point(283, 267);
             this.BackToMainMenuButton.Name = "BackToMainMenuButton";
-            this.BackToMainMenuButton.Size = new System.Drawing.Size(267, 53);
+            this.BackToMainMenuButton.Size = new System.Drawing.Size(210, 54);
             this.BackToMainMenuButton.TabIndex = 4;
             this.BackToMainMenuButton.Text = "Вернуться";
             this.BackToMainMenuButton.UseVisualStyleBackColor = true;
@@ -80,6 +81,7 @@
             this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "SettingsMenu";
             this.Text = "SettingsMenu";
+            this.Load += new System.EventHandler(this.SettingsMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

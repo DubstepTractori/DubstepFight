@@ -17,19 +17,9 @@ namespace DubstepFight.FightMenu
 {
     public partial class FightSceneMenu : Form
     {
-        BaseHero Player1;
-        BaseHero Player2;
-        Fight MyFight;
-
-        Random random;
-
-        AssassinInfoForm assassinInfo;
-        GiantInfoForm giantInfo;
-        ElfInfoForm elfInfo;
-        BlackKnightInfoForm blackKnightInfo;
-        EasterEgg secretInfo;
 
         MainGameMenu returnMenuMain;
+        MainViewModel viewModel;
 
         private void FormRezizeToThisShowAndHide(Form fromForm)
         {
@@ -39,19 +29,22 @@ namespace DubstepFight.FightMenu
             this.Hide();
         }
 
-        public FightSceneMenu(BaseHero chosenHero, BaseHero chosenHeroPlayer2, MainGameMenu MainMenu)
+        public FightSceneMenu(MainGameMenu MainMenu, MainViewModel viewModel)
         {
             InitializeComponent();
 
-            Player1 = chosenHero;
-            Player2 = chosenHeroPlayer2;
             returnMenuMain = MainMenu;
-            random = new Random();
+            this.viewModel = viewModel;
 
-            MyFight = new Fight(Player1, Player2);
+            TurnCounterLabel.Text = this.viewModel.GameFight.TurnCounter.ToString();
 
-            TurnCounterLabel.Text = MyFight.TurnCounter.ToString();
+            InitializePlayers();
 
+            TurnCheck();
+        }
+
+        private void InitializePlayers()
+        {
             ReturnMenuButton.Enabled = false;
             ReturnMenuButton.Visible = false;
 
@@ -77,18 +70,10 @@ namespace DubstepFight.FightMenu
             Player1GetDamageLabel.Text = "";
             Player2GetDamageLabel.Text = "";
             PlayerWinLabel.Text = "";
-
-            
-
-            
-
-            TurnCheck();
         }
 
         private void FrameUpdate()
-        {
-            
-
+        { 
             
 
             TurnCheck();
@@ -309,7 +294,7 @@ namespace DubstepFight.FightMenu
         {
             if (Player2.Name == "Ассассин")
             {
-                assassinInfo = new AssassinInfoForm(this);
+                assassinInfo = new AssassinInfoForm(this, "Assasin", "123", "123123");
                 FormRezizeToThisShowAndHide(assassinInfo);
             }
             if (Player2.Name == "Гигант")

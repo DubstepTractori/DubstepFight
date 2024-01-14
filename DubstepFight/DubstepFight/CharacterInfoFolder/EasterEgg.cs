@@ -22,8 +22,7 @@ namespace DubstepFight.CharacterInfoFolder
         {
             InitializeComponent();
             returnGame = ReturnMenu;
-            retunButtonRec = new Rectangle(ReturnButton.Location, ReturnButton.Size);
-            formRec = new Rectangle(this.Location, this.Size);
+            
         }
 
         private void ReturnButton_Click(object sender, EventArgs e)
@@ -34,19 +33,24 @@ namespace DubstepFight.CharacterInfoFolder
 
         private void EasterEgg_Load(object sender, EventArgs e)
         {
-            
+            retunButtonRec = new Rectangle(ReturnButton.Location, ReturnButton.Size);
+            formRec = new Rectangle(this.Location, this.Size);
         }
 
         private void ControlResize(Rectangle r, Control c)
         {
-            float ratioX = (float)(this.Size.Width) / (float)(formRec.Width);
+            float ratioX = (float)(this.Width) / (float)(formRec.Width);
             float ratioY = (float)(this.Height) / (float)(formRec.Height);
 
-            int newX = (int)(r.Width * ratioX);
-            int newY = (int)(r.Height * ratioY);
+            int newX = (int)(r.Location.X * ratioX);
+            int newY = (int)(r.Location.Y * ratioY);
+
+            int newWidth = (int)(r.Width * ratioX);
+            int newHeight = (int)(r.Height * ratioY);
+
 
             c.Location = new Point(newX, newY);
-            c.Size = new Size(newX, newY);
+            c.Size = new Size(newWidth, newHeight);
         }
 
         private void EasterEgg_Resize(object sender, EventArgs e)
