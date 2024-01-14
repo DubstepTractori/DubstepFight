@@ -174,7 +174,10 @@ namespace DubstepFight.FightMenu
         {
             if(PlayerWaiting.Name == "Ассассин")
             {
-                PlayerDoing.Health -= Convert.ToInt32(PlayerDoing.Health * 0.15);
+                if(PlayerWaiting.Passive.PassiveCounter1 > 0)
+                {
+                    PlayerDoing.Health -= Convert.ToInt32(PlayerDoing.Health * 0.15);
+                }
                 PlayerWaiting.PassiveProc();
             }
         }

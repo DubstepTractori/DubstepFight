@@ -45,7 +45,6 @@
             // 
             // ReturnButton
             // 
-            this.ReturnButton.AutoSize = true;
             this.ReturnButton.Location = new System.Drawing.Point(12, 373);
             this.ReturnButton.Name = "ReturnButton";
             this.ReturnButton.Size = new System.Drawing.Size(776, 65);
@@ -68,7 +67,6 @@
             this.Resize += new System.EventHandler(this.EasterEgg_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.SecretPictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
