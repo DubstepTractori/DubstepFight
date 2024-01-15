@@ -17,9 +17,10 @@ namespace DubstepFight
 
         MainGameMenu menu;
         DevelopersCreditMenu Credits;
+        //TODO: Передавать настройки музыки и текущую песню в вьюмодел
+        MainViewModel viewModel;
 
-
-        public SettingsMenu(MainGameMenu returnMenu)
+        public SettingsMenu(MainGameMenu returnMenu, MainViewModel viewModel)
         {
             InitializeComponent();
             this.menu = returnMenu;
@@ -30,18 +31,6 @@ namespace DubstepFight
             menu.Show();
             this.Close();
         }
-        private void BackToMainMenuButton_MouseEnter(object sender, EventArgs e)
-        {
-            BackToMainMenuButton.ForeColor = Color.Magenta;
-            BackToMainMenuButton.BackColor = Color.Magenta;
-
-
-        }
-        private void BackToMainMenuButton_MouseLeave(object sender, EventArgs e)
-        {
-            BackToMainMenuButton.ForeColor = Color.Cyan;
-            BackToMainMenuButton.BackColor = Color.Transparent;
-        }
 
         private void DevelopersButton_Click(object sender, EventArgs e)
         {
@@ -51,21 +40,8 @@ namespace DubstepFight
             Credits.Size = this.Size;
             this.Hide();
         }
-        private void DevelopersButton_MouseEnter(object sender, EventArgs e)
-        {
-            DevelopersButton.ForeColor = Color.Magenta;
-            DevelopersButton.BackColor = Color.Magenta;
 
-
-        }
-        private void DevelopersButton_MouseLeave(object sender, EventArgs e)
-        {
-            DevelopersButton.ForeColor = Color.Cyan;
-            DevelopersButton.BackColor = Color.Transparent;
-        }
-
-
-        private void ChooseCharacterLabel_Click(object sender, EventArgs e)
+        private void SettingsMenu_Load(object sender, EventArgs e)
         {
 
         }

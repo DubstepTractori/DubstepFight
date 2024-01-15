@@ -17,19 +17,10 @@ namespace DubstepFight.FightMenu
 {
     public partial class FightSceneMenu : Form
     {
-        BaseHero Player1;
-        BaseHero Player2;
-        Fight MyFight;
-
-        Random random;
-
-        AssassinInfoForm assassinInfo;
-        GiantInfoForm giantInfo;
-        ElfInfoForm elfInfo;
-        BlackKnightInfoForm blackKnightInfo;
-        EasterEgg secretInfo;
 
         MainGameMenu returnMenuMain;
+        MainViewModel viewModel;
+        HeroInfoForm heroInfo;
 
         private void FormRezizeToThisShowAndHide(Form fromForm)
         {
@@ -39,67 +30,62 @@ namespace DubstepFight.FightMenu
             this.Hide();
         }
 
-        public FightSceneMenu(BaseHero chosenHero, BaseHero chosenHeroPlayer2, MainGameMenu MainMenu)
+        public FightSceneMenu(MainGameMenu MainMenu, MainViewModel viewModel)
         {
             InitializeComponent();
 
-            Player1 = chosenHero;
-            Player2 = chosenHeroPlayer2;
             returnMenuMain = MainMenu;
-            random = new Random();
+            this.viewModel = viewModel;
 
-            MyFight = new Fight(Player1, Player2);
+            TurnCounterLabel.Text = this.viewModel.GameFight.TurnCounter.ToString();
 
-            TurnCounterLabel.Text = MyFight.TurnCounter.ToString();
+            InitializePlayers();
 
+            TurnCheck();
+        }
+
+        private void InitializePlayers()
+        {
             ReturnMenuButton.Enabled = false;
             ReturnMenuButton.Visible = false;
 
-            Player1HeroNameLabel.Text = Player1.Name;
-            Player1HpLabel.Text = Player1.Health.ToString();
-            Player1HpProgressBar.Maximum = Player1.Health;
-            Player1HpProgressBar.Value = Player1.Health;
-            Player1Attack1MyButton.Image = Image.FromFile(Player1.Attack1ImgPath);
-            Player1Attack2MyButton.Image = Image.FromFile(Player1.Attack2ImgPath);
-            Player1CharPicBox.Image = Image.FromFile(Player1.CharPoseIdleImgPath);
+            Player1HeroNameLabel.Text = viewModel.FirstPlayerHero.Name;
+            Player1HpLabel.Text = viewModel.FirstPlayerHero.Health.ToString();
+            Player1HpProgressBar.Maximum = viewModel.FirstPlayerHero.Health;
+            Player1HpProgressBar.Value = viewModel.FirstPlayerHero.Health;
+            Player1Attack1MyButton.Image = Image.FromFile(viewModel.FirstPlayerHero.Attack1ImgPath);
+            Player1Attack2MyButton.Image = Image.FromFile(viewModel.FirstPlayerHero.Attack2ImgPath);
+            Player1CharPicBox.Image = Image.FromFile(viewModel.FirstPlayerHero.CharPoseIdleImgPath);
 
 
-            Player2HeroNameLabel.Text = Player2.Name;
-            Player2HpLabel.Text = Player2.Health.ToString();
-            Player2HpProgressBar.Maximum = Player2.Health;
-            Player2HpProgressBar.Value = Player2.Health;
-            Player2Attack1MyButton.Image = Image.FromFile(Player2.Attack1ImgPath);
-            Player2Attack2MyButton.Image = Image.FromFile(Player2.Attack2ImgPath);
-            Image Player2CharPoseIdle = Image.FromFile((Player2.CharPoseIdleImgPath));
+            Player2HeroNameLabel.Text = viewModel.SecondPlayerHero.Name;
+            Player2HpLabel.Text = viewModel.SecondPlayerHero.Health.ToString();
+            Player2HpProgressBar.Maximum = viewModel.SecondPlayerHero.Health;
+            Player2HpProgressBar.Value = viewModel.SecondPlayerHero.Health;
+            Player2Attack1MyButton.Image = Image.FromFile(viewModel.SecondPlayerHero.Attack1ImgPath);
+            Player2Attack2MyButton.Image = Image.FromFile(viewModel.SecondPlayerHero.Attack2ImgPath);
+            Image Player2CharPoseIdle = Image.FromFile((viewModel.SecondPlayerHero.CharPoseIdleImgPath));
             Player2CharPoseIdle.RotateFlip(RotateFlipType.Rotate180FlipY);
             Player2CharPicBox.Image = Player2CharPoseIdle;
 
             Player1GetDamageLabel.Text = "";
             Player2GetDamageLabel.Text = "";
             PlayerWinLabel.Text = "";
-
-            
-
-            
-
-            TurnCheck();
         }
 
         private void FrameUpdate()
-        {
-            
-
+        { 
             
 
             TurnCheck();
 
-            TurnCounterLabel.Text = MyFight.TurnCounter.ToString();
+            TurnCounterLabel.Text = viewModel.GameFight.TurnCounter.ToString();
 
-            Player1HpLabel.Text = Player1.Health.ToString();
-            Player1HpProgressBar.Value = Player1.Health;
+            Player1HpLabel.Text = viewModel.FirstPlayerHero.Health.ToString();
+            Player1HpProgressBar.Value = viewModel.FirstPlayerHero.Health;
 
-            Player2HpLabel.Text = Player2.Health.ToString();
-            Player2HpProgressBar.Value = Player2.Health;
+            Player2HpLabel.Text = viewModel.SecondPlayerHero.Health.ToString();
+            Player2HpProgressBar.Value = viewModel.SecondPlayerHero.Health;
 
             
 
@@ -108,9 +94,9 @@ namespace DubstepFight.FightMenu
         }
         private void TurnCheck()
         {
-            if (!MyFight.IsPlayer1Turn)
+            if (!viewModel.GameFight.IsPlayer1Turn)
             {
-                PassiveCheck(Player1, Player2, Player2Attack1MyButton, Player2Attack2MyButton, 
+                PassiveCheck(viewModel.FirstPlayerHero, viewModel.SecondPlayerHero, Player2Attack1MyButton, Player2Attack2MyButton, 
                     Player1Attack1MyButton, Player1Attack2MyButton);
                 
 
@@ -121,19 +107,19 @@ namespace DubstepFight.FightMenu
                 Player2Attack1MyButton.ButtonEnable();
                 Player2Attack2MyButton.ButtonEnable();
 
-                if (Player2.Attack2CD > 0)
+                if (viewModel.SecondPlayerHero.Attack2CD > 0)
                 { Player2Attack2MyButton.ButtonDisable(); }
             }
 
-            if (MyFight.IsPlayer1Turn)
+            if (viewModel.GameFight.IsPlayer1Turn)
             {
-                PassiveCheck(Player2, Player1, Player1Attack1MyButton, Player1Attack2MyButton, 
+                PassiveCheck(viewModel.SecondPlayerHero, viewModel.FirstPlayerHero, Player1Attack1MyButton, Player1Attack2MyButton, 
                     Player2Attack1MyButton, Player2Attack2MyButton);
 
                 Player1Attack1MyButton.ButtonEnable();
                 Player1Attack2MyButton.ButtonEnable();
 
-                if (Player1.Attack2CD > 0)
+                if (viewModel.FirstPlayerHero.Attack2CD > 0)
                 { Player1Attack2MyButton.ButtonDisable(); }
 
                 Player2Attack1MyButton.ButtonDisable();
@@ -143,8 +129,8 @@ namespace DubstepFight.FightMenu
 
         private void Player1Win()
         {
-            Player2.Health = 0;
-            Player2HpLabel.Text = Player2.Health.ToString();
+            viewModel.SecondPlayerHero.Health = 0;
+            Player2HpLabel.Text = viewModel.SecondPlayerHero.Health.ToString();
             Player2HpProgressBar.Value = 0;
             PlayerWinLabel.Text = "Победил Игрок 1";
             ReturnMenuButton.Visible = true;
@@ -154,8 +140,8 @@ namespace DubstepFight.FightMenu
 
         private void Player2Win()
         {
-            Player1.Health = 0;
-            Player1HpLabel.Text = Player1.Health.ToString();
+            viewModel.FirstPlayerHero.Health = 0;
+            Player1HpLabel.Text = viewModel.FirstPlayerHero.Health.ToString();
             Player1HpProgressBar.Value = 0;
             PlayerWinLabel.Text = "Победил Игрок 2";
             ReturnMenuButton.Visible = true;
@@ -174,7 +160,10 @@ namespace DubstepFight.FightMenu
         {
             if(PlayerWaiting.Name == "Ассассин")
             {
-                PlayerDoing.Health -= Convert.ToInt32(PlayerDoing.Health * 0.15);
+                if(PlayerWaiting.Passive.PassiveCounter1 > 0)
+                {
+                    PlayerDoing.Health -= Convert.ToInt32(PlayerDoing.Health * 0.15);
+                }
                 PlayerWaiting.PassiveProc();
             }
         }
@@ -201,11 +190,11 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                int damageDealt = Player2.TakeDamage(Player1.Attack1());
+                int damageDealt = viewModel.SecondPlayerHero.TakeDamage(viewModel.FirstPlayerHero.Attack1());
                 Player2GetDamageLabel.Text = "Полученный урон: " + damageDealt;
-                MyFight.TurnSwitch();
+                viewModel.GameFight.TurnSwitch();
                 FrameUpdate();
-                if (Player2.Health <= 0)
+                if (viewModel.SecondPlayerHero.Health <= 0)
                 { Player1Win(); }
 
             }
@@ -220,11 +209,11 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                int damageDealt = Player2.TakeDamage(Player1.Attack2());
+                int damageDealt = viewModel.SecondPlayerHero.TakeDamage(viewModel.FirstPlayerHero.Attack2());
                 Player2GetDamageLabel.Text = "Полученный урон: " + damageDealt;
-                MyFight.TurnSwitch();
+                viewModel.GameFight.TurnSwitch();
                 FrameUpdate();
-                if (Player2.Health <= 0)
+                if (viewModel.SecondPlayerHero.Health <= 0)
                 { Player1Win(); }
             }
             catch
@@ -237,11 +226,11 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                int damageDealt = Player1.TakeDamage(Player2.Attack1());
+                int damageDealt = viewModel.FirstPlayerHero.TakeDamage(viewModel.SecondPlayerHero.Attack1());
                 Player1GetDamageLabel.Text = "Полученный урон: " + damageDealt;
-                MyFight.TurnSwitch();
+                viewModel.GameFight.TurnSwitch();
                 FrameUpdate();
-                if (Player1.Health <= 0)
+                if (viewModel.FirstPlayerHero.Health <= 0)
                 { Player2Win(); }
             }
             catch
@@ -254,11 +243,11 @@ namespace DubstepFight.FightMenu
         {
             try
             {
-                int damageDealt = Player1.TakeDamage(Player2.Attack2());
+                int damageDealt = viewModel.FirstPlayerHero.TakeDamage(viewModel.SecondPlayerHero.Attack2());
                 Player1GetDamageLabel.Text = "Полученный урон: " + damageDealt;
-                MyFight.TurnSwitch();
+                viewModel.GameFight.TurnSwitch();
                 FrameUpdate();
-                if(Player1.Health <= 0)
+                if(viewModel.FirstPlayerHero.Health <= 0)
                 { Player2Win(); }
             }
             catch
@@ -269,69 +258,14 @@ namespace DubstepFight.FightMenu
 
         private void Player1InfoButton_Click(object sender, EventArgs e)
         {
-            if (Player1.Name == "Ассассин")
-            {
-                assassinInfo = new AssassinInfoForm(this);
-                FormRezizeToThisShowAndHide(assassinInfo);
-            }
-            if (Player1.Name == "Гигант")
-            {
-                giantInfo = new GiantInfoForm(this);
-                FormRezizeToThisShowAndHide(giantInfo);
-            }
-            if (Player1.Name == "Эльф")
-            {
-                elfInfo = new ElfInfoForm(this);
-                FormRezizeToThisShowAndHide(elfInfo);
-            }
-            if (Player1.Name == "Тёмный Рыцарь")
-            {
-                if(random.Next(0,100) == 1)
-                {
-                    secretInfo = new EasterEgg(this);
-                    FormRezizeToThisShowAndHide(secretInfo);
-                }
-                else
-                {
-                    blackKnightInfo = new BlackKnightInfoForm(this);
-                    FormRezizeToThisShowAndHide(blackKnightInfo);
-                }
-                
-                
-            }
-
+            heroInfo = new HeroInfoForm(this, viewModel.FirstPlayerHero);
+            FormRezizeToThisShowAndHide(heroInfo);
         }
 
         private void Player2InfoButton_Click(object sender, EventArgs e)
         {
-            if (Player2.Name == "Ассассин")
-            {
-                assassinInfo = new AssassinInfoForm(this);
-                FormRezizeToThisShowAndHide(assassinInfo);
-            }
-            if (Player2.Name == "Гигант")
-            {
-                giantInfo = new GiantInfoForm(this);
-                FormRezizeToThisShowAndHide(giantInfo);
-            }
-            if (Player2.Name == "Эльф")
-            {
-                elfInfo = new ElfInfoForm(this);
-                FormRezizeToThisShowAndHide(elfInfo);
-            }
-            if (Player2.Name == "Тёмный Рыцарь")
-            {
-                if (random.Next(0, 100) == 1)
-                {
-                    secretInfo = new EasterEgg(this);
-                    FormRezizeToThisShowAndHide(secretInfo);
-                }
-                else
-                {
-                    blackKnightInfo = new BlackKnightInfoForm(this);
-                    FormRezizeToThisShowAndHide(blackKnightInfo);
-                }
-            }
+            heroInfo = new HeroInfoForm(this, viewModel.SecondPlayerHero);
+            FormRezizeToThisShowAndHide(heroInfo);
         }
 
         private void ReturnMenuButton_Click(object sender, EventArgs e)

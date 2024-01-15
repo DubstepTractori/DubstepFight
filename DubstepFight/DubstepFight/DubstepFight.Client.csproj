@@ -46,17 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CharacterInfoFolder\AssassinInfoForm.cs">
+    <Compile Include="CharacterInfoFolder\HeroInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterInfoFolder\AssassinInfoForm.Designer.cs">
-      <DependentUpon>AssassinInfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\BlackKnightInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\BlackKnightInfoForm.Designer.cs">
-      <DependentUpon>BlackKnightInfoForm.cs</DependentUpon>
+    <Compile Include="CharacterInfoFolder\HeroInfoForm.Designer.cs">
+      <DependentUpon>HeroInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CharacterInfoFolder\EasterEgg.cs">
       <SubType>Form</SubType>
@@ -64,34 +58,16 @@
     <Compile Include="CharacterInfoFolder\EasterEgg.Designer.cs">
       <DependentUpon>EasterEgg.cs</DependentUpon>
     </Compile>
-    <Compile Include="CharacterInfoFolder\ElfInfoForm.cs">
+    <Compile Include="FightMenuFolder\ChooseCharacterMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterInfoFolder\ElfInfoForm.Designer.cs">
-      <DependentUpon>ElfInfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\GiantInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\GiantInfoForm.Designer.cs">
-      <DependentUpon>GiantInfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FightMenu\ChooseCharacterMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FightMenu\ChooseCharacterMenu.Designer.cs">
+    <Compile Include="FightMenuFolder\ChooseCharacterMenu.Designer.cs">
       <DependentUpon>ChooseCharacterMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FightMenu\ChooseCharacterMenu2.cs">
+    <Compile Include="FightMenuFolder\FightSceneMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FightMenu\ChooseCharacterMenu2.Designer.cs">
-      <DependentUpon>ChooseCharacterMenu2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FightMenu\FightSceneMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FightMenu\FightSceneMenu.Designer.cs">
+    <Compile Include="FightMenuFolder\FightSceneMenu.Designer.cs">
       <DependentUpon>FightSceneMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenuFolder\DevelopersCreditMenu.cs">
@@ -106,6 +82,7 @@
     <Compile Include="MainMenuFolder\MainGameMenu.Designer.cs">
       <DependentUpon>MainGameMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainMenuFolder\MainViewModel.cs" />
     <Compile Include="MyCustomAttackButton1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -120,28 +97,16 @@
     <Compile Include="MainMenuFolder\SettingsMenu.Designer.cs">
       <DependentUpon>SettingsMenu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CharacterInfoFolder\AssassinInfoForm.resx">
-      <DependentUpon>AssassinInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CharacterInfoFolder\BlackKnightInfoForm.resx">
-      <DependentUpon>BlackKnightInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="CharacterInfoFolder\HeroInfoForm.resx">
+      <DependentUpon>HeroInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterInfoFolder\EasterEgg.resx">
       <DependentUpon>EasterEgg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CharacterInfoFolder\ElfInfoForm.resx">
-      <DependentUpon>ElfInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CharacterInfoFolder\GiantInfoForm.resx">
-      <DependentUpon>GiantInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FightMenu\ChooseCharacterMenu.resx">
+    <EmbeddedResource Include="FightMenuFolder\ChooseCharacterMenu.resx">
       <DependentUpon>ChooseCharacterMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FightMenu\ChooseCharacterMenu2.resx">
-      <DependentUpon>ChooseCharacterMenu2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FightMenu\FightSceneMenu.resx">
+    <EmbeddedResource Include="FightMenuFolder\FightSceneMenu.resx">
       <DependentUpon>FightSceneMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuFolder\DevelopersCreditMenu.resx">
@@ -201,7 +166,6 @@
     <Content Include="Resources\Giant\Gigant_Pose.png" />
     <Content Include="Resources\Other\NoIcon.png" />
     <Content Include="Resources\Other\SecretNigga.jpg" />
-    <Content Include="Resources\Other\Vector 20 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

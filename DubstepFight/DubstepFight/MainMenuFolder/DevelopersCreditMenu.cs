@@ -25,40 +25,11 @@ namespace DubstepFight.MainMenu
         {
             Process.Start("https://github.com/DubstepTractori");
         }
-        private void GitHubLinkButton_MouseEnter(object sender, EventArgs e)
-        {
-            GitHubLinkButton.ForeColor = Color.Magenta;
-            GitHubLinkButton.BackColor = Color.Magenta;
-
-
-        }
-        private void GitHubLinkButton_MouseLeave(object sender, EventArgs e)
-        {
-            GitHubLinkButton.ForeColor = Color.Cyan;
-            GitHubLinkButton.BackColor = Color.Transparent;
-        }
 
         private void BackToSettingsButton_Click(object sender, EventArgs e)
         {
             Settings.Show();
             this.Close();
-        }
-        private void BackToSettingsButton_MouseEnter(object sender, EventArgs e)
-        {
-            BackToSettingsButton.ForeColor = Color.Magenta;
-            BackToSettingsButton.BackColor = Color.Magenta;
-
-
-        }
-        private void BackToSettingsButton_MouseLeave(object sender, EventArgs e)
-        {
-            BackToSettingsButton.ForeColor = Color.Cyan;
-            BackToSettingsButton.BackColor = Color.Transparent;
-        }
-
-        private void DimaCreditLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
