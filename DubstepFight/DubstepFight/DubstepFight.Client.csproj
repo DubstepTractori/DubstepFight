@@ -76,22 +76,22 @@
     <Compile Include="CharacterInfoFolder\GiantInfoForm.Designer.cs">
       <DependentUpon>GiantInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FightMenu\ChooseCharacterMenu.cs">
+    <Compile Include="CharacterInfoFolder\ViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FightMenu\ChooseCharacterMenu.Designer.cs">
+    <Compile Include="CharacterInfoFolder\ViewForm.Designer.cs">
+      <DependentUpon>ViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FightMenuFolder\ChooseCharacterMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FightMenuFolder\ChooseCharacterMenu.Designer.cs">
       <DependentUpon>ChooseCharacterMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FightMenu\ChooseCharacterMenu2.cs">
+    <Compile Include="FightMenuFolder\FightSceneMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FightMenu\ChooseCharacterMenu2.Designer.cs">
-      <DependentUpon>ChooseCharacterMenu2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FightMenu\FightSceneMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FightMenu\FightSceneMenu.Designer.cs">
+    <Compile Include="FightMenuFolder\FightSceneMenu.Designer.cs">
       <DependentUpon>FightSceneMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenuFolder\DevelopersCreditMenu.cs">
@@ -106,6 +106,7 @@
     <Compile Include="MainMenuFolder\MainGameMenu.Designer.cs">
       <DependentUpon>MainGameMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainMenuFolder\MainViewModel.cs" />
     <Compile Include="MyCustomAttackButton1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -135,13 +136,10 @@
     <EmbeddedResource Include="CharacterInfoFolder\GiantInfoForm.resx">
       <DependentUpon>GiantInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FightMenu\ChooseCharacterMenu.resx">
+    <EmbeddedResource Include="FightMenuFolder\ChooseCharacterMenu.resx">
       <DependentUpon>ChooseCharacterMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FightMenu\ChooseCharacterMenu2.resx">
-      <DependentUpon>ChooseCharacterMenu2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FightMenu\FightSceneMenu.resx">
+    <EmbeddedResource Include="FightMenuFolder\FightSceneMenu.resx">
       <DependentUpon>FightSceneMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuFolder\DevelopersCreditMenu.resx">

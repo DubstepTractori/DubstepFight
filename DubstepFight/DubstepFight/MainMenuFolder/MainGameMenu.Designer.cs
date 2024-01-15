@@ -69,13 +69,13 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("ascii", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Cyan;
             this.button1.Location = new System.Drawing.Point(314, 366);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 33);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Выход";
+            this.button1.Text = "Exit";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -84,13 +84,13 @@
             this.SettingsButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.SettingsButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.SettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsButton.BackgroundImage")));
-            this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SettingsButton.Font = new System.Drawing.Font("ascii", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsButton.ForeColor = System.Drawing.Color.Cyan;
             this.SettingsButton.Location = new System.Drawing.Point(314, 294);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(164, 39);
             this.SettingsButton.TabIndex = 4;
-            this.SettingsButton.Text = "Настройки";
+            this.SettingsButton.Text = "Settings";
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 

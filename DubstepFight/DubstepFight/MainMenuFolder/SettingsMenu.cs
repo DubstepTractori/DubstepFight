@@ -17,9 +17,10 @@ namespace DubstepFight
 
         MainGameMenu menu;
         DevelopersCreditMenu Credits;
+        //TODO: Передавать настройки музыки и текущую песню в вьюмодел
+        MainViewModel viewModel;
 
-
-        public SettingsMenu(MainGameMenu returnMenu)
+        public SettingsMenu(MainGameMenu returnMenu, MainViewModel viewModel)
         {
             InitializeComponent();
             this.menu = returnMenu;
@@ -38,6 +39,11 @@ namespace DubstepFight
             Credits.Location = this.Location;
             Credits.Size = this.Size;
             this.Hide();
+        }
+
+        private void SettingsMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
