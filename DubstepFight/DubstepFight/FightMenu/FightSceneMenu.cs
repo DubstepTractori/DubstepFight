@@ -17,9 +17,19 @@ namespace DubstepFight.FightMenu
 {
     public partial class FightSceneMenu : Form
     {
+        BaseHero Player1;
+        BaseHero Player2;
+        Fight MyFight;
+
+        Random random;
+
+        AssassinInfoForm assassinInfo;
+        GiantInfoForm giantInfo;
+        ElfInfoForm elfInfo;
+        BlackKnightInfoForm blackKnightInfo;
+        EasterEgg secretInfo;
 
         MainGameMenu returnMenuMain;
-        MainViewModel viewModel;
 
         private void FormRezizeToThisShowAndHide(Form fromForm)
         {
@@ -29,22 +39,19 @@ namespace DubstepFight.FightMenu
             this.Hide();
         }
 
-        public FightSceneMenu(MainGameMenu MainMenu, MainViewModel viewModel)
+        public FightSceneMenu(BaseHero chosenHero, BaseHero chosenHeroPlayer2, MainGameMenu MainMenu)
         {
             InitializeComponent();
 
+            Player1 = chosenHero;
+            Player2 = chosenHeroPlayer2;
             returnMenuMain = MainMenu;
-            this.viewModel = viewModel;
+            random = new Random();
 
-            TurnCounterLabel.Text = this.viewModel.GameFight.TurnCounter.ToString();
+            MyFight = new Fight(Player1, Player2);
 
-            InitializePlayers();
+            TurnCounterLabel.Text = MyFight.TurnCounter.ToString();
 
-            TurnCheck();
-        }
-
-        private void InitializePlayers()
-        {
             ReturnMenuButton.Enabled = false;
             ReturnMenuButton.Visible = false;
 
@@ -70,10 +77,18 @@ namespace DubstepFight.FightMenu
             Player1GetDamageLabel.Text = "";
             Player2GetDamageLabel.Text = "";
             PlayerWinLabel.Text = "";
+
+            
+
+            
+
+            TurnCheck();
         }
 
         private void FrameUpdate()
-        { 
+        {
+            
+
             
 
             TurnCheck();
@@ -159,10 +174,7 @@ namespace DubstepFight.FightMenu
         {
             if(PlayerWaiting.Name == "Ассассин")
             {
-                if(PlayerWaiting.Passive.PassiveCounter1 > 0)
-                {
-                    PlayerDoing.Health -= Convert.ToInt32(PlayerDoing.Health * 0.15);
-                }
+                PlayerDoing.Health -= Convert.ToInt32(PlayerDoing.Health * 0.15);
                 PlayerWaiting.PassiveProc();
             }
         }
@@ -294,7 +306,7 @@ namespace DubstepFight.FightMenu
         {
             if (Player2.Name == "Ассассин")
             {
-                assassinInfo = new AssassinInfoForm(this, "Assasin", "123", "123123");
+                assassinInfo = new AssassinInfoForm(this);
                 FormRezizeToThisShowAndHide(assassinInfo);
             }
             if (Player2.Name == "Гигант")
@@ -309,7 +321,7 @@ namespace DubstepFight.FightMenu
             }
             if (Player2.Name == "Тёмный Рыцарь")
             {
-                if (random.Next(0, 2) == 1)
+                if (random.Next(0, 100) == 1)
                 {
                     secretInfo = new EasterEgg(this);
                     FormRezizeToThisShowAndHide(secretInfo);

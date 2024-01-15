@@ -15,7 +15,7 @@ namespace DubstepFight.CharacterInfoFolder
     {
 
         FightSceneMenu ReturnFight;
-        public AssassinInfoForm(FightSceneMenu returnFight, string heroName,string  heroBaseAttack, string heroPassive)
+        public AssassinInfoForm(FightSceneMenu returnFight)
         {
             InitializeComponent();
             ReturnFight = returnFight;

@@ -12,18 +12,14 @@ namespace DubstepFight
 {
     public partial class MainGameMenu : Form
     {
-        MainViewModel viewModel;
         public MainGameMenu()
         {
             InitializeComponent();
-            viewModel = new MainViewModel();
         }
 
         ChooseCharacterMenu ChooseCharacter;
         SettingsMenu Settings;
 
-
-        //TODO: переименовать
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -31,16 +27,21 @@ namespace DubstepFight
 
         private void ChoosePlayer1Button_Click(object sender, EventArgs e)
         {
-            ChooseCharacter = new ChooseCharacterMenu(this, viewModel);
+            ChooseCharacter = new ChooseCharacterMenu(this);
             ChooseCharacter.Show();
             ChooseCharacter.Size = this.Size;
             ChooseCharacter.Location = this.Location;
             this.Hide();
         }
 
+        private void ChoosePlayer2Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Данная фунция пока недоступна");
+        }
+
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            Settings = new SettingsMenu(this, viewModel);
+            Settings = new SettingsMenu(this);
             Settings.Show();
             Settings.Size = this.Size;
             Settings.Location = this.Location;
