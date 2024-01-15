@@ -201,6 +201,7 @@
     <Content Include="Resources\Giant\Gigant_Pose.png" />
     <Content Include="Resources\Other\NoIcon.png" />
     <Content Include="Resources\Other\SecretNigga.jpg" />
+    <Content Include="Resources\Other\Vector 20 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
