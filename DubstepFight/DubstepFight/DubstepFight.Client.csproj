@@ -46,41 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CharacterInfoFolder\AssassinInfoForm.cs">
+    <Compile Include="CharacterInfoFolder\HeroInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterInfoFolder\AssassinInfoForm.Designer.cs">
-      <DependentUpon>AssassinInfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\BlackKnightInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\BlackKnightInfoForm.Designer.cs">
-      <DependentUpon>BlackKnightInfoForm.cs</DependentUpon>
+    <Compile Include="CharacterInfoFolder\HeroInfoForm.Designer.cs">
+      <DependentUpon>HeroInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CharacterInfoFolder\EasterEgg.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CharacterInfoFolder\EasterEgg.Designer.cs">
       <DependentUpon>EasterEgg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\ElfInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\ElfInfoForm.Designer.cs">
-      <DependentUpon>ElfInfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\GiantInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\GiantInfoForm.Designer.cs">
-      <DependentUpon>GiantInfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\ViewForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\ViewForm.Designer.cs">
-      <DependentUpon>ViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FightMenuFolder\ChooseCharacterMenu.cs">
       <SubType>Form</SubType>
@@ -121,20 +97,11 @@
     <Compile Include="MainMenuFolder\SettingsMenu.Designer.cs">
       <DependentUpon>SettingsMenu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CharacterInfoFolder\AssassinInfoForm.resx">
-      <DependentUpon>AssassinInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CharacterInfoFolder\BlackKnightInfoForm.resx">
-      <DependentUpon>BlackKnightInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="CharacterInfoFolder\HeroInfoForm.resx">
+      <DependentUpon>HeroInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterInfoFolder\EasterEgg.resx">
       <DependentUpon>EasterEgg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CharacterInfoFolder\ElfInfoForm.resx">
-      <DependentUpon>ElfInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CharacterInfoFolder\GiantInfoForm.resx">
-      <DependentUpon>GiantInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FightMenuFolder\ChooseCharacterMenu.resx">
       <DependentUpon>ChooseCharacterMenu.cs</DependentUpon>

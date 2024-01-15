@@ -23,6 +23,7 @@ namespace DubstepFight
         {
             InitializeComponent();
             this.menu = returnMenu;
+            this.viewModel = viewModel;
         }
 
         private void ReturnToMenuButton_Click(object sender, EventArgs e)
@@ -31,9 +32,11 @@ namespace DubstepFight
             this.Close();
         }
 
-        private void CreateHeroAction<HeroType>()
+        private void CreateHeroAction(string heroName)
         {
-            viewModel.CreateHero<HeroType>();
+            viewModel.CreateHero(heroName);
+
+            ChooseCharacterLabel.Text = "Выберите персонажа для\r\nИгрока 2";
 
             if (viewModel.CreationCompleted)
             {
@@ -48,26 +51,23 @@ namespace DubstepFight
 
         private void ChooseHeroAssasinButton_Click(object sender, EventArgs e)
         {
-            CreateHeroAction<Assasin>();
-
+            CreateHeroAction("Assassin");
         }
 
 
         private void ChooseHeroElfButton_Click(object sender, EventArgs e)
         {
-            CreateHeroAction<Elf>();
+            CreateHeroAction("Elf");
         }
 
         private void ChooseHeroBlackKnightButton_Click(object sender, EventArgs e)
         {
-            //TODO: Redo
-            CreateHeroAction<Elf>();
+            CreateHeroAction("BlackKnight");
         }
 
         private void ChooseHeroGiantButton_Click(object sender, EventArgs e)
         {
-            //TODO: Redo
-            CreateHeroAction<Elf>();
+            CreateHeroAction("Giant");
         }
     }
 }

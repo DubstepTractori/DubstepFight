@@ -22,6 +22,7 @@ namespace DubstepFightClassLibrary
             Attack1ImgPath = @"..\..\Resources\Assassin\Assassin_Attack_1.jpg";
             Attack2ImgPath = @"..\..\Resources\Assassin\Assassin_Attack_2.jpg";
             CharPoseIdleImgPath = @"..\..\Resources\Assassin\Assassin_Pose.png";
+            CharInfoTxtPath = @"..\..\Resources\Assassin\AssasinInfo.txt";
         }
 
 
