@@ -36,6 +36,7 @@ namespace DubstepFight
                         break;
                 }
                 playerCounter++;
+                //фывфыв
             }
             else if(playerCounter == 1)
             {
