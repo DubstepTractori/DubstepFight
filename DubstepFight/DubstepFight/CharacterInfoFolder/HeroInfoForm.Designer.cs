@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeroInfoForm));
             this.HeroNameLabel = new System.Windows.Forms.Label();
             this.HeroBaseAttackLabel = new System.Windows.Forms.Label();
             this.HeroBaseAttackInfoLabel = new System.Windows.Forms.Label();
             this.HeroSkill1Label = new System.Windows.Forms.Label();
             this.HeroSkill1InfoLabel = new System.Windows.Forms.Label();
-            this.HaroPassiveLabel = new System.Windows.Forms.Label();
+            this.HeroPassiveLabel = new System.Windows.Forms.Label();
             this.HeroPassiveInfoLabel = new System.Windows.Forms.Label();
             this.returnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,9 +44,9 @@
             this.HeroNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.HeroNameLabel.Location = new System.Drawing.Point(12, 9);
             this.HeroNameLabel.Name = "HeroNameLabel";
-            this.HeroNameLabel.Size = new System.Drawing.Size(114, 25);
+            this.HeroNameLabel.Size = new System.Drawing.Size(122, 25);
             this.HeroNameLabel.TabIndex = 0;
-            this.HeroNameLabel.Text = "Ассассин";
+            this.HeroNameLabel.Text = "HeroName";
             // 
             // HeroBaseAttackLabel
             // 
@@ -65,9 +64,9 @@
             this.HeroBaseAttackInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.HeroBaseAttackInfoLabel.Location = new System.Drawing.Point(68, 80);
             this.HeroBaseAttackInfoLabel.Name = "HeroBaseAttackInfoLabel";
-            this.HeroBaseAttackInfoLabel.Size = new System.Drawing.Size(375, 20);
+            this.HeroBaseAttackInfoLabel.Size = new System.Drawing.Size(68, 20);
             this.HeroBaseAttackInfoLabel.TabIndex = 2;
-            this.HeroBaseAttackInfoLabel.Text = "Ассасин бьёт своим кинжалом, нанося 20 урона.";
+            this.HeroBaseAttackInfoLabel.Text = "Attack 1";
             // 
             // HeroSkill1Label
             // 
@@ -85,19 +84,19 @@
             this.HeroSkill1InfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.HeroSkill1InfoLabel.Location = new System.Drawing.Point(68, 180);
             this.HeroSkill1InfoLabel.Name = "HeroSkill1InfoLabel";
-            this.HeroSkill1InfoLabel.Size = new System.Drawing.Size(545, 120);
+            this.HeroSkill1InfoLabel.Size = new System.Drawing.Size(68, 20);
             this.HeroSkill1InfoLabel.TabIndex = 4;
-            this.HeroSkill1InfoLabel.Text = resources.GetString("HeroSkill1InfoLabel.Text");
+            this.HeroSkill1InfoLabel.Text = "Attack 2";
             // 
-            // HaroPassiveLabel
+            // HeroPassiveLabel
             // 
-            this.HaroPassiveLabel.AutoSize = true;
-            this.HaroPassiveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HaroPassiveLabel.Location = new System.Drawing.Point(35, 335);
-            this.HaroPassiveLabel.Name = "HaroPassiveLabel";
-            this.HaroPassiveLabel.Size = new System.Drawing.Size(163, 20);
-            this.HaroPassiveLabel.TabIndex = 6;
-            this.HaroPassiveLabel.Text = "Пассивный навык:";
+            this.HeroPassiveLabel.AutoSize = true;
+            this.HeroPassiveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HeroPassiveLabel.Location = new System.Drawing.Point(35, 335);
+            this.HeroPassiveLabel.Name = "HeroPassiveLabel";
+            this.HeroPassiveLabel.Size = new System.Drawing.Size(163, 20);
+            this.HeroPassiveLabel.TabIndex = 6;
+            this.HeroPassiveLabel.Text = "Пассивный навык:";
             // 
             // HeroPassiveInfoLabel
             // 
@@ -105,10 +104,9 @@
             this.HeroPassiveInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.HeroPassiveInfoLabel.Location = new System.Drawing.Point(68, 365);
             this.HeroPassiveInfoLabel.Name = "HeroPassiveInfoLabel";
-            this.HeroPassiveInfoLabel.Size = new System.Drawing.Size(467, 40);
+            this.HeroPassiveInfoLabel.Size = new System.Drawing.Size(63, 20);
             this.HeroPassiveInfoLabel.TabIndex = 7;
-            this.HeroPassiveInfoLabel.Text = "При получении урона Ассассин имеет 30% шанс увернуться,\r\nигнорируя весь полученны" +
-    "й урон";
+            this.HeroPassiveInfoLabel.Text = "Passive";
             // 
             // returnButton
             // 
@@ -128,7 +126,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.returnButton);
             this.Controls.Add(this.HeroPassiveInfoLabel);
-            this.Controls.Add(this.HaroPassiveLabel);
+            this.Controls.Add(this.HeroPassiveLabel);
             this.Controls.Add(this.HeroSkill1InfoLabel);
             this.Controls.Add(this.HeroSkill1Label);
             this.Controls.Add(this.HeroBaseAttackInfoLabel);
@@ -150,7 +148,7 @@
         private System.Windows.Forms.Label HeroBaseAttackInfoLabel;
         private System.Windows.Forms.Label HeroSkill1Label;
         private System.Windows.Forms.Label HeroSkill1InfoLabel;
-        private System.Windows.Forms.Label HaroPassiveLabel;
+        private System.Windows.Forms.Label HeroPassiveLabel;
         private System.Windows.Forms.Label HeroPassiveInfoLabel;
         private System.Windows.Forms.Button returnButton;
     }

@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="HeroSkill1InfoLabel.Text" xml:space="preserve">
-    <value>Ассасин делает быстрый взмах своим кинжалом, нанося 12 урона
-и вызывая у противника [Кровотечение] на 2 хода
-[Перезарядка данного умения 3 хода]
-
-Кровотечение - при использовании атакующего навыка наносит урон, 
-равный 9% от макс. здоровья. Данный навык игнорирует защиту
-</value>
-  </data>
 </root>

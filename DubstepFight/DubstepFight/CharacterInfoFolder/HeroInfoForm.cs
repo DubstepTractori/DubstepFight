@@ -30,18 +30,33 @@ namespace DubstepFight.CharacterInfoFolder
             ReturnFight.Show();
         }
 
+        private void TextClear()
+        {
+            HeroNameLabel.Text = "";
+            HeroBaseAttackInfoLabel.Text = "";
+            HeroSkill1InfoLabel.Text = "";
+            HeroPassiveInfoLabel.Text = "";
+        }
         private void HeroInfoForm_Load(object sender, EventArgs e)
         {
+            TextClear();
             HeroNameLabel.Text = Hero.Name;
 
             using (StreamReader fileReader = new StreamReader(Hero.CharInfoTxtPath))
             {
                 string line = "";
                 
-                while(line != "=Border=")
+                while((line = fileReader.ReadLine()) != "=Border=")
                 {
-                    line = fileReader.ReadLine();
-                    HeroBaseAttackInfoLabel.Text += line;
+                    HeroBaseAttackInfoLabel.Text += line += "\r\n";
+                }
+                while ((line = fileReader.ReadLine()) != "=Border=")
+                {
+                    HeroSkill1InfoLabel.Text += line += "\r\n";
+                }
+                while ((line = fileReader.ReadLine()) != "=Border=")
+                {
+                    HeroPassiveInfoLabel.Text += line += "\r\n";
                 }
             }
 

@@ -21,6 +21,7 @@ namespace DubstepFight
             Attack1ImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg";
             Attack2ImgPath = @"..\..\Resources\Other\NoIcon.png";
             CharPoseIdleImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Pose.png";
+            CharInfoTxtPath = @"..\..\Resources\BlackKnight\BlackKnightInfo.txt";
         }
 
         public override int Attack1()
