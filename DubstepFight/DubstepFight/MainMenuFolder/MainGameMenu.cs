@@ -17,10 +17,17 @@ namespace DubstepFight
     public partial class MainGameMenu : Form
     {
         MainViewModel viewModel;
+        Rectangle FormRec;
+        Rectangle ExitButtonRec;
+        Rectangle StartGameButtonRec;
+        Rectangle SettingsButtonRec;
+        Rectangle WelcomeLabelRec;
+        
         public MainGameMenu()
         {
             InitializeComponent();
             viewModel = new MainViewModel();
+            
         }
 
         ChooseCharacterMenu ChooseCharacter;
@@ -32,28 +39,28 @@ namespace DubstepFight
         }
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            button1.ForeColor = Color.Magenta;
-            button1.BackColor = Color.Magenta;
+            ExitButton.ForeColor = Color.Magenta;
+            ExitButton.BackColor = Color.Magenta;
 
         }
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.ForeColor = Color.Cyan;
-            button1.BackColor = Color.Transparent;
+            ExitButton.ForeColor = Color.Cyan;
+            ExitButton.BackColor = Color.Transparent;
         }
         
 
         private void ChoosePlayer1Button_MouseEnter(object sender, EventArgs e)
         {
-            ChoosePlayer1Button.ForeColor = Color.Magenta;
-            ChoosePlayer1Button.BackColor = Color.Magenta;
+            StartGameButton.ForeColor = Color.Magenta;
+            StartGameButton.BackColor = Color.Magenta;
 
 
         }
         private void ChoosePlayer1Button_MouseLeave(object sender, EventArgs e)
         {
-            ChoosePlayer1Button.ForeColor = Color.Cyan;
-            ChoosePlayer1Button.BackColor = Color.Transparent;
+            StartGameButton.ForeColor = Color.Cyan;
+            StartGameButton.BackColor = Color.Transparent;
         }
         private void ChoosePlayer1Button_Click(object sender, EventArgs e)
         {
@@ -91,6 +98,19 @@ namespace DubstepFight
 
         private void MainGameMenu_Load(object sender, EventArgs e)
         {
+            FormRec = new Rectangle(this.Location, this.Size);
+            ExitButtonRec = new Rectangle(ExitButton.Location, ExitButton.Size);
+            StartGameButtonRec = new Rectangle(StartGameButton.Location, StartGameButton.Size);
+            SettingsButtonRec = new Rectangle(SettingsButton.Location, SettingsButton.Size);
+            WelcomeLabelRec = new Rectangle(WelcomeLabel.Location, WelcomeLabel.Size);
+        }
+
+        private void MainGameMenu_Resize_1(object sender, EventArgs e)
+        {
+            viewModel.ControlResize(ExitButtonRec, FormRec, ExitButton, this);
+            viewModel.ControlResize(StartGameButtonRec, FormRec, StartGameButton, this);
+            viewModel.ControlResize(SettingsButtonRec, FormRec, SettingsButton, this);
+            viewModel.ControlResize(WelcomeLabelRec, FormRec, WelcomeLabel, this);
         }
     }
 }
