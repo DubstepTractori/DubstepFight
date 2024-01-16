@@ -121,7 +121,7 @@
   <data name="BackToSettingsButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATYAAABRCAYAAABYOor/AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAAlxJREFUeF7t3bFqU1EAxvE8QVEKFUGoQ+rQqUMLJVUQHVxFX6Bju/gK6d6HcO2i
+        EQAACxEBf2RfkQAAAlxJREFUeF7t3bFqU1EAxvE8QVEKFUGoQ+rQqUMLJVUQHVxFX6Bju/gK6d6HcO2i
         zk6CbXDTRyj4Bj7B0RMT6TWxTbd7Pn8f/IYkdzqQP9ybIYOD83J5cFEKyz0+LycDM2trwnaz0aR8ePqp
         3JkdmZn1ffOwrQ93y9ravY7N12+mX+zt8dnCZ/+DjZ3nZe/d93ncLve/lIezYzOzPk/Yrre+tduJ25PP
         5eXs6MysrxO2m929/6hsn5xNz2IWuLe/jIH+mT42ErbVDY9O/8QN6KfR17IpbLf04MVhGR6fAj2z//GH
@@ -137,7 +137,7 @@
   <data name="GitHubLinkButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATYAAABRCAYAAABYOor/AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAAlxJREFUeF7t3bFqU1EAxvE8QVEKFUGoQ+rQqUMLJVUQHVxFX6Bju/gK6d6HcO2i
+        EQAACxEBf2RfkQAAAlxJREFUeF7t3bFqU1EAxvE8QVEKFUGoQ+rQqUMLJVUQHVxFX6Bju/gK6d6HcO2i
         zk6CbXDTRyj4Bj7B0RMT6TWxTbd7Pn8f/IYkdzqQP9ybIYOD83J5cFEKyz0+LycDM2trwnaz0aR8ePqp
         3JkdmZn1ffOwrQ93y9ravY7N12+mX+zt8dnCZ/+DjZ3nZe/d93ncLve/lIezYzOzPk/Yrre+tduJ25PP
         5eXs6MysrxO2m929/6hsn5xNz2IWuLe/jIH+mT42ErbVDY9O/8QN6KfR17IpbLf04MVhGR6fAj2z//GH

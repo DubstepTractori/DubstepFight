@@ -40,6 +40,7 @@
             this.DevelopersButton.BackColor = System.Drawing.Color.Transparent;
             this.DevelopersButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DevelopersButton.BackgroundImage")));
             this.DevelopersButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DevelopersButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DevelopersButton.FlatAppearance.BorderSize = 0;
             this.DevelopersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DevelopersButton.Font = new System.Drawing.Font("ascii", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

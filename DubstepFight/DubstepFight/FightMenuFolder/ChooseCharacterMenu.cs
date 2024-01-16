@@ -31,6 +31,18 @@ namespace DubstepFight
             menu.Show();
             this.Close();
         }
+        private void ReturnToMenuButton_MouseEnter(object sender, EventArgs e)
+        {
+            ReturnToMenuButton.ForeColor = Color.Magenta;
+            ReturnToMenuButton.BackColor = Color.Magenta;
+
+
+        }
+        private void ReturnToMenuButton_MouseLeave(object sender, EventArgs e)
+        {
+            ReturnToMenuButton.ForeColor = Color.Cyan;
+            ReturnToMenuButton.BackColor = Color.Transparent;
+        }
 
         private void CreateHeroAction(string heroName)
         {
@@ -68,6 +80,26 @@ namespace DubstepFight
         private void ChooseHeroGiantButton_Click(object sender, EventArgs e)
         {
             CreateHeroAction("Giant");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
