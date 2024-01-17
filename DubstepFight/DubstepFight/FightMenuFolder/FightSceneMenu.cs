@@ -261,17 +261,63 @@ namespace DubstepFight.FightMenu
             heroInfo = new HeroInfoForm(this, viewModel.FirstPlayerHero);
             FormRezizeToThisShowAndHide(heroInfo);
         }
+        private void Player1InfoButton_MouseEnter(object sender, EventArgs e)
+        {
+            Player1InfoButton.ForeColor = Color.Magenta;
+            Player1InfoButton.BackColor = Color.Magenta;
+
+
+        }
+        private void Player1InfoButton_MouseLeave(object sender, EventArgs e)
+        {
+            Player1InfoButton.ForeColor = Color.Cyan;
+            Player1InfoButton.BackColor = Color.Transparent;
+        }
 
         private void Player2InfoButton_Click(object sender, EventArgs e)
         {
             heroInfo = new HeroInfoForm(this, viewModel.SecondPlayerHero);
             FormRezizeToThisShowAndHide(heroInfo);
         }
+        private void Player2InfoButton_MouseEnter(object sender, EventArgs e)
+        {
+            Player2InfoButton.ForeColor = Color.Magenta;
+            Player2InfoButton.BackColor = Color.Magenta;
+
+
+        }
+        private void Player2InfoButton_MouseLeave(object sender, EventArgs e)
+        {
+            Player2InfoButton.ForeColor = Color.Cyan;
+            Player2InfoButton.BackColor = Color.Transparent;
+        }
 
         private void ReturnMenuButton_Click(object sender, EventArgs e)
         {
             FormRezizeToThisShowAndHide(returnMenuMain);
             this.Close();
+        }
+        private void ReturnMenuButtonм_MouseEnter(object sender, EventArgs e)
+        {
+            ReturnMenuButton.ForeColor = Color.Magenta;
+            ReturnMenuButton.BackColor = Color.Magenta;
+
+
+        }
+        private void ReturnMenuButton_MouseLeave(object sender, EventArgs e)
+        {
+            ReturnMenuButton.ForeColor = Color.Cyan;
+            ReturnMenuButton.BackColor = Color.Transparent;
+        }
+
+        private void Player2HpProgressBar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Player2CharPicBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

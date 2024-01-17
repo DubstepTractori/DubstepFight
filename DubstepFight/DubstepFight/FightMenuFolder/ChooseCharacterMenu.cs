@@ -101,5 +101,10 @@ namespace DubstepFight
         {
 
         }
+
+        private void ChooseCharacterMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

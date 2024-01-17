@@ -267,6 +267,7 @@
             this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "ChooseCharacterMenu";
             this.Text = "Dubstep Fight";
+            this.Load += new System.EventHandler(this.ChooseCharacterMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
