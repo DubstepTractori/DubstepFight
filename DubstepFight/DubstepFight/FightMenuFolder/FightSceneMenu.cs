@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 using System.IO;
-using WMPLib;
 
 namespace DubstepFight.FightMenu
 {
@@ -52,15 +51,6 @@ namespace DubstepFight.FightMenu
 
         private void InitializePlayers()
         {
-
-            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
-            WMP.URL = Path.GetFullPath("../../Resources/Other/DabstepTraktori.mp3");
-            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
-            WMP.controls.play(); // Старт
-
-
-
-
             ReturnMenuButton.Enabled = false;
             ReturnMenuButton.Visible = false;
 
@@ -205,11 +195,20 @@ namespace DubstepFight.FightMenu
         }
 
 
-        
-
+        int flag = 10;
         private void Player1Attack1MyButton_Click(object sender, EventArgs e)
         {
-           
+
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer(); 
+
+            WMP.URL = Path.GetFullPath("../../Resources/Other/DabstepTraktori.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            if (flag == 10)
+            {
+                WMP.controls.play(); // Старт
+                flag++;
+            }
+
             try
             {
                 int damageDealt = viewModel.SecondPlayerHero.TakeDamage(viewModel.FirstPlayerHero.Attack1());
@@ -326,15 +325,21 @@ namespace DubstepFight.FightMenu
 
         private void ReturnMenuButton_Click(object sender, EventArgs e)
         {
-
             FormRezizeToThisShowAndHide(returnMenuMain);
             this.Close();
-
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
         }
         private void ReturnMenuButtonм_MouseEnter(object sender, EventArgs e)
         {
             ReturnMenuButton.ForeColor = Color.Magenta;
             ReturnMenuButton.BackColor = Color.Magenta;
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
 
 
         }

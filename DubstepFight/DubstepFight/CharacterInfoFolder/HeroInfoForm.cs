@@ -22,6 +22,13 @@ namespace DubstepFight.CharacterInfoFolder
             InitializeComponent();
             ReturnFight = returnFight;
             Hero = hero;
+            this.HeroNameLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            this.HeroBaseAttackInfoLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            this.HeroPassiveInfoLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            this.HeroSkill1Label.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            this.HeroBaseAttackLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            this.HeroSkill1InfoLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            this.HaroPassiveLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,6 +40,10 @@ namespace DubstepFight.CharacterInfoFolder
         {
             returnButton.ForeColor = Color.Magenta;
             returnButton.BackColor = Color.Magenta;
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
 
 
         }
@@ -56,6 +67,26 @@ namespace DubstepFight.CharacterInfoFolder
                     HeroBaseAttackInfoLabel.Text += line;
                 }
             }
+
+        }
+
+        private void HeroNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HeroSkill1InfoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HeroBaseAttackInfoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HaroPassiveLabel_Click(object sender, EventArgs e)
+        {
 
         }
     }

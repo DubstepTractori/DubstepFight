@@ -205,6 +205,7 @@
             this.label1.Size = new System.Drawing.Size(64, 14);
             this.label1.TabIndex = 11;
             this.label1.Text = "Assasin";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
