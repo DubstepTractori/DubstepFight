@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,16 +20,28 @@ namespace DubstepFight.MainMenu
         {
             InitializeComponent();
             this.Settings = returnSettings;
+            this.GarikCreditLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            this.VadimCreditLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            this.AntonCreditLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            this.DimaCreditLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
         }
 
         private void GitHubLinkButton_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/DubstepTractori");
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
         }
         private void GitHubLinkButton_MouseEnter(object sender, EventArgs e)
         {
             GitHubLinkButton.ForeColor = Color.Magenta;
             GitHubLinkButton.BackColor = Color.Magenta;
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
 
 
         }
@@ -42,11 +55,19 @@ namespace DubstepFight.MainMenu
         {
             Settings.Show();
             this.Close();
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
         }
         private void BackToSettingsButton_MouseEnter(object sender, EventArgs e)
         {
             BackToSettingsButton.ForeColor = Color.Magenta;
             BackToSettingsButton.BackColor = Color.Magenta;
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
 
 
         }
@@ -57,6 +78,12 @@ namespace DubstepFight.MainMenu
         }
 
         private void DimaCreditLabel_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void GarikCreditLabel_Click(object sender, EventArgs e)
         {
 
         }

@@ -327,11 +327,19 @@ namespace DubstepFight.FightMenu
         {
             FormRezizeToThisShowAndHide(returnMenuMain);
             this.Close();
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
         }
         private void ReturnMenuButtonм_MouseEnter(object sender, EventArgs e)
         {
             ReturnMenuButton.ForeColor = Color.Magenta;
             ReturnMenuButton.BackColor = Color.Magenta;
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
 
 
         }

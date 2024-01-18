@@ -87,6 +87,7 @@
             this.GarikCreditLabel.TabIndex = 4;
             this.GarikCreditLabel.Text = "Гарик - Занимается итерфейсом, для достижения более понятной и приятной\r\nработы п" +
     "ользователя с нашей игрой.";
+            this.GarikCreditLabel.Click += new System.EventHandler(this.GarikCreditLabel_Click);
             // 
             // BackToSettingsButton
             // 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
@@ -35,6 +36,10 @@ namespace DubstepFight
         {
             BackToMainMenuButton.ForeColor = Color.Magenta;
             BackToMainMenuButton.BackColor = Color.Magenta;
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
 
 
         }
@@ -56,6 +61,10 @@ namespace DubstepFight
         {
             DevelopersButton.ForeColor = Color.Magenta;
             DevelopersButton.BackColor = Color.Magenta;
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play();
 
 
         }

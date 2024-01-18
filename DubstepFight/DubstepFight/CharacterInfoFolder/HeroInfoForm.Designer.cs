@@ -45,11 +45,12 @@
             this.HeroNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.HeroNameLabel.Font = new System.Drawing.Font("ascii", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeroNameLabel.ForeColor = System.Drawing.Color.Cyan;
-            this.HeroNameLabel.Location = new System.Drawing.Point(12, 9);
+            this.HeroNameLabel.Location = new System.Drawing.Point(496, 200);
             this.HeroNameLabel.Name = "HeroNameLabel";
             this.HeroNameLabel.Size = new System.Drawing.Size(140, 26);
             this.HeroNameLabel.TabIndex = 0;
             this.HeroNameLabel.Text = "Ассассин";
+            this.HeroNameLabel.Click += new System.EventHandler(this.HeroNameLabel_Click);
             // 
             // HeroBaseAttackLabel
             // 
@@ -74,6 +75,7 @@
             this.HeroBaseAttackInfoLabel.Size = new System.Drawing.Size(489, 20);
             this.HeroBaseAttackInfoLabel.TabIndex = 2;
             this.HeroBaseAttackInfoLabel.Text = "Ассасин бьёт своим кинжалом, нанося 20 урона.";
+            this.HeroBaseAttackInfoLabel.Click += new System.EventHandler(this.HeroBaseAttackInfoLabel_Click);
             // 
             // HeroSkill1Label
             // 
@@ -98,6 +100,7 @@
             this.HeroSkill1InfoLabel.Size = new System.Drawing.Size(727, 120);
             this.HeroSkill1InfoLabel.TabIndex = 4;
             this.HeroSkill1InfoLabel.Text = resources.GetString("HeroSkill1InfoLabel.Text");
+            this.HeroSkill1InfoLabel.Click += new System.EventHandler(this.HeroSkill1InfoLabel_Click);
             // 
             // HaroPassiveLabel
             // 
@@ -110,6 +113,7 @@
             this.HaroPassiveLabel.Size = new System.Drawing.Size(188, 20);
             this.HaroPassiveLabel.TabIndex = 6;
             this.HaroPassiveLabel.Text = "Пассивный навык:";
+            this.HaroPassiveLabel.Click += new System.EventHandler(this.HaroPassiveLabel_Click);
             // 
             // HeroPassiveInfoLabel
             // 
