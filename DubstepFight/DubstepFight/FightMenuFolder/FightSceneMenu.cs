@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DubstepFight.FightMenu
 {
@@ -21,6 +22,10 @@ namespace DubstepFight.FightMenu
         MainGameMenu returnMenuMain;
         MainViewModel viewModel;
         HeroInfoForm heroInfo;
+
+        public WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+
+
 
         private void FormRezizeToThisShowAndHide(Form fromForm)
         {
@@ -129,23 +134,27 @@ namespace DubstepFight.FightMenu
 
         private void Player1Win()
         {
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
             viewModel.SecondPlayerHero.Health = 0;
             Player2HpLabel.Text = viewModel.SecondPlayerHero.Health.ToString();
             Player2HpProgressBar.Value = 0;
             PlayerWinLabel.Text = "Победил Игрок 1";
             ReturnMenuButton.Visible = true;
             ReturnMenuButton.Enabled = true;
+            WMP.controls.stop();
 
         }
 
         private void Player2Win()
         {
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
             viewModel.FirstPlayerHero.Health = 0;
             Player1HpLabel.Text = viewModel.FirstPlayerHero.Health.ToString();
             Player1HpProgressBar.Value = 0;
             PlayerWinLabel.Text = "Победил Игрок 2";
             ReturnMenuButton.Visible = true;
             ReturnMenuButton.Enabled = true;
+            WMP.controls.stop();
         }
 
         private void PassiveCheck(BaseHero PlayerDoing, BaseHero PlayerWaiting, Button PlayerWaitingAttackButton1, Button PlayerWaitingAttackButton2, 
@@ -186,8 +195,20 @@ namespace DubstepFight.FightMenu
         }
 
 
+        int flag = 10;
         private void Player1Attack1MyButton_Click(object sender, EventArgs e)
         {
+
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer(); 
+
+            WMP.URL = Path.GetFullPath("../../Resources/Other/DabstepTraktori.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            if (flag == 10)
+            {
+                WMP.controls.play(); // Старт
+                flag++;
+            }
+
             try
             {
                 int damageDealt = viewModel.SecondPlayerHero.TakeDamage(viewModel.FirstPlayerHero.Attack1());
@@ -207,6 +228,7 @@ namespace DubstepFight.FightMenu
 
         private void Player1Attack2MyButton_Click(object sender, EventArgs e)
         {
+
             try
             {
                 int damageDealt = viewModel.SecondPlayerHero.TakeDamage(viewModel.FirstPlayerHero.Attack2());
@@ -222,8 +244,11 @@ namespace DubstepFight.FightMenu
             }
         }
 
-        private void Player2Attack1MyButton_Click(object sender, EventArgs e)
+            private void Player2Attack1MyButton_Click(object sender, EventArgs e)
         {
+
+            
+
             try
             {
                 int damageDealt = viewModel.FirstPlayerHero.TakeDamage(viewModel.SecondPlayerHero.Attack1());
@@ -241,6 +266,8 @@ namespace DubstepFight.FightMenu
 
         private void Player2Attack2MyButton_Click(object sender, EventArgs e)
         {
+
+
             try
             {
                 int damageDealt = viewModel.FirstPlayerHero.TakeDamage(viewModel.SecondPlayerHero.Attack2());
@@ -255,6 +282,10 @@ namespace DubstepFight.FightMenu
                 Player2Win();
             }
         }
+
+ 
+
+
 
         private void Player1InfoButton_Click(object sender, EventArgs e)
         {
