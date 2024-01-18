@@ -137,6 +137,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Other\MinecraftRusNEW.otf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -149,13 +150,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Resources\Assassin\AssassinChooseIcon.png" />
     <Content Include="Resources\Assassin\Assassin_Attack_1.jpg" />
     <Content Include="Resources\Assassin\Assassin_Attack_2.jpg" />
     <Content Include="Resources\Assassin\Assassin_Pose.png" />
     <Content Include="Resources\Backgrounds\MainMenu.gif" />
+    <Content Include="Resources\BlackKnight\BlackKnightChooseicon.png" />
     <Content Include="Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg" />
     <Content Include="Resources\BlackKnight\BlackKnight_Attack_1_Var_2.jpg" />
     <Content Include="Resources\BlackKnight\BlackKnight_Pose.png" />
+    <Content Include="Resources\Elf\ElfChooseIcon.png" />
     <Content Include="Resources\Elf\Elf_Attack_1.jpg" />
     <Content Include="Resources\Elf\Elf_Attack_2.jpg" />
     <Content Include="Resources\Elf\Elf_Attack_3.jpg" />
@@ -163,6 +167,7 @@
     <Content Include="Resources\Elf\Elf_Attack_5.jpg" />
     <Content Include="Resources\Elf\Elf_Attack_6.jpg" />
     <Content Include="Resources\Elf\Elf_Pose.png" />
+    <Content Include="Resources\Giant\GiantChooseIcon.png" />
     <Content Include="Resources\Giant\Gigant_Pose.png" />
     <Content Include="Resources\Other\NoIcon.png" />
     <Content Include="Resources\Other\SecretNigga.jpg" />

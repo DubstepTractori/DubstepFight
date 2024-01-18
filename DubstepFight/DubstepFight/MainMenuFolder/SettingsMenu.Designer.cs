@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsMenu));
             this.DevelopersButton = new System.Windows.Forms.Button();
-            this.ChooseCharacterLabel = new System.Windows.Forms.Label();
+            this.SettingsLabel = new System.Windows.Forms.Label();
             this.BackToMainMenuButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             this.DevelopersButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DevelopersButton.FlatAppearance.BorderSize = 0;
             this.DevelopersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DevelopersButton.Font = new System.Drawing.Font("ascii", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DevelopersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DevelopersButton.ForeColor = System.Drawing.Color.Cyan;
             this.DevelopersButton.Location = new System.Drawing.Point(291, 125);
             this.DevelopersButton.Name = "DevelopersButton";
@@ -54,20 +54,20 @@
             this.DevelopersButton.MouseEnter += new System.EventHandler(this.DevelopersButton_MouseEnter);
             this.DevelopersButton.MouseLeave += new System.EventHandler(this.DevelopersButton_MouseLeave);
             // 
-            // ChooseCharacterLabel
+            // SettingsLabel
             // 
-            this.ChooseCharacterLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ChooseCharacterLabel.AutoSize = true;
-            this.ChooseCharacterLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ChooseCharacterLabel.Font = new System.Drawing.Font("ascii", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChooseCharacterLabel.ForeColor = System.Drawing.Color.Cyan;
-            this.ChooseCharacterLabel.Location = new System.Drawing.Point(341, 53);
-            this.ChooseCharacterLabel.Name = "ChooseCharacterLabel";
-            this.ChooseCharacterLabel.Size = new System.Drawing.Size(110, 24);
-            this.ChooseCharacterLabel.TabIndex = 2;
-            this.ChooseCharacterLabel.Text = "Settings";
-            this.ChooseCharacterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ChooseCharacterLabel.Click += new System.EventHandler(this.ChooseCharacterLabel_Click);
+            this.SettingsLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SettingsLabel.AutoSize = true;
+            this.SettingsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SettingsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsLabel.ForeColor = System.Drawing.Color.Cyan;
+            this.SettingsLabel.Location = new System.Drawing.Point(341, 53);
+            this.SettingsLabel.Name = "SettingsLabel";
+            this.SettingsLabel.Size = new System.Drawing.Size(84, 24);
+            this.SettingsLabel.TabIndex = 2;
+            this.SettingsLabel.Text = "Settings";
+            this.SettingsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SettingsLabel.Click += new System.EventHandler(this.ChooseCharacterLabel_Click);
             // 
             // BackToMainMenuButton
             // 
@@ -77,7 +77,7 @@
             this.BackToMainMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackToMainMenuButton.FlatAppearance.BorderSize = 0;
             this.BackToMainMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackToMainMenuButton.Font = new System.Drawing.Font("ascii", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackToMainMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackToMainMenuButton.ForeColor = System.Drawing.Color.Cyan;
             this.BackToMainMenuButton.Location = new System.Drawing.Point(619, 375);
             this.BackToMainMenuButton.Name = "BackToMainMenuButton";
@@ -97,11 +97,13 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BackToMainMenuButton);
-            this.Controls.Add(this.ChooseCharacterLabel);
+            this.Controls.Add(this.SettingsLabel);
             this.Controls.Add(this.DevelopersButton);
             this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "SettingsMenu";
             this.Text = "SettingsMenu";
+            this.Load += new System.EventHandler(this.SettingsMenu_Load);
+            this.Resize += new System.EventHandler(this.SettingsMenu_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,7 +112,7 @@
         #endregion
 
         private System.Windows.Forms.Button DevelopersButton;
-        private System.Windows.Forms.Label ChooseCharacterLabel;
+        private System.Windows.Forms.Label SettingsLabel;
         private System.Windows.Forms.Button BackToMainMenuButton;
     }
 }

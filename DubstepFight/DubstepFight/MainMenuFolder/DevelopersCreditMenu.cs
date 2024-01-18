@@ -14,11 +14,17 @@ namespace DubstepFight.MainMenu
     public partial class DevelopersCreditMenu : Form
     {
         SettingsMenu Settings;
+        MainViewModel viewModel;
+        Rectangle GitHubLinkRec;
+        Rectangle BackToSettingsRec;
+        Rectangle FormRec;
+        Rectangle CreditsLabelRec;
 
-        public DevelopersCreditMenu(SettingsMenu returnSettings)
+        public DevelopersCreditMenu(SettingsMenu returnSettings, MainViewModel viewModel)
         {
             InitializeComponent();
             this.Settings = returnSettings;
+            this.viewModel = viewModel;
         }
 
         private void GitHubLinkButton_Click(object sender, EventArgs e)
@@ -59,6 +65,25 @@ namespace DubstepFight.MainMenu
         private void DimaCreditLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DevelopersCreditMenu_Load(object sender, EventArgs e)
+        {
+            FormRec = new Rectangle(this.Location, this.Size);
+            BackToSettingsRec = new Rectangle(BackToSettingsButton.Location, BackToSettingsButton.Size);
+            GitHubLinkRec = new Rectangle(GitHubLinkButton.Location, GitHubLinkButton.Size);
+            CreditsLabelRec = new Rectangle(CreditsLabel.Location, CreditsLabel.Size);
+
+            viewModel.UseCustomFontBut(BackToSettingsButton);
+            viewModel.UseCustomFontBut(GitHubLinkButton);
+            viewModel.UseCustomFontLab(CreditsLabel);
+        }
+
+        private void DevelopersCreditMenu_Resize(object sender, EventArgs e)
+        {
+            viewModel.ControlResize(BackToSettingsRec, FormRec, BackToSettingsButton, this);
+            viewModel.ControlResize(GitHubLinkRec, FormRec, GitHubLinkButton, this);
+            viewModel.ControlResize(CreditsLabelRec, FormRec, CreditsLabel, this);
         }
     }
 }

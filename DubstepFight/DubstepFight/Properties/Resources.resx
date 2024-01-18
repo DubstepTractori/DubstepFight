@@ -121,11 +121,14 @@
   <data name="Elf_Attack_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Elf\Elf_Attack_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BlackKnight_Attack_1_Var_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AssassinChooseIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Assassin\AssassinChooseIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Elf_Pose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Elf\Elf_Pose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ElfChooseIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Elf\ElfChooseIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Assassin_Pose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Assassin\Assassin_Pose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,17 +145,26 @@
   <data name="Elf_Attack_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Elf\Elf_Attack_6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Elf_Attack_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Elf\Elf_Attack_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SecretNigga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Other\SecretNigga.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BlackKnight_Pose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BlackKnight\BlackKnight_Pose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Gigant_Pose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Giant\Gigant_Pose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MinecraftRusNEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Other\MinecraftRusNEW.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BlackKnight_Attack_1_Var_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Elf_Attack_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Elf\Elf_Attack_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SecretNigga" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Other\SecretNigga.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Elf_Attack_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Elf\Elf_Attack_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Assassin_Attack_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Assassin\Assassin_Attack_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,10 +172,13 @@
   <data name="Assassin_Attack_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Assassin\Assassin_Attack_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BlackKnightChooseicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BlackKnight\BlackKnightChooseicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MainMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Backgrounds\MainMenu.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gigant_Pose" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Giant\Gigant_Pose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GiantChooseIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Giant\GiantChooseIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

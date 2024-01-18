@@ -2,6 +2,7 @@
 using DubstepFightClassLibrary;
 using System;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Windows.Forms;
 
 namespace DubstepFight
@@ -14,6 +15,8 @@ namespace DubstepFight
         public BaseHero SecondPlayerHero { get; internal set; }
         public Fight GameFight { get; internal set; } //Класс Fight (счётчик ходов)
         public Random Random { get; internal set; }
+        public PrivateFontCollection MinecraftFont = new PrivateFontCollection();
+        
 
         private int playerCounter = 0;
         public void CreateHero(string heroName)
@@ -39,6 +42,7 @@ namespace DubstepFight
                 }
                 playerCounter++;
             }
+
             else if(playerCounter == 1)
             {
                 switch (heroName)
@@ -62,7 +66,15 @@ namespace DubstepFight
                 GameFight = new Fight(FirstPlayerHero, SecondPlayerHero);
             }
         }
-        public void ControlResize(Rectangle ControlRec, Rectangle FormRec, Control Control, Form Form) //Изменение размера чего либо с изменением размера формы
+
+        public void DeleteCharacters()
+        {
+            playerCounter = 0;
+            FirstPlayerHero = null;
+            SecondPlayerHero = null;
+        }
+
+        public void ControlResize(Rectangle ControlRec, Rectangle FormRec, Control Control, Form Form)
         {
             float ratioX = (float)(Form.Width) / (float)(FormRec.Width);
             float ratioY = (float)(Form.Height) / (float)(FormRec.Height);
@@ -77,5 +89,16 @@ namespace DubstepFight
             Control.Location = new Point(newX, newY);
             Control.Size = new Size(newWidth, newHeight);
         }
+
+        public void UseCustomFontLab(Label label)
+        {
+            label.Font = new Font(MinecraftFont.Families[0], label.Font.Size);
+        }
+
+        public void UseCustomFontBut(Button button)
+        {
+            button.Font = new Font(MinecraftFont.Families[0], button.Font.Size);
+        }
+
     }
 }

@@ -21,6 +21,20 @@ namespace DubstepFight.FightMenu
         MainGameMenu returnMenuMain;
         MainViewModel viewModel;
         HeroInfoForm heroInfo;
+        Rectangle FormRec;
+        Rectangle Player1HeroNameLabelRec;
+        Rectangle Player2HeroNameLabelRec;
+        Rectangle Player1HpProgressBarRec;
+        Rectangle Player2HpProgressBarRec;
+        Rectangle Player1HpLabelRec;
+        Rectangle Player2HpLabelRec;
+        Rectangle TurnCounterLabelRec;
+        Rectangle PlayerWinLabelRec;
+        Rectangle Player1GetDamageLabelRec;
+        Rectangle Player2GetDamageLabelRec;
+        Rectangle ReturnMenuButtonRec;
+        Rectangle Player1CharPicBoxRec;
+        Rectangle Player2CharPicBoxRec;
 
         private void FormRezizeToThisShowAndHide(Form fromForm)
         {
@@ -258,20 +272,101 @@ namespace DubstepFight.FightMenu
 
         private void Player1InfoButton_Click(object sender, EventArgs e)
         {
-            heroInfo = new HeroInfoForm(this, viewModel.FirstPlayerHero);
+            heroInfo = new HeroInfoForm(this, viewModel.FirstPlayerHero, viewModel);
             FormRezizeToThisShowAndHide(heroInfo);
+        }
+        private void Player1InfoButton_MouseEnter(object sender, EventArgs e)
+        {
+            Player1InfoButton.ForeColor = Color.Magenta;
+            Player1InfoButton.BackColor = Color.Magenta;
+
+
+        }
+        private void Player1InfoButton_MouseLeave(object sender, EventArgs e)
+        {
+            Player1InfoButton.ForeColor = Color.Cyan;
+            Player1InfoButton.BackColor = Color.Transparent;
         }
 
         private void Player2InfoButton_Click(object sender, EventArgs e)
         {
-            heroInfo = new HeroInfoForm(this, viewModel.SecondPlayerHero);
+            heroInfo = new HeroInfoForm(this, viewModel.SecondPlayerHero, viewModel);
             FormRezizeToThisShowAndHide(heroInfo);
+        }
+        private void Player2InfoButton_MouseEnter(object sender, EventArgs e)
+        {
+            Player2InfoButton.ForeColor = Color.Magenta;
+            Player2InfoButton.BackColor = Color.Magenta;
+
+
+        }
+        private void Player2InfoButton_MouseLeave(object sender, EventArgs e)
+        {
+            Player2InfoButton.ForeColor = Color.Cyan;
+            Player2InfoButton.BackColor = Color.Transparent;
         }
 
         private void ReturnMenuButton_Click(object sender, EventArgs e)
         {
             FormRezizeToThisShowAndHide(returnMenuMain);
             this.Close();
+        }
+        private void ReturnMenuButtonм_MouseEnter(object sender, EventArgs e)
+        {
+            ReturnMenuButton.ForeColor = Color.Magenta;
+            ReturnMenuButton.BackColor = Color.Magenta;
+
+
+        }
+        private void ReturnMenuButton_MouseLeave(object sender, EventArgs e)
+        {
+            ReturnMenuButton.ForeColor = Color.Cyan;
+            ReturnMenuButton.BackColor = Color.Transparent;
+        }
+
+        private void Player2HpProgressBar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Player2CharPicBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FightSceneMenu_Load(object sender, EventArgs e)
+        {
+            FormRec = new Rectangle(this.Location, this.Size);
+            Player1HeroNameLabelRec = new Rectangle(Player1HeroNameLabel.Location, Player1HeroNameLabel.Size);
+            Player2HeroNameLabelRec = new Rectangle(Player2HeroNameLabel.Location, Player2HeroNameLabel.Size);
+            Player1HpProgressBarRec = new Rectangle(Player1HpProgressBar.Location, Player1HpProgressBar.Size);
+            Player2HpProgressBarRec = new Rectangle(Player2HpProgressBar.Location, Player2HpProgressBar.Size);
+            Player1HpLabelRec = new Rectangle(Player1HpLabel.Location, Player1HpLabel.Size);
+            Player2HpLabelRec = new Rectangle(Player2HpLabel.Location, Player2HpLabel.Size);
+            TurnCounterLabelRec = new Rectangle(TurnCounterLabel.Location, TurnCounterLabel.Size);
+            PlayerWinLabelRec = new Rectangle(PlayerWinLabel.Location, PlayerWinLabel.Size);
+            Player1GetDamageLabelRec = new Rectangle(Player1GetDamageLabel.Location, Player1GetDamageLabel.Size);
+            Player2GetDamageLabelRec = new Rectangle(Player2GetDamageLabel.Location, Player2GetDamageLabel.Size);
+            ReturnMenuButtonRec = new Rectangle(ReturnMenuButton.Location, ReturnMenuButton.Size);
+            Player1CharPicBoxRec = new Rectangle(Player1CharPicBox.Location, Player1CharPicBox.Size);
+            Player2CharPicBoxRec = new Rectangle(Player2CharPicBox.Location, Player2CharPicBox.Size);
+        }
+
+        private void FightSceneMenu_Resize(object sender, EventArgs e)
+        {
+            viewModel.ControlResize(Player1HeroNameLabelRec, FormRec, Player1HeroNameLabel, this);
+            viewModel.ControlResize(Player2HeroNameLabelRec, FormRec, Player2HeroNameLabel, this);
+            viewModel.ControlResize(Player1HpProgressBarRec, FormRec, Player1HpProgressBar, this);
+            viewModel.ControlResize(Player2HpProgressBarRec, FormRec, Player2HpProgressBar, this);
+            viewModel.ControlResize(Player1HpLabelRec, FormRec, Player1HpLabel, this);
+            viewModel.ControlResize(Player2HpLabelRec, FormRec, Player2HpLabel, this);
+            viewModel.ControlResize(TurnCounterLabelRec, FormRec, TurnCounterLabel, this);
+            viewModel.ControlResize(PlayerWinLabelRec, FormRec, PlayerWinLabel, this);
+            viewModel.ControlResize(Player1GetDamageLabelRec, FormRec, Player1GetDamageLabel, this);
+            viewModel.ControlResize(Player2GetDamageLabelRec, FormRec, Player2GetDamageLabel, this);
+            viewModel.ControlResize(ReturnMenuButtonRec, FormRec, ReturnMenuButton, this);
+            viewModel.ControlResize(Player1CharPicBoxRec, FormRec, Player1CharPicBox, this);
+            viewModel.ControlResize(Player2CharPicBoxRec, FormRec, Player2CharPicBox, this);
         }
     }
 }

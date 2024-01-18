@@ -93,6 +93,16 @@ namespace DubstepFight.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AssassinChooseIcon {
+            get {
+                object obj = ResourceManager.GetObject("AssassinChooseIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BlackKnight_Attack_1_Var_1 {
             get {
                 object obj = ResourceManager.GetObject("BlackKnight_Attack_1_Var_1", resourceCulture);
@@ -116,6 +126,16 @@ namespace DubstepFight.Properties {
         internal static System.Drawing.Bitmap BlackKnight_Pose {
             get {
                 object obj = ResourceManager.GetObject("BlackKnight_Pose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BlackKnightChooseicon {
+            get {
+                object obj = ResourceManager.GetObject("BlackKnightChooseicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +213,26 @@ namespace DubstepFight.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ElfChooseIcon {
+            get {
+                object obj = ResourceManager.GetObject("ElfChooseIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GiantChooseIcon {
+            get {
+                object obj = ResourceManager.GetObject("GiantChooseIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gigant_Pose {
             get {
                 object obj = ResourceManager.GetObject("Gigant_Pose", resourceCulture);
@@ -207,6 +247,16 @@ namespace DubstepFight.Properties {
             get {
                 object obj = ResourceManager.GetObject("MainMenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MinecraftRusNEW {
+            get {
+                object obj = ResourceManager.GetObject("MinecraftRusNEW", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

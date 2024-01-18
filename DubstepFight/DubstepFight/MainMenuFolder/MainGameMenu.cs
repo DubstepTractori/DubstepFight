@@ -27,6 +27,7 @@ namespace DubstepFight
         {
             InitializeComponent();
             viewModel = new MainViewModel();
+            viewModel.MinecraftFont.AddFontFile(@"..\..\Resources\Other\MinecraftRusNEW.otf");
             
         }
 
@@ -103,6 +104,12 @@ namespace DubstepFight
             StartGameButtonRec = new Rectangle(StartGameButton.Location, StartGameButton.Size);
             SettingsButtonRec = new Rectangle(SettingsButton.Location, SettingsButton.Size);
             WelcomeLabelRec = new Rectangle(WelcomeLabel.Location, WelcomeLabel.Size);
+
+            viewModel.UseCustomFontLab(WelcomeLabel);
+            viewModel.UseCustomFontBut(StartGameButton);
+            viewModel.UseCustomFontBut(SettingsButton);
+            viewModel.UseCustomFontBut(ExitButton);
+
         }
 
         private void MainGameMenu_Resize_1(object sender, EventArgs e)

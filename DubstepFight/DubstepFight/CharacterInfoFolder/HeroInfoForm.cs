@@ -17,17 +17,34 @@ namespace DubstepFight.CharacterInfoFolder
 
         FightSceneMenu ReturnFight;
         BaseHero Hero;
-        public HeroInfoForm(FightSceneMenu returnFight, BaseHero hero)
+        MainViewModel viewModel;
+        Rectangle ReturnButtonRec;
+        Rectangle FormRec;
+
+        public HeroInfoForm(FightSceneMenu returnFight, BaseHero hero, MainViewModel viewModel)
         {
             InitializeComponent();
             ReturnFight = returnFight;
             Hero = hero;
+            this.viewModel = viewModel;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
             ReturnFight.Show();
+        }
+        private void returnButton_MouseEnter(object sender, EventArgs e)
+        {
+            returnButton.ForeColor = Color.Magenta;
+            returnButton.BackColor = Color.Magenta;
+
+
+        }
+        private void returnButton_MouseLeave(object sender, EventArgs e)
+        {
+            returnButton.ForeColor = Color.Cyan;
+            returnButton.BackColor = Color.Transparent;
         }
 
         private void TextClear()
@@ -39,14 +56,16 @@ namespace DubstepFight.CharacterInfoFolder
         }
         private void HeroInfoForm_Load(object sender, EventArgs e)
         {
+            ReturnButtonRec = new Rectangle(returnButton.Location, returnButton.Size);
+
             TextClear();
             HeroNameLabel.Text = Hero.Name;
 
             using (StreamReader fileReader = new StreamReader(Hero.CharInfoTxtPath))
             {
                 string line = "";
-                
-                while((line = fileReader.ReadLine()) != "=Border=")
+
+                while ((line = fileReader.ReadLine()) != "=Border=")
                 {
                     HeroBaseAttackInfoLabel.Text += line += "\r\n";
                 }
@@ -60,6 +79,11 @@ namespace DubstepFight.CharacterInfoFolder
                 }
             }
 
+        }
+
+        private void HeroInfoForm_Resize(object sender, EventArgs e)
+        {
+            viewModel.ControlResize(ReturnButtonRec, FormRec, returnButton, this);
         }
     }
 }
