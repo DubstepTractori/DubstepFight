@@ -29,6 +29,18 @@ namespace DubstepFight.CharacterInfoFolder
             this.Close();
             ReturnFight.Show();
         }
+        private void returnButton_MouseEnter(object sender, EventArgs e)
+        {
+            returnButton.ForeColor = Color.Magenta;
+            returnButton.BackColor = Color.Magenta;
+
+
+        }
+        private void returnButton_MouseLeave(object sender, EventArgs e)
+        {
+            returnButton.ForeColor = Color.Cyan;
+            returnButton.BackColor = Color.Transparent;
+        }
 
         private void HeroInfoForm_Load(object sender, EventArgs e)
         {
