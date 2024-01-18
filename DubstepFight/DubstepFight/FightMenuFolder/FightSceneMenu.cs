@@ -51,6 +51,13 @@ namespace DubstepFight.FightMenu
 
         private void InitializePlayers()
         {
+
+            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+            WMP.URL = Path.GetFullPath("../../Resources/Other/DabstepTraktori.mp3");
+            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
+            WMP.controls.play(); // Старт
+
+
             ReturnMenuButton.Enabled = false;
             ReturnMenuButton.Visible = false;
 
@@ -198,16 +205,6 @@ namespace DubstepFight.FightMenu
         int flag = 10;
         private void Player1Attack1MyButton_Click(object sender, EventArgs e)
         {
-
-            WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer(); 
-
-            WMP.URL = Path.GetFullPath("../../Resources/Other/DabstepTraktori.mp3");
-            WMP.settings.volume = 100; // меняя значение можно регулировать громкость
-            if (flag == 10)
-            {
-                WMP.controls.play(); // Старт
-                flag++;
-            }
 
             try
             {
