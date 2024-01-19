@@ -202,7 +202,6 @@ namespace DubstepFight.FightMenu
         }
 
 
-        int flag = 10;
         private void Player1Attack1MyButton_Click(object sender, EventArgs e)
         {
 
