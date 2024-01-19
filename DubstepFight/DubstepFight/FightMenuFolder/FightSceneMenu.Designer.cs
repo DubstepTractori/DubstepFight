@@ -244,6 +244,8 @@
             this.ReturnMenuButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ReturnMenuButton.BackColor = System.Drawing.Color.Transparent;
             this.ReturnMenuButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReturnMenuButton.BackgroundImage")));
+            this.ReturnMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ReturnMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ReturnMenuButton.FlatAppearance.BorderSize = 0;
             this.ReturnMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReturnMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

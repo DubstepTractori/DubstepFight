@@ -1,7 +1,5 @@
 ﻿using DubstepFight;
-using DubstepFight.Core.Model.Attack;
 using DubstepFight.Core.Model.Fight;
-using DubstepFight.Core.Model.Passive;
 using System;
 using System.Collections;
 using System.Collections.Generic;

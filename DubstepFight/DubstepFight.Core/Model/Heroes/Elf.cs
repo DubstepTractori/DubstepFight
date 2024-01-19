@@ -1,8 +1,5 @@
 ﻿using DubstepFight;
-using DubstepFight.Core.Model.Attack;
 using DubstepFight.Core.Model.Fight;
-using DubstepFight.Core.Model.Passive;
-using DubstepFight.Core.Model.Passivki;
 using System;
 using System.Collections.Generic;
 using System.Linq;

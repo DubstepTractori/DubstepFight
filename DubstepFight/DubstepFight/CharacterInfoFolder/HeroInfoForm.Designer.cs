@@ -129,6 +129,7 @@
             this.returnButton.BackColor = System.Drawing.Color.Transparent;
             this.returnButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("returnButton.BackgroundImage")));
             this.returnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.returnButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.returnButton.FlatAppearance.BorderSize = 0;
             this.returnButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.returnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

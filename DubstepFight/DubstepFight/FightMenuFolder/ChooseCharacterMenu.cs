@@ -136,6 +136,8 @@ namespace DubstepFight
             viewModel.UseCustomFontLab(BlackKnightLabel);
             viewModel.UseCustomFontLab(GiantLabel);
             viewModel.UseCustomFontBut(ReturnToMenuButton);
+
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void ChooseCharacterMenu_Resize(object sender, EventArgs e)

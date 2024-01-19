@@ -51,6 +51,7 @@
             this.BackToSettingsButton.BackColor = System.Drawing.Color.Transparent;
             this.BackToSettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackToSettingsButton.BackgroundImage")));
             this.BackToSettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackToSettingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackToSettingsButton.FlatAppearance.BorderSize = 0;
             this.BackToSettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackToSettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -71,6 +72,7 @@
             this.GitHubLinkButton.BackColor = System.Drawing.Color.Transparent;
             this.GitHubLinkButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GitHubLinkButton.BackgroundImage")));
             this.GitHubLinkButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GitHubLinkButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GitHubLinkButton.FlatAppearance.BorderSize = 0;
             this.GitHubLinkButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GitHubLinkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

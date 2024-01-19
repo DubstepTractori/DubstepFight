@@ -77,6 +77,8 @@ namespace DubstepFight.MainMenu
             viewModel.UseCustomFontBut(BackToSettingsButton);
             viewModel.UseCustomFontBut(GitHubLinkButton);
             viewModel.UseCustomFontLab(CreditsLabel);
+
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void DevelopersCreditMenu_Resize(object sender, EventArgs e)

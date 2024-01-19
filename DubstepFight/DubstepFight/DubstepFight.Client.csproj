@@ -52,12 +52,6 @@
     <Compile Include="CharacterInfoFolder\HeroInfoForm.Designer.cs">
       <DependentUpon>HeroInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CharacterInfoFolder\EasterEgg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CharacterInfoFolder\EasterEgg.Designer.cs">
-      <DependentUpon>EasterEgg.cs</DependentUpon>
-    </Compile>
     <Compile Include="FightMenuFolder\ChooseCharacterMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,9 +93,6 @@
     </Compile>
     <EmbeddedResource Include="CharacterInfoFolder\HeroInfoForm.resx">
       <DependentUpon>HeroInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CharacterInfoFolder\EasterEgg.resx">
-      <DependentUpon>EasterEgg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FightMenuFolder\ChooseCharacterMenu.resx">
       <DependentUpon>ChooseCharacterMenu.cs</DependentUpon>

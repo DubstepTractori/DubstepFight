@@ -86,6 +86,8 @@ namespace DubstepFight
             viewModel.UseCustomFontLab(SettingsLabel);
             viewModel.UseCustomFontBut(BackToMainMenuButton);
             viewModel.UseCustomFontBut(DevelopersButton);
+
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void SettingsMenu_Resize(object sender, EventArgs e)

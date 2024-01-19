@@ -350,6 +350,8 @@ namespace DubstepFight.FightMenu
             ReturnMenuButtonRec = new Rectangle(ReturnMenuButton.Location, ReturnMenuButton.Size);
             Player1CharPicBoxRec = new Rectangle(Player1CharPicBox.Location, Player1CharPicBox.Size);
             Player2CharPicBoxRec = new Rectangle(Player2CharPicBox.Location, Player2CharPicBox.Size);
+
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void FightSceneMenu_Resize(object sender, EventArgs e)

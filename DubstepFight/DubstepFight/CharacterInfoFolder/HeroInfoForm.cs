@@ -57,6 +57,7 @@ namespace DubstepFight.CharacterInfoFolder
         private void HeroInfoForm_Load(object sender, EventArgs e)
         {
             ReturnButtonRec = new Rectangle(returnButton.Location, returnButton.Size);
+            FormRec = new Rectangle(this.Location, this.Size);
 
             TextClear();
             HeroNameLabel.Text = Hero.Name;
@@ -79,6 +80,7 @@ namespace DubstepFight.CharacterInfoFolder
                 }
             }
 
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void HeroInfoForm_Resize(object sender, EventArgs e)

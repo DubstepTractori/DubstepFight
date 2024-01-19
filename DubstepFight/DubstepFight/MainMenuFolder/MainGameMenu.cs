@@ -110,6 +110,7 @@ namespace DubstepFight
             viewModel.UseCustomFontBut(SettingsButton);
             viewModel.UseCustomFontBut(ExitButton);
 
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void MainGameMenu_Resize_1(object sender, EventArgs e)
