@@ -16,6 +16,10 @@ namespace DubstepFight
         public Fight GameFight { get; internal set; } //Класс Fight (счётчик ходов)
         public Random Random { get; internal set; }
         public PrivateFontCollection MinecraftFont = new PrivateFontCollection();
+
+        public WMPLib.WindowsMediaPlayer WMP = new WMPLib.WindowsMediaPlayer();
+        public WMPLib.WindowsMediaPlayer WMPMusic = new WMPLib.WindowsMediaPlayer();
+        public int WMPVolume = 100;
         
 
         private int playerCounter = 0;
@@ -72,6 +76,7 @@ namespace DubstepFight
             playerCounter = 0;
             FirstPlayerHero = null;
             SecondPlayerHero = null;
+            CreationCompleted = false;
         }
 
         public void ControlResize(Rectangle ControlRec, Rectangle FormRec, Control Control, Form Form)

@@ -126,6 +126,7 @@
             // 
             // returnButton
             // 
+            this.returnButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.returnButton.BackColor = System.Drawing.Color.Transparent;
             this.returnButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("returnButton.BackgroundImage")));
             this.returnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -140,9 +141,9 @@
             this.returnButton.TabIndex = 8;
             this.returnButton.Text = "Back";
             this.returnButton.UseVisualStyleBackColor = false;
-            this.returnButton.Click += new System.EventHandler(this.button1_Click);
-            this.returnButton.MouseEnter += new System.EventHandler(this.returnButton_MouseEnter);
-            this.returnButton.MouseLeave += new System.EventHandler(this.returnButton_MouseLeave);
+            this.returnButton.Click += new System.EventHandler(this.Button1_Click);
+            this.returnButton.MouseEnter += new System.EventHandler(this.ReturnButton_MouseEnter);
+            this.returnButton.MouseLeave += new System.EventHandler(this.ReturnButton_MouseLeave);
             // 
             // HeroInfoForm
             // 
@@ -163,7 +164,7 @@
             this.Name = "HeroInfoForm";
             this.Text = "AssassinInfoForm";
             this.Load += new System.EventHandler(this.HeroInfoForm_Load);
-            this.Resize += new System.EventHandler(this.HeroInfoForm_Resize);
+            this.Resize += new System.EventHandler(this.HeroInfoForm_Resize_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

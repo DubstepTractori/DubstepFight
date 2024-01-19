@@ -17,7 +17,7 @@ namespace DubstepFight
         /// 
         public BlackKnight() { Health = 150; Power = 20; Name = "Тёмный Рыцарь"; Passive = new Passive(0); Attack2CD = 2;
             Attack1ImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg";
-            Attack2ImgPath = @"..\..\Resources\Other\NoIcon.png";
+            Attack2ImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Attack_2.jpg";
             CharPoseIdleImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Pose.png";
             CharInfoTxtPath = @"..\..\Resources\BlackKnight\BlackKnightInfo.txt";
         }

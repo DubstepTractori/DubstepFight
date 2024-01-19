@@ -32,6 +32,10 @@
             this.DevelopersButton = new System.Windows.Forms.Button();
             this.SettingsLabel = new System.Windows.Forms.Label();
             this.BackToMainMenuButton = new System.Windows.Forms.Button();
+            this.SoundVolumeTrackBar = new System.Windows.Forms.TrackBar();
+            this.SoundVolumeLabel = new System.Windows.Forms.Label();
+            this.SoundVolumeNumLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.SoundVolumeTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // DevelopersButton
@@ -62,7 +66,7 @@
             this.SettingsLabel.BackColor = System.Drawing.Color.Transparent;
             this.SettingsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsLabel.ForeColor = System.Drawing.Color.Cyan;
-            this.SettingsLabel.Location = new System.Drawing.Point(341, 53);
+            this.SettingsLabel.Location = new System.Drawing.Point(357, 60);
             this.SettingsLabel.Name = "SettingsLabel";
             this.SettingsLabel.Size = new System.Drawing.Size(84, 24);
             this.SettingsLabel.TabIndex = 2;
@@ -91,6 +95,46 @@
             this.BackToMainMenuButton.MouseEnter += new System.EventHandler(this.BackToMainMenuButton_MouseEnter);
             this.BackToMainMenuButton.MouseLeave += new System.EventHandler(this.BackToMainMenuButton_MouseLeave);
             // 
+            // SoundVolumeTrackBar
+            // 
+            this.SoundVolumeTrackBar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SoundVolumeTrackBar.Location = new System.Drawing.Point(245, 268);
+            this.SoundVolumeTrackBar.Maximum = 100;
+            this.SoundVolumeTrackBar.Name = "SoundVolumeTrackBar";
+            this.SoundVolumeTrackBar.Size = new System.Drawing.Size(304, 45);
+            this.SoundVolumeTrackBar.TabIndex = 5;
+            this.SoundVolumeTrackBar.TickFrequency = 10;
+            this.SoundVolumeTrackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.SoundVolumeTrackBar.Scroll += new System.EventHandler(this.SoundVolumeTrackBar_Scroll);
+            // 
+            // SoundVolumeLabel
+            // 
+            this.SoundVolumeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SoundVolumeLabel.AutoSize = true;
+            this.SoundVolumeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SoundVolumeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoundVolumeLabel.ForeColor = System.Drawing.Color.Cyan;
+            this.SoundVolumeLabel.Location = new System.Drawing.Point(357, 241);
+            this.SoundVolumeLabel.Name = "SoundVolumeLabel";
+            this.SoundVolumeLabel.Size = new System.Drawing.Size(82, 24);
+            this.SoundVolumeLabel.TabIndex = 6;
+            this.SoundVolumeLabel.Text = "Volume";
+            this.SoundVolumeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SoundVolumeNumLabel
+            // 
+            this.SoundVolumeNumLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SoundVolumeNumLabel.AutoSize = true;
+            this.SoundVolumeNumLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SoundVolumeNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoundVolumeNumLabel.ForeColor = System.Drawing.Color.Cyan;
+            this.SoundVolumeNumLabel.Location = new System.Drawing.Point(241, 316);
+            this.SoundVolumeNumLabel.Name = "SoundVolumeNumLabel";
+            this.SoundVolumeNumLabel.Size = new System.Drawing.Size(59, 24);
+            this.SoundVolumeNumLabel.TabIndex = 7;
+            this.SoundVolumeNumLabel.Text = "100%";
+            this.SoundVolumeNumLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // SettingsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,6 +142,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SoundVolumeNumLabel);
+            this.Controls.Add(this.SoundVolumeLabel);
+            this.Controls.Add(this.SoundVolumeTrackBar);
             this.Controls.Add(this.BackToMainMenuButton);
             this.Controls.Add(this.SettingsLabel);
             this.Controls.Add(this.DevelopersButton);
@@ -106,6 +153,7 @@
             this.Text = "SettingsMenu";
             this.Load += new System.EventHandler(this.SettingsMenu_Load);
             this.Resize += new System.EventHandler(this.SettingsMenu_Resize);
+            ((System.ComponentModel.ISupportInitialize)(this.SoundVolumeTrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +164,8 @@
         private System.Windows.Forms.Button DevelopersButton;
         private System.Windows.Forms.Label SettingsLabel;
         private System.Windows.Forms.Button BackToMainMenuButton;
+        private System.Windows.Forms.TrackBar SoundVolumeTrackBar;
+        private System.Windows.Forms.Label SoundVolumeLabel;
+        private System.Windows.Forms.Label SoundVolumeNumLabel;
     }
 }

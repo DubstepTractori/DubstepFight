@@ -22,7 +22,7 @@ namespace DubstepFight
         Rectangle StartGameButtonRec;
         Rectangle SettingsButtonRec;
         Rectangle WelcomeLabelRec;
-        
+
         public MainGameMenu()
         {
             InitializeComponent();
@@ -40,19 +40,25 @@ namespace DubstepFight
         }
         private void button1_MouseEnter(object sender, EventArgs e)
         {
+
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            viewModel.WMP.controls.play();
             ExitButton.ForeColor = Color.Magenta;
             ExitButton.BackColor = Color.Magenta;
 
         }
         private void button1_MouseLeave(object sender, EventArgs e)
         {
+
             ExitButton.ForeColor = Color.Cyan;
             ExitButton.BackColor = Color.Transparent;
         }
-        
+
 
         private void ChoosePlayer1Button_MouseEnter(object sender, EventArgs e)
         {
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            viewModel.WMP.controls.play();
             StartGameButton.ForeColor = Color.Magenta;
             StartGameButton.BackColor = Color.Magenta;
 
@@ -70,11 +76,8 @@ namespace DubstepFight
             ChooseCharacter.Size = this.Size;
             ChooseCharacter.Location = this.Location;
             this.Hide();
-        }
-
-        private void ChoosePlayer2Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Данная фунция пока недоступна");
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            viewModel.WMP.controls.play();
         }
 
         private void SettingsButton_Click(object sender, EventArgs e)
@@ -84,11 +87,15 @@ namespace DubstepFight
             Settings.Size = this.Size;
             Settings.Location = this.Location;
             this.Hide();
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            viewModel.WMP.controls.play();
         }
         private void SettingsButton_MouseEnter(object sender, EventArgs e)
         {
             SettingsButton.ForeColor = Color.Magenta;
             SettingsButton.BackColor = Color.Magenta;
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            viewModel.WMP.controls.play();
 
         }
         private void SettingsButton_MouseLeave(object sender, EventArgs e)
@@ -110,7 +117,12 @@ namespace DubstepFight
             viewModel.UseCustomFontBut(SettingsButton);
             viewModel.UseCustomFontBut(ExitButton);
 
+            viewModel.WMP.settings.volume = viewModel.WMPVolume;
+
             this.WindowState = FormWindowState.Maximized;
+
+            viewModel.WMPMusic.URL = Path.GetFullPath("../../Resources/Other/DR_GABBA_Sunday_2PM.mp3");
+            viewModel.WMPMusic.controls.play();
         }
 
         private void MainGameMenu_Resize_1(object sender, EventArgs e)

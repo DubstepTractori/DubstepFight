@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DubstepFight.FightMenu
 {
@@ -308,15 +309,18 @@ namespace DubstepFight.FightMenu
 
         private void ReturnMenuButton_Click(object sender, EventArgs e)
         {
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            viewModel.WMP.controls.play();
             FormRezizeToThisShowAndHide(returnMenuMain);
+            viewModel.DeleteCharacters();
             this.Close();
         }
         private void ReturnMenuButtonм_MouseEnter(object sender, EventArgs e)
         {
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            viewModel.WMP.controls.play();
             ReturnMenuButton.ForeColor = Color.Magenta;
             ReturnMenuButton.BackColor = Color.Magenta;
-
-
         }
         private void ReturnMenuButton_MouseLeave(object sender, EventArgs e)
         {
@@ -350,6 +354,17 @@ namespace DubstepFight.FightMenu
             ReturnMenuButtonRec = new Rectangle(ReturnMenuButton.Location, ReturnMenuButton.Size);
             Player1CharPicBoxRec = new Rectangle(Player1CharPicBox.Location, Player1CharPicBox.Size);
             Player2CharPicBoxRec = new Rectangle(Player2CharPicBox.Location, Player2CharPicBox.Size);
+
+            viewModel.UseCustomFontLab(TurnCounterLabel);
+            viewModel.UseCustomFontLab(PlayerWinLabel);
+            viewModel.UseCustomFontLab(Player1HeroNameLabel);
+            viewModel.UseCustomFontLab(Player2HeroNameLabel);
+            viewModel.UseCustomFontLab(Player1HpLabel);
+            viewModel.UseCustomFontLab(Player2HpLabel);
+            viewModel.UseCustomFontLab(Player1GetDamageLabel);
+            viewModel.UseCustomFontLab(Player2GetDamageLabel);
+            viewModel.UseCustomFontBut(Player1InfoButton);
+            viewModel.UseCustomFontBut(Player2InfoButton);
 
             this.WindowState = FormWindowState.Maximized;
         }

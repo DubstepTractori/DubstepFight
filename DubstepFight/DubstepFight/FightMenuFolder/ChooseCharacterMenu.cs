@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,14 +42,17 @@ namespace DubstepFight
 
         private void ReturnToMenuButton_Click(object sender, EventArgs e)
         {
-            viewModel.DeleteCharacters();
             menu.Show();
             this.Close();
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            viewModel.WMP.controls.play();
         }
         private void ReturnToMenuButton_MouseEnter(object sender, EventArgs e)
         {
             ReturnToMenuButton.ForeColor = Color.Magenta;
             ReturnToMenuButton.BackColor = Color.Magenta;
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            viewModel.WMP.controls.play();
 
 
         }
@@ -73,47 +77,6 @@ namespace DubstepFight
                 fightMenu.Size = this.Size;
                 this.Close();
             }
-        }
-
-        private void ChooseHeroAssasinButton_Click(object sender, EventArgs e)
-        {
-            CreateHeroAction("Assassin");
-        }
-
-
-        private void ChooseHeroElfButton_Click(object sender, EventArgs e)
-        {
-            CreateHeroAction("Elf");
-        }
-
-        private void ChooseHeroBlackKnightButton_Click(object sender, EventArgs e)
-        {
-            CreateHeroAction("BlackKnight");
-        }
-
-        private void ChooseHeroGiantButton_Click(object sender, EventArgs e)
-        {
-            CreateHeroAction("Giant");
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ChooseCharacterMenu_Load(object sender, EventArgs e)
@@ -157,21 +120,53 @@ namespace DubstepFight
         private void AssassinPicBox_Click(object sender, EventArgs e)
         {
             CreateHeroAction("Assassin");
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            viewModel.WMP.controls.play();
         }
 
         private void ElfPicBox_Click(object sender, EventArgs e)
         {
             CreateHeroAction("Elf");
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            viewModel.WMP.controls.play();
         }
 
         private void BlackKnightPicBox_Click(object sender, EventArgs e)
         {
             CreateHeroAction("BlackKnight");
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            viewModel.WMP.controls.play();
         }
 
         private void GiantPicBox_Click(object sender, EventArgs e)
         {
             CreateHeroAction("Giant");
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            viewModel.WMP.controls.play();
+        }
+
+        private void AssassinPicBox_MouseEnter(object sender, EventArgs e)
+        {
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            viewModel.WMP.controls.play();
+        }
+
+        private void ElfPicBox_MouseEnter(object sender, EventArgs e)
+        {
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            viewModel.WMP.controls.play();
+        }
+
+        private void BlackKnightPicBox_MouseEnter(object sender, EventArgs e)
+        {
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            viewModel.WMP.controls.play();
+        }
+
+        private void GiantPicBox_MouseEnter(object sender, EventArgs e)
+        {
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            viewModel.WMP.controls.play();
         }
     }
 }

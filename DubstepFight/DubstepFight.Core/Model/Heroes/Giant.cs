@@ -14,8 +14,8 @@ namespace DubstepFightClassLibrary
         /// класс гиганта
         /// </summary>
         public Giant() { Health = 200; Power = 15; Name = "Гигант"; Attack2CD = 2;
-            Attack1ImgPath = @"..\..\Resources\Other\NoIcon.png";
-            Attack2ImgPath = @"..\..\Resources\Other\NoIcon.png";
+            Attack1ImgPath = @"..\..\Resources\Giant\Giant_attack_1.png";
+            Attack2ImgPath = @"..\..\Resources\Giant\Giant_attack_2.png";
             CharPoseIdleImgPath = @"..\..\Resources\Giant\Gigant_Pose.png";
             CharInfoTxtPath = @"..\..\Resources\Giant\GiantInfo.txt";
         }

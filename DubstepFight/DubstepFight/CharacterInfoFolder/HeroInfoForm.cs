@@ -29,19 +29,21 @@ namespace DubstepFight.CharacterInfoFolder
             this.viewModel = viewModel;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
+            viewModel.WMP.controls.play();
             ReturnFight.Show();
+            this.Close();
         }
-        private void returnButton_MouseEnter(object sender, EventArgs e)
+        private void ReturnButton_MouseEnter(object sender, EventArgs e)
         {
+            viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
+            viewModel.WMP.controls.play();
             returnButton.ForeColor = Color.Magenta;
             returnButton.BackColor = Color.Magenta;
-
-
         }
-        private void returnButton_MouseLeave(object sender, EventArgs e)
+        private void ReturnButton_MouseLeave(object sender, EventArgs e)
         {
             returnButton.ForeColor = Color.Cyan;
             returnButton.BackColor = Color.Transparent;
@@ -78,12 +80,20 @@ namespace DubstepFight.CharacterInfoFolder
                 {
                     HeroPassiveInfoLabel.Text += line += "\r\n";
                 }
+                fileReader.Close();
             }
 
+            viewModel.UseCustomFontBut(returnButton);
+            viewModel.UseCustomFontLab(HeroBaseAttackInfoLabel);
+            viewModel.UseCustomFontLab(HeroSkill1InfoLabel);
+            viewModel.UseCustomFontLab(HeroPassiveInfoLabel);
+            viewModel.UseCustomFontLab(HeroBaseAttackLabel);
+            viewModel.UseCustomFontLab(HeroSkill1Label);
+            viewModel.UseCustomFontLab(HaroPassiveLabel);
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void HeroInfoForm_Resize(object sender, EventArgs e)
+        private void HeroInfoForm_Resize_1(object sender, EventArgs e)
         {
             viewModel.ControlResize(ReturnButtonRec, FormRec, returnButton, this);
         }

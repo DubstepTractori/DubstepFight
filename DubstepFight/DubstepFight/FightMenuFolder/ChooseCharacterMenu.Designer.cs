@@ -103,7 +103,6 @@
             this.ElfLabel.Size = new System.Drawing.Size(22, 13);
             this.ElfLabel.TabIndex = 12;
             this.ElfLabel.Text = "Elf";
-            this.ElfLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // BlackKnightLabel
             // 
@@ -140,6 +139,7 @@
             this.AssassinPicBox.TabIndex = 15;
             this.AssassinPicBox.TabStop = false;
             this.AssassinPicBox.Click += new System.EventHandler(this.AssassinPicBox_Click);
+            this.AssassinPicBox.MouseEnter += new System.EventHandler(this.AssassinPicBox_MouseEnter);
             // 
             // ElfPicBox
             // 
@@ -152,6 +152,7 @@
             this.ElfPicBox.TabIndex = 16;
             this.ElfPicBox.TabStop = false;
             this.ElfPicBox.Click += new System.EventHandler(this.ElfPicBox_Click);
+            this.ElfPicBox.MouseEnter += new System.EventHandler(this.ElfPicBox_MouseEnter);
             // 
             // BlackKnightPicBox
             // 
@@ -164,6 +165,7 @@
             this.BlackKnightPicBox.TabIndex = 17;
             this.BlackKnightPicBox.TabStop = false;
             this.BlackKnightPicBox.Click += new System.EventHandler(this.BlackKnightPicBox_Click);
+            this.BlackKnightPicBox.MouseEnter += new System.EventHandler(this.BlackKnightPicBox_MouseEnter);
             // 
             // GiantPicBox
             // 
@@ -176,6 +178,7 @@
             this.GiantPicBox.TabIndex = 18;
             this.GiantPicBox.TabStop = false;
             this.GiantPicBox.Click += new System.EventHandler(this.GiantPicBox_Click);
+            this.GiantPicBox.MouseEnter += new System.EventHandler(this.GiantPicBox_MouseEnter);
             // 
             // ChooseCharacterMenu
             // 
