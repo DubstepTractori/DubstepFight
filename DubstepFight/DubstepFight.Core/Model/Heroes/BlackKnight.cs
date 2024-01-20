@@ -19,6 +19,7 @@ namespace DubstepFight
             Attack1ImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Attack_1_Var_1.jpg";
             Attack2ImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Attack_2.jpg";
             CharPoseIdleImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Pose.png";
+            CharAttackAnimImgPath = @"..\..\Resources\BlackKnight\BlackKnight_Pose_2.png";
             CharInfoTxtPath = @"..\..\Resources\BlackKnight\BlackKnightInfo.txt";
         }
 

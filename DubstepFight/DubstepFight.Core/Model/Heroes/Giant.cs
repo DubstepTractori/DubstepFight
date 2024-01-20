@@ -17,6 +17,7 @@ namespace DubstepFightClassLibrary
             Attack1ImgPath = @"..\..\Resources\Giant\Giant_attack_1.png";
             Attack2ImgPath = @"..\..\Resources\Giant\Giant_attack_2.png";
             CharPoseIdleImgPath = @"..\..\Resources\Giant\Gigant_Pose.png";
+            CharAttackAnimImgPath = @"..\..\Resources\Giant\Gigant_Pose_2.png";
             CharInfoTxtPath = @"..\..\Resources\Giant\GiantInfo.txt";
         }
         public override int Attack1()

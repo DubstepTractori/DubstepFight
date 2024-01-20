@@ -69,6 +69,8 @@ namespace DubstepFight.MainMenu
 
         private void DevelopersCreditMenu_Load(object sender, EventArgs e)
         {
+            this.DoubleBuffered = true;
+
             FormRec = new Rectangle(this.Location, this.Size);
             BackToSettingsRec = new Rectangle(BackToSettingsButton.Location, BackToSettingsButton.Size);
             GitHubLinkRec = new Rectangle(GitHubLinkButton.Location, GitHubLinkButton.Size);

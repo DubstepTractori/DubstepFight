@@ -140,25 +140,69 @@ namespace DubstepFight.FightMenu
                 Player2Attack1MyButton.ButtonDisable();
                 Player2Attack2MyButton.ButtonDisable();
             }
+
+            if(viewModel.GameFight.GameOver == true)
+            {
+                if (viewModel.FirstPlayerHero.Health > viewModel.SecondPlayerHero.Health)
+                {
+                    Player1Win(true);
+                }
+                else if (viewModel.FirstPlayerHero.Health < viewModel.SecondPlayerHero.Health)
+                {
+                    Player2Win(true);
+                }
+                else
+                {
+                    DrawWin(true);
+                }
+            }
         }
 
-        private void Player1Win()
+        private void Player1Win(bool noTurns)
         {
             viewModel.SecondPlayerHero.Health = 0;
             Player2HpLabel.Text = viewModel.SecondPlayerHero.Health.ToString();
             Player2HpProgressBar.Value = 0;
-            PlayerWinLabel.Text = "Победил Игрок 1";
+            if (noTurns)
+            {
+                PlayerWinLabel.Text = "Ходы закончились.\r\nПобедил Игрок 1";
+            }
+            else
+            {
+                PlayerWinLabel.Text = "Победил Игрок 1";
+            }
             ReturnMenuButton.Visible = true;
             ReturnMenuButton.Enabled = true;
 
         }
 
-        private void Player2Win()
+        private void Player2Win(bool noTurns)
         {
             viewModel.FirstPlayerHero.Health = 0;
             Player1HpLabel.Text = viewModel.FirstPlayerHero.Health.ToString();
             Player1HpProgressBar.Value = 0;
-            PlayerWinLabel.Text = "Победил Игрок 2";
+            if(noTurns)
+            {
+                PlayerWinLabel.Text = "Ходы закончились.\r\nПобедил Игрок 2";
+            }
+            else
+            {
+                PlayerWinLabel.Text = "Победил Игрок 2";
+            }
+            ReturnMenuButton.Visible = true;
+            ReturnMenuButton.Enabled = true;
+        }
+
+        private void DrawWin(bool noTurns)
+        {
+            if (noTurns)
+            {
+                PlayerWinLabel.Text = "Ходы закончились.\r\nНичья";
+            }
+            else
+            {
+                PlayerWinLabel.Text = "Ничья";
+            }
             ReturnMenuButton.Visible = true;
             ReturnMenuButton.Enabled = true;
         }
@@ -206,16 +250,17 @@ namespace DubstepFight.FightMenu
             try
             {
                 int damageDealt = viewModel.SecondPlayerHero.TakeDamage(viewModel.FirstPlayerHero.Attack1());
+                viewModel.HeroPlayAttackAnim(Player1CharPicBox, Player2CharPicBox, true);
                 Player2GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 viewModel.GameFight.TurnSwitch();
                 FrameUpdate();
                 if (viewModel.SecondPlayerHero.Health <= 0)
-                { Player1Win(); }
+                { Player1Win(false); }
 
             }
             catch
             {
-                Player1Win();
+                Player1Win(false);
             }
             
         }
@@ -225,15 +270,16 @@ namespace DubstepFight.FightMenu
             try
             {
                 int damageDealt = viewModel.SecondPlayerHero.TakeDamage(viewModel.FirstPlayerHero.Attack2());
+                viewModel.HeroPlayAttackAnim(Player1CharPicBox, Player2CharPicBox, true);
                 Player2GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 viewModel.GameFight.TurnSwitch();
                 FrameUpdate();
                 if (viewModel.SecondPlayerHero.Health <= 0)
-                { Player1Win(); }
+                { Player1Win(false); }
             }
             catch
             {
-                Player1Win();
+                Player1Win(false);
             }
         }
 
@@ -242,15 +288,16 @@ namespace DubstepFight.FightMenu
             try
             {
                 int damageDealt = viewModel.FirstPlayerHero.TakeDamage(viewModel.SecondPlayerHero.Attack1());
+                viewModel.HeroPlayAttackAnim(Player2CharPicBox, Player1CharPicBox, false);
                 Player1GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 viewModel.GameFight.TurnSwitch();
                 FrameUpdate();
                 if (viewModel.FirstPlayerHero.Health <= 0)
-                { Player2Win(); }
+                { Player2Win(false); }
             }
             catch
             {
-                Player2Win();
+                Player2Win(false);
             }
         }
 
@@ -259,15 +306,16 @@ namespace DubstepFight.FightMenu
             try
             {
                 int damageDealt = viewModel.FirstPlayerHero.TakeDamage(viewModel.SecondPlayerHero.Attack2());
+                viewModel.HeroPlayAttackAnim(Player2CharPicBox, Player1CharPicBox, false);
                 Player1GetDamageLabel.Text = "Полученный урон: " + damageDealt;
                 viewModel.GameFight.TurnSwitch();
                 FrameUpdate();
                 if(viewModel.FirstPlayerHero.Health <= 0)
-                { Player2Win(); }
+                { Player2Win(false); }
             }
             catch
             {              
-                Player2Win();
+                Player2Win(false);
             }
         }
 
@@ -311,6 +359,7 @@ namespace DubstepFight.FightMenu
         {
             viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
             viewModel.WMP.controls.play();
+            viewModel.WMPMusic.controls.stop();
             FormRezizeToThisShowAndHide(returnMenuMain);
             viewModel.DeleteCharacters();
             this.Close();
@@ -340,6 +389,8 @@ namespace DubstepFight.FightMenu
 
         private void FightSceneMenu_Load(object sender, EventArgs e)
         {
+            this.DoubleBuffered = true;
+
             FormRec = new Rectangle(this.Location, this.Size);
             Player1HeroNameLabelRec = new Rectangle(Player1HeroNameLabel.Location, Player1HeroNameLabel.Size);
             Player2HeroNameLabelRec = new Rectangle(Player2HeroNameLabel.Location, Player2HeroNameLabel.Size);
@@ -367,6 +418,9 @@ namespace DubstepFight.FightMenu
             viewModel.UseCustomFontBut(Player2InfoButton);
 
             this.WindowState = FormWindowState.Maximized;
+
+            viewModel.WMPMusic.URL = Path.GetFullPath("../../Resources/Other/DabstepTraktori.mp3");
+            viewModel.WMPMusic.controls.play();
         }
 
         private void FightSceneMenu_Resize(object sender, EventArgs e)

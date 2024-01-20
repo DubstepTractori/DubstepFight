@@ -12,6 +12,7 @@ namespace DubstepFight.Core.Model.Fight
         private BaseHero player2Hero;
         private bool isPlayer1Turn;
         private int turnCounter;
+        private bool gameOver;
 
         public Fight(BaseHero player1, BaseHero player2) {Player1Hero = player1; Player2Hero = player2; IsPlayer1Turn = true; TurnCounter = 30; }
         public BaseHero Player1Hero {
@@ -34,10 +35,17 @@ namespace DubstepFight.Core.Model.Fight
             get { return isPlayer1Turn; }
             set { isPlayer1Turn = value; }
         }
+
+        public bool GameOver { get => gameOver; set => gameOver = value; }
+
         public void TurnSwitch()
         {
             IsPlayer1Turn = !IsPlayer1Turn;
             TurnCounter--;
+            if(TurnCounter <= 0)
+            {
+                GameOver = true;
+            }    
         }
     }
 }

@@ -3,6 +3,7 @@ using DubstepFightClassLibrary;
 using System;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DubstepFight
@@ -13,7 +14,7 @@ namespace DubstepFight
         public bool CreationCompleted { get; internal set; }
         public BaseHero FirstPlayerHero { get; internal set; }
         public BaseHero SecondPlayerHero { get; internal set; }
-        public Fight GameFight { get; internal set; } //Класс Fight (счётчик ходов)
+        public Fight GameFight { get; internal set; }
         public Random Random { get; internal set; }
         public PrivateFontCollection MinecraftFont = new PrivateFontCollection();
 
@@ -103,6 +104,44 @@ namespace DubstepFight
         public void UseCustomFontBut(Button button)
         {
             button.Font = new Font(MinecraftFont.Families[0], button.Font.Size);
+        }
+
+        public async void HeroPlayAttackAnim(PictureBox HeroPicBox, PictureBox Hero2PicBox, bool isLeft)
+        {
+            Point BasePosition = new Point(HeroPicBox.Location.X, HeroPicBox.Location.Y);
+            if(isLeft)
+            {
+                HeroPicBox.Image = Image.FromFile(FirstPlayerHero.CharAttackAnimImgPath);
+                while (HeroPicBox.Location.X < Hero2PicBox.Location.X - 250)
+                {
+                    await Task.Delay(1);
+                    HeroPicBox.Location = new Point(HeroPicBox.Location.X + 20, HeroPicBox.Location.Y);
+                }
+                while (HeroPicBox.Location.X > BasePosition.X)
+                {
+                    await Task.Delay(1);
+                    HeroPicBox.Location = new Point(HeroPicBox.Location.X - 20, HeroPicBox.Location.Y);
+                }
+                HeroPicBox.Image = Image.FromFile(FirstPlayerHero.CharPoseIdleImgPath);
+            }
+            else
+            {
+                HeroPicBox.Image = Image.FromFile(SecondPlayerHero.CharAttackAnimImgPath);
+                HeroPicBox.Image.RotateFlip(RotateFlipType.Rotate180FlipY);
+                while (HeroPicBox.Location.X > Hero2PicBox.Location.X + 250)
+                {
+                    await Task.Delay(1);
+                    HeroPicBox.Location = new Point(HeroPicBox.Location.X - 20, HeroPicBox.Location.Y);
+                }
+                while (HeroPicBox.Location.X < BasePosition.X)
+                {
+                    await Task.Delay(1);
+                    HeroPicBox.Location = new Point(HeroPicBox.Location.X + 20, HeroPicBox.Location.Y);
+                }
+                HeroPicBox.Image = Image.FromFile(SecondPlayerHero.CharPoseIdleImgPath);
+                HeroPicBox.Image.RotateFlip(RotateFlipType.Rotate180FlipY);
+            }
+
         }
 
     }

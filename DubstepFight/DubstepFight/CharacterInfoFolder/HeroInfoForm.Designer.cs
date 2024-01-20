@@ -36,7 +36,7 @@
             this.HeroSkill1InfoLabel = new System.Windows.Forms.Label();
             this.HaroPassiveLabel = new System.Windows.Forms.Label();
             this.HeroPassiveInfoLabel = new System.Windows.Forms.Label();
-            this.returnButton = new System.Windows.Forms.Button();
+            this.ReturnMenuButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HeroNameLabel
@@ -124,26 +124,25 @@
             this.HeroPassiveInfoLabel.Text = "При получении урона Ассассин имеет 30% шанс увернуться,\r\nигнорируя весь полученны" +
     "й урон";
             // 
-            // returnButton
+            // ReturnMenuButton
             // 
-            this.returnButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.returnButton.BackColor = System.Drawing.Color.Transparent;
-            this.returnButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("returnButton.BackgroundImage")));
-            this.returnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.returnButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.returnButton.FlatAppearance.BorderSize = 0;
-            this.returnButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnButton.ForeColor = System.Drawing.Color.Cyan;
-            this.returnButton.Location = new System.Drawing.Point(628, 383);
-            this.returnButton.Name = "returnButton";
-            this.returnButton.Size = new System.Drawing.Size(160, 55);
-            this.returnButton.TabIndex = 8;
-            this.returnButton.Text = "Back";
-            this.returnButton.UseVisualStyleBackColor = false;
-            this.returnButton.Click += new System.EventHandler(this.Button1_Click);
-            this.returnButton.MouseEnter += new System.EventHandler(this.ReturnButton_MouseEnter);
-            this.returnButton.MouseLeave += new System.EventHandler(this.ReturnButton_MouseLeave);
+            this.ReturnMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ReturnMenuButton.BackColor = System.Drawing.Color.Transparent;
+            this.ReturnMenuButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReturnMenuButton.BackgroundImage")));
+            this.ReturnMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ReturnMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReturnMenuButton.FlatAppearance.BorderSize = 0;
+            this.ReturnMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReturnMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnMenuButton.ForeColor = System.Drawing.Color.Cyan;
+            this.ReturnMenuButton.Location = new System.Drawing.Point(628, 383);
+            this.ReturnMenuButton.Name = "ReturnMenuButton";
+            this.ReturnMenuButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ReturnMenuButton.Size = new System.Drawing.Size(160, 55);
+            this.ReturnMenuButton.TabIndex = 9;
+            this.ReturnMenuButton.Text = "Back";
+            this.ReturnMenuButton.UseVisualStyleBackColor = false;
+            this.ReturnMenuButton.Click += new System.EventHandler(this.ReturnMenuButton_Click);
             // 
             // HeroInfoForm
             // 
@@ -152,7 +151,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.returnButton);
+            this.Controls.Add(this.ReturnMenuButton);
             this.Controls.Add(this.HeroPassiveInfoLabel);
             this.Controls.Add(this.HaroPassiveLabel);
             this.Controls.Add(this.HeroSkill1InfoLabel);
@@ -179,6 +178,6 @@
         private System.Windows.Forms.Label HeroSkill1InfoLabel;
         private System.Windows.Forms.Label HaroPassiveLabel;
         private System.Windows.Forms.Label HeroPassiveInfoLabel;
-        private System.Windows.Forms.Button returnButton;
+        private System.Windows.Forms.Button ReturnMenuButton;
     }
 }

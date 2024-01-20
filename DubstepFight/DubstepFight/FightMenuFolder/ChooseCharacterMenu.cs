@@ -81,6 +81,8 @@ namespace DubstepFight
 
         private void ChooseCharacterMenu_Load(object sender, EventArgs e)
         {
+            this.DoubleBuffered = true;
+
             FormRec = new Rectangle(this.Location, this.Size);
             AssassinPicBoxRec = new Rectangle(AssassinPicBox.Location, AssassinPicBox.Size);
             AssassinLabelRec = new Rectangle(AssassinLabel.Location, AssassinLabel.Size);

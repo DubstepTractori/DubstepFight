@@ -106,6 +106,8 @@ namespace DubstepFight
 
         private void MainGameMenu_Load(object sender, EventArgs e)
         {
+            this.DoubleBuffered = true;
+
             FormRec = new Rectangle(this.Location, this.Size);
             ExitButtonRec = new Rectangle(ExitButton.Location, ExitButton.Size);
             StartGameButtonRec = new Rectangle(StartGameButton.Location, StartGameButton.Size);
@@ -121,8 +123,7 @@ namespace DubstepFight
 
             this.WindowState = FormWindowState.Maximized;
 
-            viewModel.WMPMusic.URL = Path.GetFullPath("../../Resources/Other/DR_GABBA_Sunday_2PM.mp3");
-            viewModel.WMPMusic.controls.play();
+            
         }
 
         private void MainGameMenu_Resize_1(object sender, EventArgs e)

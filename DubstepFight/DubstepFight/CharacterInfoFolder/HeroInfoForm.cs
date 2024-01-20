@@ -18,7 +18,7 @@ namespace DubstepFight.CharacterInfoFolder
         FightSceneMenu ReturnFight;
         BaseHero Hero;
         MainViewModel viewModel;
-        Rectangle ReturnButtonRec;
+        Rectangle ReturnMenuButtonRec;
         Rectangle FormRec;
 
         public HeroInfoForm(FightSceneMenu returnFight, BaseHero hero, MainViewModel viewModel)
@@ -29,24 +29,24 @@ namespace DubstepFight.CharacterInfoFolder
             this.viewModel = viewModel;
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void ReturnMenuButton_Click(object sender, EventArgs e)
         {
             viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
             viewModel.WMP.controls.play();
             ReturnFight.Show();
             this.Close();
         }
-        private void ReturnButton_MouseEnter(object sender, EventArgs e)
+        private void ReturnMenuButton_MouseEnter(object sender, EventArgs e)
         {
             viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Kcick.mp3");
             viewModel.WMP.controls.play();
-            returnButton.ForeColor = Color.Magenta;
-            returnButton.BackColor = Color.Magenta;
+            ReturnMenuButton.ForeColor = Color.Magenta;
+            ReturnMenuButton.BackColor = Color.Magenta;
         }
-        private void ReturnButton_MouseLeave(object sender, EventArgs e)
+        private void ReturnMenuButton_MouseLeave(object sender, EventArgs e)
         {
-            returnButton.ForeColor = Color.Cyan;
-            returnButton.BackColor = Color.Transparent;
+            ReturnMenuButton.ForeColor = Color.Cyan;
+            ReturnMenuButton.BackColor = Color.Transparent;
         }
 
         private void TextClear()
@@ -58,7 +58,9 @@ namespace DubstepFight.CharacterInfoFolder
         }
         private void HeroInfoForm_Load(object sender, EventArgs e)
         {
-            ReturnButtonRec = new Rectangle(returnButton.Location, returnButton.Size);
+            this.DoubleBuffered = true;
+
+            ReturnMenuButtonRec = new Rectangle(ReturnMenuButton.Location, ReturnMenuButton.Size);
             FormRec = new Rectangle(this.Location, this.Size);
 
             TextClear();
@@ -83,7 +85,7 @@ namespace DubstepFight.CharacterInfoFolder
                 fileReader.Close();
             }
 
-            viewModel.UseCustomFontBut(returnButton);
+            viewModel.UseCustomFontBut(ReturnMenuButton);
             viewModel.UseCustomFontLab(HeroBaseAttackInfoLabel);
             viewModel.UseCustomFontLab(HeroSkill1InfoLabel);
             viewModel.UseCustomFontLab(HeroPassiveInfoLabel);
@@ -95,7 +97,8 @@ namespace DubstepFight.CharacterInfoFolder
 
         private void HeroInfoForm_Resize_1(object sender, EventArgs e)
         {
-            viewModel.ControlResize(ReturnButtonRec, FormRec, returnButton, this);
+            //viewModel.ControlResize(ReturnMenuButtonRec, FormRec, ReturnMenuButton, this);
         }
+
     }
 }

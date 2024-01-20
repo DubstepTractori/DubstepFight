@@ -95,6 +95,8 @@ namespace DubstepFight
         }
         private void SettingsMenu_Load(object sender, EventArgs e)
         {
+            this.DoubleBuffered = true;
+
             SettingsLabelRec = new Rectangle(SettingsLabel.Location, SettingsLabel.Size);
             DevelopersButtonRec = new Rectangle(DevelopersButton.Location, DevelopersButton.Size);
             ReturnMainMenuButtonRec = new Rectangle(BackToMainMenuButton.Location, BackToMainMenuButton.Size);
