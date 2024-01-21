@@ -115,6 +115,7 @@ namespace DubstepFight
             SoundVolumeNumLabel.Text = viewModel.WMPVolume.ToString() + "%"; 
 
             this.WindowState = FormWindowState.Maximized;
+
         }
 
         private void SettingsMenu_Resize(object sender, EventArgs e)

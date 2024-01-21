@@ -92,6 +92,13 @@ namespace DubstepFight.CharacterInfoFolder
             viewModel.UseCustomFontLab(HeroBaseAttackLabel);
             viewModel.UseCustomFontLab(HeroSkill1Label);
             viewModel.UseCustomFontLab(HaroPassiveLabel);
+
+            HeroBaseAttackInfoLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            HeroSkill1InfoLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            HeroPassiveInfoLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            HeroBaseAttackLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            HeroSkill1Label.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+            HaroPassiveLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
             this.WindowState = FormWindowState.Maximized;
         }
 

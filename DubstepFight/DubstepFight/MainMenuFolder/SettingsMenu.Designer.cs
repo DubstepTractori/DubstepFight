@@ -114,7 +114,7 @@
             this.SoundVolumeLabel.BackColor = System.Drawing.Color.Transparent;
             this.SoundVolumeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoundVolumeLabel.ForeColor = System.Drawing.Color.Cyan;
-            this.SoundVolumeLabel.Location = new System.Drawing.Point(357, 241);
+            this.SoundVolumeLabel.Location = new System.Drawing.Point(347, 256);
             this.SoundVolumeLabel.Name = "SoundVolumeLabel";
             this.SoundVolumeLabel.Size = new System.Drawing.Size(82, 24);
             this.SoundVolumeLabel.TabIndex = 6;

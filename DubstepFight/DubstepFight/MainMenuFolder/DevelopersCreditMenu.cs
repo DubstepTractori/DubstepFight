@@ -80,6 +80,8 @@ namespace DubstepFight.MainMenu
             viewModel.UseCustomFontBut(GitHubLinkButton);
             viewModel.UseCustomFontLab(CreditsLabel);
 
+            CreditsLabel.BackColor = System.Drawing.Color.FromArgb(150, 0, 0, 0);
+
             this.WindowState = FormWindowState.Maximized;
         }
 
