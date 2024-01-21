@@ -46,6 +46,7 @@ namespace DubstepFight
             this.Close();
             viewModel.WMP.URL = Path.GetFullPath("../../Resources/Other/Zvuc.mp3");
             viewModel.WMP.controls.play();
+            viewModel.DeleteCharacters();
         }
         private void ReturnToMenuButton_MouseEnter(object sender, EventArgs e)
         {
